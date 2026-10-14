@@ -63,6 +63,10 @@ contact:
       email: "fernando.ruiperez@ehu.eus"
 ---
 
+<h2 align="center" style="color: #FF8C00;">
+  Web under development
+</h2>
+
 Pol-KT Laboratory operates within the Donostia Kimika Teorikoa research group and develops theory and simulation strategies for polymers, soft materials and responsive molecular assemblies. This landing page now follows the same subgroup-home structure used throughout the migration so the section can grow consistently.
 
 The visual block on the right acts as a compact three-line overview of the current Pol-KT research landscape.

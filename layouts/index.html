@@ -8,26 +8,18 @@
     <div class="container page-layout">
       {{ if .Params.home_plain }}
         <article class="home-content">
-          {{ $seminarYears := hugo.Data.seminars.items | default slice }}
-          {{ $latestYear := index $seminarYears 0 }}
+          {{ $seminarData := partial "seminar-data.html" . }}
+          {{ $latestYear := index $seminarData.years 0 }}
           {{ $slides := slice }}
           {{ $nextSlide := dict "kind" "Next seminar" "title" "The next seminar will be announced soon." "url" ("kt-seminars/" | relURL) "more" "All seminars" }}
           {{ $nextHasDate := false }}
-          {{ $nextEntries := hugo.Data.seminars.next.entries | default slice }}
-          {{ if gt (len $nextEntries) 0 }}
-            {{ $nextEntry := index $nextEntries 0 }}
-            {{ if gt (len $nextEntry.talks) 0 }}
-              {{ $nextTalk := index $nextEntry.talks 0 }}
-              {{ $nextTitle := $nextTalk.title | default "" }}
-              {{ $nextDate := $nextEntry.date | default "" }}
-              {{ if and (not (strings.HasPrefix (lower $nextTitle) "title:")) (not (strings.HasPrefix (lower $nextDate) "date:")) }}
-                {{ $nextSlide = dict "kind" "Next seminar" "date" $nextDate "title" $nextTitle "speaker" $nextTalk.speaker "url" ("kt-seminars/" | relURL) "more" "All seminars" }}
-                {{ $nextHasDate = true }}
-              {{ end }}
+          {{ range $seminarData.upcoming }}
+            {{ $entry := . }}
+            {{ with .talks }}
+              {{ $talk := index . 0 }}
+              {{ $slides = $slides | append (dict "kind" "Next seminars" "date" $entry.date "title" $talk.title "speaker" $talk.speaker "url" ("kt-seminars/" | relURL) "more" "All seminars") }}
+              {{ $nextHasDate = true }}
             {{ end }}
-          {{ end }}
-          {{ if $nextHasDate }}
-            {{ $slides = $slides | append $nextSlide }}
           {{ end }}
           {{ $newsPages := where site.RegularPages "Section" "news" }}
           {{ $recentNews := slice }}
@@ -57,6 +49,7 @@
           {{ $newsLastLine := eq (site.Params.header_style | default "default") "classic_news_last_line" }}
           <header class="landing-heading">
             <h1>Welcome to the Donostia Kimika Teorikoa Group</h1>
+            <!-- < <p style="color: #FF8C00; font-size: 1.2em; font-weight: 600; margin-top: 10px;">Web under development</p> -->
             <p style="color: #FF8C00; font-size: 1.2em; font-weight: 600; margin-top: 10px;">Web under development</p>
           </header>
           <section class="landing-split">

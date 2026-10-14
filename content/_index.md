@@ -11,6 +11,3 @@ header:
   brand_url: "/"
 ---
 
-<div style="text-align: center; color: #FF8C00; font-size: 1.2em; margin: 20px 0; font-weight: 600;">
-  Web under development
-</div>

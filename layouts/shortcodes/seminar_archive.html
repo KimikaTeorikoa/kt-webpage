@@ -1,16 +1,11 @@
-{{ $years := hugo.Data.seminars.items | default slice }}
-{{ $upcoming := slice }}
-{{ with hugo.Data.seminars.next }}
-  {{ $upcoming = .entries | default slice }}
-{{ end }}
-{{ with index hugo.Data.seminars "Next" }}
-  {{ $upcoming = .entries | default $upcoming }}
-{{ end }}
+{{ $seminarData := partial "seminar-data.html" . }}
+{{ $years := $seminarData.years }}
+{{ $upcoming := $seminarData.upcoming }}
 
 <section class="seminar-archive">
   {{ if gt (len $upcoming) 0 }}
     <section class="seminar-year seminar-year--next" aria-labelledby="seminar-year-next">
-      <h2 id="seminar-year-next" class="seminar-year__title">Next seminar</h2>
+      <h2 id="seminar-year-next" class="seminar-year__title">Next seminars</h2>
       <ol class="seminar-list">
         {{ range $upcoming }}
           <li class="seminar-entry seminar-entry--next">

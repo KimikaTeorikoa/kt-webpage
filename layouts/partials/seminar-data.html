@@ -1,0 +1,41 @@
+{{- /* Splits next.entries by date: upcoming ones stay "next", past ones join the archive of their year. */ -}}
+{{- $today := now.Format "2006-01-02" -}}
+{{- $upcoming := slice -}}
+{{- $expired := slice -}}
+{{- range (hugo.Data.seminars.next.entries | default slice) -}}
+  {{- $iso := substr (printf "%v" (.iso | default "")) 0 10 -}}
+  {{- if strings.HasPrefix (lower (.date | default "")) "date:" -}}
+  {{- else if and $iso (lt $iso $today) -}}
+    {{- $expired = $expired | append . -}}
+  {{- else -}}
+    {{- $upcoming = $upcoming | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $upcoming = sort $upcoming "iso" "asc" -}}
+{{- $expired = sort $expired "iso" "desc" -}}
+
+{{- $archive := hugo.Data.seminars.items | default slice -}}
+{{- $archiveYears := slice -}}
+{{- range $archive -}}{{- $archiveYears = $archiveYears | append (int .year) -}}{{- end -}}
+{{- $blocks := slice -}}
+{{- $extraYears := slice -}}
+{{- range $expired -}}
+  {{- $y := int (substr (printf "%v" .iso) 0 4) -}}
+  {{- if and (not (in $archiveYears $y)) (not (in $extraYears $y)) -}}
+    {{- $extraYears = $extraYears | append $y -}}
+    {{- $blocks = $blocks | append (dict "year" $y "entries" slice) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $archive -}}{{- $blocks = $blocks | append (dict "year" (int .year) "entries" .entries) -}}{{- end -}}
+
+{{- $years := slice -}}
+{{- range $blocks -}}
+  {{- $y := .year -}}
+  {{- $entries := slice -}}
+  {{- range $expired -}}
+    {{- if eq (int (substr (printf "%v" .iso) 0 4)) $y -}}{{- $entries = $entries | append . -}}{{- end -}}
+  {{- end -}}
+  {{- $entries = $entries | append .entries -}}
+  {{- $years = $years | append (dict "year" $y "entries" $entries) -}}
+{{- end -}}
+{{- return (dict "upcoming" $upcoming "years" $years) -}}

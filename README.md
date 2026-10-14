@@ -316,17 +316,23 @@ Use `--dry-run` to walk through the prompts without writing files, or
 
 ## Adding seminars
 
-Set the next seminar and move the currently listed next seminar into the past
-archive with:
+Add an upcoming seminar with:
 
 ```bash
 python3 scripts/add_seminar.py
 ```
 
 Enter its date (`DD.MM.YYYY`), time, optional place, talk title and speaker.
-The script archives a complete previous next seminar under its year before
-replacing it. If an older next entry has no year, the script asks for one.
-Use `--dry-run` to preview the change. Do not run
+Upcoming seminars accumulate under `next.entries` in `data/seminars.yaml`
+(shown as "Next seminars", each with an `iso` date). Every time the script
+runs it moves the seminars whose date has passed to the past-seminar archive;
+`python3 scripts/add_seminar.py --archive-only` does only that. Use
+`--dry-run` to preview a change.
+
+The site also classifies seminars by date at build time: a seminar is "next"
+until its day is over, then it appears as the latest/past seminar. Because the
+site is static, that switch happens on the next `make build`/deploy, so deploy
+again (or schedule a daily deploy) after a seminar date passes. Do not run
 `scripts/import_seminars.py`: it was a one-time import and is disabled to
 protect the seminar data.
 
