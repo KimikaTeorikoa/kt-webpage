@@ -1,12 +1,13 @@
-# Generated from https://www.ehu.eus/chemistry/theory/5_kt-seminars/past-group-seminars/
+# Historical seminars imported from the legacy archive; use scripts/add_seminar.py for upcoming seminars.
 
 next:
   entries:
-    - date: "date: TBA"
-      place: "place: TBA"
+    - year: 2026
+      date: "October 16th, 10:30 am"
+      place: "Main Room (Kimika Fakultatea)"
       talks:
-        - title: "title: TBA"
-          speaker: "title: TBA"
+        - title: "Theoretical Study of Frustrated Lewis Pairs (FLP) as Catalyst in Chemistry: from Cyclic Polymerizations to N$_2$ Activation"
+          speaker: "Xuban Gastearena"
 
 items:
   - year: 2026

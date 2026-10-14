@@ -1160,9 +1160,8 @@ img {
 
 .news-article__banner {
   display: block;
-  width: 100%;
   max-height: 520px;
-  margin: 24px 0 34px;
+  margin: 24px auto 34px;
   border-radius: 18px;
   object-fit: cover;
 }

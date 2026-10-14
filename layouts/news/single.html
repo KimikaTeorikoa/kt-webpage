@@ -10,7 +10,14 @@
         </header>
         {{ with .Params.banner }}
           {{ $banner := strings.TrimPrefix "/" . }}
-          <img class="news-article__banner" src="{{ $banner | relURL }}" alt="Banner for {{ $.Title }}">
+          {{ $bannerScale := 100 }}
+          {{ if isset $.Params "banner_scale" }}
+            {{ $bannerScale = int $.Params.banner_scale }}
+          {{ end }}
+          {{ if or (lt $bannerScale 1) (gt $bannerScale 100) }}
+            {{ errorf "news page %q has invalid banner_scale %v; expected a value from 1 to 100" $.File.Path $.Params.banner_scale }}
+          {{ end }}
+          <img class="news-article__banner" style="width: {{ $bannerScale }}%;" src="{{ $banner | relURL }}" alt="Banner for {{ $.Title }}">
         {{ end }}
         <div class="news-article__content prose">{{ .Content }}</div>
         {{ with .Params.gallery_images }}

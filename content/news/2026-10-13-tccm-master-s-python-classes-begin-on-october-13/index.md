@@ -3,6 +3,7 @@ title: TCCM Master's Python Classes Begin on October 13
 date: '2026-10-13'
 summary: TCCM Master's Python Classes Begin on October 13
 banner: /images/news/2026-10-13-tccm-master-s-python-classes-begin-on-october-13/banner.jpeg
+banner_scale: 30
 gallery_images: []
 ---
 

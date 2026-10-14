@@ -8,7 +8,7 @@ member_type: "researcher"
 photo: "/images/members/researchers/elisa.jpg"
 groups: ["matcat"]
 group_labels: ["MatCat-KT"]
-role: "MatCat-KT Group Leader"
+role: "MatCat-KT Group Co-Leader"
 position: "Profesora Adjunta"
 affiliation: "EHU & DIPC"
 publication_names:

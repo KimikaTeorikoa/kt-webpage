@@ -200,19 +200,12 @@ def write_yaml(items: list[dict[str, object]]) -> None:
 
 
 def main() -> int:
-    items = parse_seminars()
-    write_yaml(items)
-    entry_count = sum(len(item["entries"]) for item in items)  # type: ignore[arg-type]
-    talk_count = sum(
-        len(entry["talks"])
-        for item in items
-        for entry in item["entries"]  # type: ignore[index]
+    print(
+        "This was a one-time legacy importer and must not be run again: "
+        "it overwrites data/seminars.yaml. Use scripts/add_seminar.py instead.",
+        file=sys.stderr,
     )
-    pdf_count = len(list(PDF_DIR.glob("*.pdf"))) if PDF_DIR.exists() else 0
-    print(f"Imported {entry_count} seminar dates")
-    print(f"Imported {talk_count} talks")
-    print(f"Downloaded/local seminar PDFs: {pdf_count}")
-    return 0
+    return 1
 
 
 if __name__ == "__main__":

@@ -189,6 +189,7 @@ def create_news_item(
     }
     if banner_url:
         front_matter["banner"] = banner_url
+        front_matter["banner_scale"] = 100
     article_content = (
         "---\n"
         + yaml.safe_dump(front_matter, sort_keys=False, allow_unicode=True)

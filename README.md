@@ -309,8 +309,26 @@ newest first on `/news/`; the home-page ticker also includes the next seminar,
 the latest past seminar, and recent news. The local `make serve` target
 includes future-dated news so scheduled items can be previewed; normal
 production builds still publish them
-on their date. Use `--dry-run` to walk through the prompts without writing
-files, or `--help` to see the available option.
+on their date. For a banner, edit its `banner_scale` front-matter value to
+control its width on the news article page (percentage, 1–100; default: 100).
+Use `--dry-run` to walk through the prompts without writing files, or
+`--help` to see the available option.
+
+## Adding seminars
+
+Set the next seminar and move the currently listed next seminar into the past
+archive with:
+
+```bash
+python3 scripts/add_seminar.py
+```
+
+Enter its date (`DD.MM.YYYY`), time, optional place, talk title and speaker.
+The script archives a complete previous next seminar under its year before
+replacing it. If an older next entry has no year, the script asks for one.
+Use `--dry-run` to preview the change. Do not run
+`scripts/import_seminars.py`: it was a one-time import and is disabled to
+protect the seminar data.
 
 ## Typical workflow
 
