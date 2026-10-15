@@ -14,7 +14,7 @@ header:
 contact:
   title: Contact
   people:
-  - name: Prof. Elixabete Rezabal
+  - name: Associate Prof. Elixabete Rezabal
     email: elixabete.rezabal@ehu.eus
     social:
       github: https://github.com/ISoM-KT

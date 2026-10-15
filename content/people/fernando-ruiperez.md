@@ -1,5 +1,5 @@
 ---
-title: "Prof. Fernando Ruiperez"
+title: "Associate Prof. Fernando Ruiperez"
 id: "fernando-ruiperez"
 url: "/polkt/people/fernando-ruiperez/"
 aliases:

@@ -1,5 +1,5 @@
 ---
-title: "Prof. Elena Formoso"
+title: "Associate Prof. Elena Formoso"
 id: "elena-formoso"
 url: "/biokt/people/elena-formoso/"
 aliases:

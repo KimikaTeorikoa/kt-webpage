@@ -1,5 +1,5 @@
 ---
-title: "Prof. Elisa Jimenez-Izal"
+title: "Associate Prof. Elisa Jimenez-Izal"
 id: "elisa-jimenez-izal"
 url: "/matcat/people/elisa-jimenez-izal/"
 hide_page_hero: true

@@ -1,5 +1,5 @@
 ---
-title: "Dr. Roberto Alvarez-Boto"
+title: "Associate Research Prof. Roberto Alvarez-Boto"
 id: "roberto-alvarez-boto"
 url: "/people/roberto-alvarez-boto/"
 hide_page_hero: true

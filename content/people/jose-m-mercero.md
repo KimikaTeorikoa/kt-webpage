@@ -1,5 +1,5 @@
 ---
-title: "Prof. Jose M. Mercero"
+title: "Associate Prof. Jose M. Mercero"
 id: "jose-m-mercero"
 url: "/matcat/people/jose-m-mercero/"
 hide_page_hero: true

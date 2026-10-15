@@ -1,5 +1,5 @@
 ---
-title: "Prof. Daniel Reta"
+title: "Associate Research Prof. Daniel Reta"
 id: "daniel-reta"
 url: "/people/daniel-reta/"
 hide_page_hero: true

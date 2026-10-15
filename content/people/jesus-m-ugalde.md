@@ -1,5 +1,5 @@
 ---
-title: "Prof. Jesus M. Ugalde"
+title: "Full Prof. Jesus M. Ugalde"
 id: "jesus-m-ugalde"
 url: "/people/jesus-m-ugalde/"
 hide_page_hero: true

@@ -1,5 +1,5 @@
 ---
-title: "Prof. Eduard Matito"
+title: "Research Prof. Eduard Matito"
 id: "eduard-matito"
 url: "/people/eduard-matito/"
 hide_page_hero: true

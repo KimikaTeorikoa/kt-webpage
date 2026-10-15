@@ -1,5 +1,5 @@
 ---
-title: "Prof. Jon M. Matxain"
+title: "Full Prof. Jon M. Matxain"
 id: "jon-m-matxain"
 url: "/polkt/people/jon-m-matxain/"
 aliases:

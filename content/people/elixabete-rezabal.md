@@ -1,5 +1,5 @@
 ---
-title: "Prof. Elixabete Rezabal"
+title: "Associate Prof. Elixabete Rezabal"
 id: "elixabete-rezabal"
 url: "/isom/people/elixabete-rezabal/"
 hide_page_hero: true

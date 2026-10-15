@@ -1785,6 +1785,11 @@ img {
   background: #edf5fe;
 }
 
+.research-lines-grid--isom-home .research-line-card__image {
+  object-fit: contain;
+  background: #fff;
+}
+
 .research-line-card__content {
   display: flex;
   flex: 1;

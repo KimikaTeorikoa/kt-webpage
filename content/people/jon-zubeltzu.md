@@ -1,5 +1,5 @@
 ---
-title: "Prof. Jon Zubeltzu"
+title: "Associate Prof. Jon Zubeltzu"
 id: "jon-zubeltzu"
 url: "/people/jon-zubeltzu/"
 hide_page_hero: true

@@ -1,5 +1,5 @@
 ---
-title: "Prof. Mario Piris"
+title: "Research Prof. Mario Piris"
 id: "mario-piris"
 url: "/noft/people/mario-piris/"
 hide_page_hero: true

@@ -1,5 +1,5 @@
 ---
-title: "Prof. Xabier Lopez"
+title: "Full Prof. Xabier Lopez"
 id: "xabier-lopez"
 url: "/biokt/people/xabier-lopez/"
 aliases:

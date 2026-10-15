@@ -14,9 +14,9 @@ header:
 contact:
   title: Contact
   people:
-  - name: Prof. Elisa Jimenez
+  - name: Associate Prof. Elisa Jimenez
     email: elisa.jimenez@ehu.eus
-  - name: Prof. Jose Maria Mercero
+  - name: Associate Prof. Jose Maria Mercero
     email: jm.mercero@ehu.eus
     social:
       github: https://github.com/pobmelat

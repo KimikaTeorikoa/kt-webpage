@@ -1,5 +1,5 @@
 ---
-title: "Prof. Ion Mitxelena"
+title: "Assistant Prof. Ion Mitxelena"
 id: "ion-mitxelena"
 url: "/noft/people/ion-mitxelena/"
 hide_page_hero: true

@@ -1,5 +1,5 @@
 ---
-title: "Prof. David Casanova"
+title: "Research Prof. David Casanova"
 id: "david-casanova"
 url: "/people/david-casanova/"
 hide_page_hero: true

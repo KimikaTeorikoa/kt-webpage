@@ -1,5 +1,5 @@
 ---
-title: "Dr. Claire Tonnele"
+title: "Associate Research Prof. Claire Tonnele"
 id: "claire-tonnele"
 url: "/people/claire-tonnele/"
 hide_page_hero: true

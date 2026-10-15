@@ -1,5 +1,5 @@
 ---
-title: "Prof. Jon Uranga"
+title: "Associate Research Prof. Jon Uranga"
 id: "jon-uranga"
 url: "/biokt/people/jon-uranga/"
 aliases:

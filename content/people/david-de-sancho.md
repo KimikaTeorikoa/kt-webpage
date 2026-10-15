@@ -1,5 +1,5 @@
 ---
-title: "Prof. David de Sancho"
+title: "Associate Research Prof. David de Sancho"
 id: "david-de-sancho"
 url: "/biokt/people/david-de-sancho/"
 aliases:
