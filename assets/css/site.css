@@ -3510,7 +3510,9 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
 }
 
 .member-directory--former .member-grid {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .member-directory--former .member-card {
@@ -3539,6 +3541,18 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
 
 .member-directory--former .member-card__links {
   justify-content: flex-start;
+}
+
+@media (max-width: 980px) {
+  .member-directory--former .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .member-directory--former .member-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .member-card {

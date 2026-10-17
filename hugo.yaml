@@ -1,4 +1,4 @@
-baseURL: "https://www.ehu.eus/chemistry/theory/new/"
+baseURL: "https://www.ehu.eus/chemistry/theory/"
 locale: "en"
 title: "Kimika Teorikoa"
 enableRobotsTXT: true

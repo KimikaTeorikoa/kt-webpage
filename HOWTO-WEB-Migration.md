@@ -5,27 +5,27 @@ Este documento describe cómo sustituir la web WordPress de
 `https://www.ehu.eus/chemistry/theory/new/`, y conservar WordPress en
 `https://www.ehu.eus/chemistry/theory/old/`.
 
-La configuración local del proyecto indica actualmente:
+En el servidor se ha identificado WordPress en
+`/users/scwtcg/public_html/wordpress`. La configuración local del proyecto ya
+está preparada para la URL y el destino finales:
 
 - Host SFTP: `alweb.ehu.eus`
 - Usuario: `scwtcg`
-- Carpeta de publicación actual: `/users/scwtcg/public_html/new`
-- URL de producción actual: `https://www.ehu.eus/chemistry/theory/new/`
+- Carpeta de publicación: `/users/scwtcg/public_html`
+- URL de producción: `https://www.ehu.eus/chemistry/theory/`
 
-Estos valores proceden del `Makefile` y de la configuración local `.env`.
-Antes de mover nada, confirma por SFTP con el administrador que la ruta remota
-corresponde a la raíz pública de `/chemistry/theory/` y averigua dónde está
-instalado realmente WordPress. Las rutas `/users/scwtcg/public_html` de este
-documento son las que sugiere la configuración del proyecto, no una inspección
-del servidor.
+Antes de mover nada o desplegar, confirma por SFTP con el administrador que
+`/users/scwtcg/public_html` es el document root de
+`/chemistry/theory/`, y que la instalación completa está dentro de
+`wordpress/`.
 
 ## Precauciones
 
 - Programa el cambio para un periodo de poco tráfico y avisa de una posible
   interrupción breve.
-- No presupongas que WordPress está en `public_html/wordpress/`: puede tener
-  archivos en la propia raíz o en otra ubicación. Comprueba también archivos
-  ocultos como `.htaccess`.
+- Aunque se ha indicado `public_html/wordpress/`, verifica dónde están
+  `index.php`, `wp-config.php`, `wp-content/` y `.htaccess`; puede haber reglas
+  o archivos de WordPress también en la raíz.
 - Haz primero una copia recuperable de **todos** los archivos del sitio y una
   copia de seguridad de la base de datos WordPress. Verifica que puedes leer
   los respaldos.
@@ -40,7 +40,8 @@ Con SFTP, inspecciona la carpeta que sirve
 `https://www.ehu.eus/chemistry/theory/` y apunta:
 
 - Qué directorio es el document root.
-- Dónde están `index.php`, `wp-config.php`, `wp-content/` y `.htaccess`.
+- Dónde están `index.php`, `wp-config.php`, `wp-content/` y `.htaccess`,
+  especialmente dentro de `wordpress/` y en la raíz.
 - Si `new/` está dentro del mismo document root.
 - Permisos y propietario de los archivos.
 
@@ -52,21 +53,14 @@ los ficheros descargados tienen un tamaño razonable.
 
 ## 2. Preparar Hugo para la ruta final
 
-Actualiza la URL y destino de producción en:
+La configuración ya se ha actualizado para la URL y el destino de producción:
 
-- `hugo.yaml`: `baseURL` debe ser
-  `https://www.ehu.eus/chemistry/theory/`.
-- `Makefile`: cambia los valores por defecto de `PROD_BASEURL` y `REMOTE_PATH`.
-- `.env` local: cambia `PROD_BASEURL` a la URL anterior y `REMOTE_PATH` a
-  `/users/scwtcg/public_html` **solo después de confirmar esa ruta en el
-  servidor**. Este archivo es local y no debe añadirse a Git.
-- `README.md` y otros documentos que mencionen `/new/`.
+- `hugo.yaml` y `PROD_BASEURL`: `https://www.ehu.eus/chemistry/theory/`.
+- `REMOTE_PATH`: `/users/scwtcg/public_html`.
+- `README.md` refleja la ruta final. `.env` es local y no debe añadirse a Git.
 
-Busca URLs de desarrollo escritas directamente en las plantillas o los datos.
-Por ejemplo, `layouts/partials/groups/isom-diagram.html` contiene actualmente
-enlaces con `/chemistry/theory/new/`; deben usar rutas relativas generadas por
-Hugo (como `relURL`) para funcionar tanto en la ruta antigua de pruebas como en
-la nueva ubicación de producción.
+Las URLs de desarrollo escritas directamente en plantillas deben convertirse
+en rutas generadas por Hugo. El enlace de la plantilla ISoM ya utiliza `relURL`.
 
 Comprueba también referencias a `/wordpress/` que deban seguir funcionando
 cuando WordPress viva en `/old/`. No reemplaces texto indiscriminadamente:
@@ -92,9 +86,12 @@ La ubicación depende de cómo esté instalado WordPress:
   de WordPress a `old/`, incluidos `wp-content/`, `wp-admin/`, `wp-includes/`,
   `wp-config.php`, `.htaccess` y archivos ocultos. No muevas la carpeta `new/`
   dentro de `old/`.
-- **WordPress instalado en un subdirectorio:** coloca la instalación completa
-  bajo `old/` conservando su estructura interna; no crees una ruta duplicada
-  como `old/wordpress/wordpress/`.
+- **WordPress instalado en `public_html/wordpress/` (ubicación indicada):**
+  mueve el contenido de esa instalación a `public_html/old/`, conservando su
+  estructura interna. No crees una ruta duplicada como
+  `old/wordpress/wordpress/`. Confirma antes que `wordpress/` contiene la
+  instalación completa y que no hay archivos necesarios de WordPress en la
+  raíz.
 
 Si no se puede mover de forma segura con el acceso disponible, pide al
 administrador de Alweb que lo haga o que confirme el método apropiado. No

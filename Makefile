@@ -2,15 +2,15 @@
 # Usage examples:
 #  make serve
 #  make build                        # uses default PROD_BASEURL if not overridden
-#  PROD_BASEURL="https://www.ehu.eus/chemistry/theory/new/" make build
+#  PROD_BASEURL="https://www.ehu.eus/chemistry/theory/" make build
 #  make deploy                       # incremental deploy (only changed files)
 #  make deploy-full                  # full deploy (overwrite everything)
 #
 # You can create a local .env file with the following variables (DO NOT COMMIT .env):
-# PROD_BASEURL="https://www.ehu.eus/chemistry/theory/new/"
+# PROD_BASEURL="https://www.ehu.eus/chemistry/theory/"
 # SFTP_USER=scwtcg
 # SFTP_HOST=alweb.ehu.eus
-# REMOTE_PATH=/users/scwtcg/public_html/new
+# REMOTE_PATH=/users/scwtcg/public_html
 
 # Load optional .env (if present) so users can keep credentials out of the shell.
 -include .env
@@ -18,10 +18,10 @@
 .PHONY: serve build validate-data validate check-public-links deploy deploy-full clean
 
 # Defaults (override via environment, .env, or on the make command line)
-PROD_BASEURL ?= https://www.ehu.eus/chemistry/theory/new/
+PROD_BASEURL ?= https://www.ehu.eus/chemistry/theory/
 SFTP_USER    ?= scwtcg
 SFTP_HOST    ?= alweb.ehu.eus
-REMOTE_PATH  ?= /users/scwtcg/public_html/new
+REMOTE_PATH  ?= /users/scwtcg/public_html
 
 serve:
 	hugo server -D -F --bind 127.0.0.1 --port 1313 --baseURL http://127.0.0.1:1313/

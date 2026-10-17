@@ -1,5 +1,12 @@
 # Gallery data. Imported events retain their original source URLs.
 items:
+  - title: "Xuban Gastearena Thesis defense (16.10.2026)"
+    slug: "xuban-gastearena-thesis-defense-16-10-2026"
+    images:
+      - src: "/images/gallery/xuban-gastearena-thesis-defense-16-10-2026/01-whatsapp-image-2026-10-16-at-11-38-27.jpeg"
+        alt: "Xuban Gastearena Thesis defense (16.10.2026)"
+      - src: "/images/gallery/xuban-gastearena-thesis-defense-16-10-2026/02-whatsapp-image-2026-10-16-at-15-52-16.jpeg"
+        alt: "Xuban Gastearena Thesis defense (16.10.2026)"
   - title: "Jesus Receives the Distinction of Bergara’s First Ambassador in Recognition of His Scientific Career (28.09.2026)"
     slug: "jesus-receives-the-distinction-of-bergaras-first-ambassador-in-recognition-of-his-scientific-career-28-09-2026"
     images:

@@ -43,7 +43,7 @@ office: "Kimika Teorikoa Lab; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 
 # Profile photo. Should match the file you added to static/images/members/<member_type>/
-photo: "/images/members/phd/sourish.jpg"
+photo: "/images/members/phd/s.jpg"
 
 # Group membership. Add all groups you belong to.
 # Group keys: biokt, isom, polkt, matcat, noft, moleles, qcd, momag
@@ -101,4 +101,3 @@ researcher_id: "https://scholar.google.com/citations?user=BZNTCI4AAAAJ&hl=en"
 
 - `[2022 – 2024]` Master of Technology, University of Hyderabad, Hyderabad, India.
 - `[2016 – 2020]` Bachelor of Technology, Vellore Institute of Technology, Vellore, India.
-

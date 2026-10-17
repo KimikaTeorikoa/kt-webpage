@@ -9,7 +9,7 @@
       <div class="research-lines-grid">
         {{ range $i, $ln := $lines }}
           {{ $slug := $ln.slug | default (printf "line-%d" (add $i 1)) }}
-          <a class="research-line-card research-line-card--{{ $slug }}" href="{{ printf "/chemistry/theory/new/isom/research/%s/" $slug }}">
+          <a class="research-line-card research-line-card--{{ $slug }}" href="{{ printf "/isom/research/%s/" $slug | relURL }}">
             <p class="research-line-card__eyebrow">{{ $ln.eyebrow }}</p>
             <h2>{{ $ln.title }}</h2>
             {{/* Prefer explicit card_excerpt if present (written by generator). Otherwise fall back to a 5-word excerpt from summary */}}

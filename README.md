@@ -224,10 +224,10 @@ A `Makefile` is provided for common tasks. You can override any variable on the 
 
 | Variable | Default | Purpose |
 |----------|---------|---------|
-| `PROD_BASEURL` | `https://www.ehu.eus/chemistry/theory/new/` | Base URL used for the production build. |
+| `PROD_BASEURL` | `https://www.ehu.eus/chemistry/theory/` | Base URL used for the production build. |
 | `SFTP_USER` | `scwtcg` | SFTP username. |
 | `SFTP_HOST` | `alweb.ehu.eus` | SFTP server host. |
-| `REMOTE_PATH` | `/users/scwtcg/public_html/new` | Destination directory on the server. |
+| `REMOTE_PATH` | `/users/scwtcg/public_html` | Destination directory on the server. |
 
 ### Makefile targets
 
@@ -245,13 +245,14 @@ make deploy
 make clean
 ```
 
-### Example: deploy from scratch
+### Example: deploy after migration preparation
 
 ```bash
 # 1. Validate and build for production
 make validate
 
-# 2. Deploy using your configured SFTP authentication
+# 2. Only after WordPress is backed up, moved to /old/, and the document root
+#    has been confirmed, deploy using your configured SFTP authentication
 make deploy
 ```
 
@@ -260,13 +261,18 @@ make deploy
 Create a `.env` file in the repository root (it is already ignored by git):
 
 ```bash
-PROD_BASEURL="https://www.ehu.eus/chemistry/theory/new/"
+PROD_BASEURL="https://www.ehu.eus/chemistry/theory/"
 SFTP_USER="scwtcg"
 SFTP_HOST="alweb.ehu.eus"
-REMOTE_PATH="/users/scwtcg/public_html/new"
+REMOTE_PATH="/users/scwtcg/public_html"
 ```
 
-Then simply run:
+The production path is being prepared for the migration from the `new/`
+prototype directory to the public site root. Do not run `make deploy` until
+the document root is confirmed and WordPress has been backed up and moved out
+of the document root as described in [HOWTO-WEB-Migration.md](./HOWTO-WEB-Migration.md).
+
+After the migration prerequisites are complete, run:
 
 ```bash
 make validate
