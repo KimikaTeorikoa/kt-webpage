@@ -72,7 +72,7 @@ research_lines:
   card_excerpt: For the last 10
   card_tone: biokt
 resources:
-  title: Software and Data Repositories
+  title: Software, Data and Group Resources
   items:
   - name: MasterMSM
     summary: Code for building master equation (Markov state) models of molecular
@@ -83,8 +83,13 @@ resources:
       two-state proteins.
     link: https://github.com/daviddesancho/PREFUR
   - name: hdbMSM
-    summary: ''
+    summary: Notebooks for building Markov state models from hierarchical density-based
+      clustering (HDBSCAN) of molecular simulation trajectories.
     link: https://github.com/BioKT/hdbMSM
+  - name: BIOKT Lab Handbook
+    summary: How we work in the BIOKT group, from arrival and project organisation
+      to MD simulation checklists, and the reasons behind each practice.
+    link: https://biokt.github.io/lab-handbook/
 
 contact:
   people:
