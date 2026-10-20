@@ -64,9 +64,9 @@ research_lines:
     develop analysis tools that resolve the molecular interactions driving these transitions
     along simulation trajectories.
   dois:
+  - 10.1021/acs.jcim.5c01501
   - 10.1038/s42005-022-01125-5
   - 10.1039/d0cp00328j
-  - 10.1021/acs.jcim.5c01501
   card_excerpt: A major interest of
   card_tone: biokt
 - slug: kinetic-models
@@ -80,8 +80,8 @@ research_lines:
     and coupling to reaction–diffusion simulations. Our open-source package [MasterMSM](https://github.com/daviddesancho/MasterMSM)
     makes the construction and analysis of these models available to others.
   dois:
-  - 10.1021/acs.jcim.9b00468
   - 10.1063/5.0056748
+  - 10.1021/acs.jcim.9b00468
   - 10.1063/1.5020294
   card_excerpt: We describe conformational transitions
   card_tone: biokt

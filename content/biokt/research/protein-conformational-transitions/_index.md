@@ -4,6 +4,18 @@ eyebrow: Protein Conformational Transitions
 slug: protein-conformational-transitions
 weight: 1
 publications:
+- doi: 10.1021/acs.jcim.5c01501
+  title: Resolving Molecular Interactions in Protein Folding Trajectories with NCIPLOT
+  authors:
+  - Asier Urriolabeitia
+  - Julia Contreras-García
+  - David De Sancho
+  - Xabier López
+  year: 2025
+  journal: Journal of Chemical Information and Modeling
+  volume: '65'
+  issue: '19'
+  pages: 10613-10623
 - doi: 10.1038/s42005-022-01125-5
   title: Compliant mechanical response of the ultrafast folding protein EnHD under
     force
@@ -34,18 +46,6 @@ publications:
   volume: '22'
   issue: '15'
   pages: 8118-8127
-- doi: 10.1021/acs.jcim.5c01501
-  title: Resolving Molecular Interactions in Protein Folding Trajectories with NCIPLOT
-  authors:
-  - Asier Urriolabeitia
-  - Julia Contreras-García
-  - David De Sancho
-  - Xabier López
-  year: 2025
-  journal: Journal of Chemical Information and Modeling
-  volume: '65'
-  issue: '19'
-  pages: 10613-10623
 hide_page_hero: true
 content_frame: false
 aliases:

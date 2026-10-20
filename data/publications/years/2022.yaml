@@ -497,10 +497,10 @@ items:
   - E. San Sebastian
   - J. Cepeda
   teachpress_id: '488'
-- id: 10-1021-acs-jpcb-1c0991
+- id: 10-1021-acs-jpcb-1c09911
   type: article
-  title: Influence of the Nonprotein Amino Acid Mimosine in PeptideConformational Propensities from Novel Amber Force FieldParameters
-  doi: 10.1021/acs.jpcb.1c0991
+  title: Influence of the Nonprotein Amino Acid Mimosine in Peptide Conformational Propensities from Novel Amber Force Field Parameters
+  doi: 10.1021/acs.jpcb.1c09911
   year: 2022
   journal: Journal of Physical Chemistry B
   volume: '126'

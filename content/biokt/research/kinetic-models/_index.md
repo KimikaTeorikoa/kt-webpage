@@ -4,17 +4,6 @@ eyebrow: Kinetic Models
 slug: kinetic-models
 weight: 1
 publications:
-- doi: 10.1021/acs.jcim.9b00468
-  title: 'MasterMSM: A Package for Constructing Master Equation Models of Molecular
-    Dynamics'
-  authors:
-  - David de Sancho
-  - Anne Aguirre
-  year: 2019
-  journal: Journal of Chemical Information and Modeling
-  volume: '59'
-  issue: '9'
-  pages: 3625-3629
 - doi: 10.1063/5.0056748
   title: Markov state models from hierarchical density-based assignment
   authors:
@@ -26,6 +15,17 @@ publications:
   volume: '155'
   issue: '5'
   pages: '054102'
+- doi: 10.1021/acs.jcim.9b00468
+  title: 'MasterMSM: A Package for Constructing Master Equation Models of Molecular
+    Dynamics'
+  authors:
+  - David de Sancho
+  - Anne Aguirre
+  year: 2019
+  journal: Journal of Chemical Information and Modeling
+  volume: '59'
+  issue: '9'
+  pages: 3625-3629
 - doi: 10.1063/1.5020294
   title: 'MSM/RD: Coupling Markov state models of molecular kinetics with reaction-diffusion
     simulations'
