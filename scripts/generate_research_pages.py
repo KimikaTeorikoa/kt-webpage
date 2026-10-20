@@ -200,7 +200,14 @@ def build_publication_entry_from_crossref(message: dict, group: str, slug: str) 
     # Extract basic fields (robustness modest for prototype)
     def first_title(msg):
         titles = msg.get("title") or []
-        return str(titles[0]) if titles else ""
+        if not titles:
+            return ""
+        # Crossref titles may carry JATS markup (e.g. <scp>ii</scp>) and embedded
+        # newlines/indentation; strip tags and collapse whitespace.
+        title = re.sub(r"<scp>(.*?)</scp>", lambda m: m.group(1).strip().upper(), str(titles[0]), flags=re.S)
+        title = re.sub(r"<[^>]+>", "", title)
+        title = re.sub(r"\s+", " ", title).strip()
+        return re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", title))
 
     def extract_authors(msg):
         out = []
@@ -487,6 +494,10 @@ def write_research_page(group: str, rl: dict, publications: list[dict], dry_run:
         "hide_page_hero": True,
         "content_frame": False,
     }
+    # Hugo redirect aliases (e.g. old URLs after a slug rename) are declared on the
+    # research line in the group's _index.md so they survive regeneration.
+    if rl.get("aliases"):
+        fm["aliases"] = list(rl["aliases"])
 
     # If a page already exists, preserve any existing toc_image/toc_from/toc_landing
     # for matching publications (match by DOI). The generated list is authoritative:
