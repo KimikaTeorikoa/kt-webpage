@@ -12,6 +12,8 @@ location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 photo: "/images/members/postdocs/dulce-guzman-ocampo.jpg"
 role: "Postdoctoral Researcher"
 affiliation: "DIPC"
+email: "guodulce [@] gmail.com"
+orcid: "https://orcid.org/0000-0001-6877-7025"
 groups: ["biokt"]
 publication_names:
   - "Dulce Consuelo Guzman Ocampo"
