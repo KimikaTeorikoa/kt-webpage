@@ -18,6 +18,7 @@ email: "david.desancho [@] ehu.eus"
 google_scholar: "https://scholar.google.es/citations?user=KJizEBYAAAAJ"
 twitter: "https://x.com/daviddesancho"
 bluesky: "https://bsky.app/profile/daviddesancho.bsky.social"
+linkedin: "https://www.linkedin.com/in/david-de-sancho-71b06150"
 publication_names:
   - "David de Sancho"
   - "D. de Sancho"
