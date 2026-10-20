@@ -67,6 +67,7 @@ research_lines:
   - 10.1039/d3cp02070c
   - 10.1016/j.jinorgbio.2024.112807
   - 10.1016/j.jinorgbio.2020.111169
+  image: /images/research/biokt/protein-metal-interactions.png
   card_excerpt: How aluminium and other metal ions bind peptides and reshape their conformations.
   card_tone: biokt
 - slug: enzyme-immobilisation
