@@ -82,6 +82,7 @@ research_lines:
   dois:
   - 10.1021/acs.jpclett.5c03753
   - 10.1021/acs.jcim.6c00953
+  image: /images/research/biokt/enzyme-immobilisation.png
   card_excerpt: Coarse-grained simulations of how enzymes orient when immobilised on surfaces.
   card_tone: biokt
 resources:
