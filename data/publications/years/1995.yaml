@@ -84,3 +84,19 @@ items:
   - F. P. Cossio
   - J. M. Ugalde
   teachpress_id: '532'
+- id: 10-1002-qua-560530402
+  type: article
+  title: A BCS approach to molecular correlation
+  year: 1995
+  authors:
+  - M. Piris
+  - R. Cruz
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: International Journal of Quantum Chemistry
+  volume: '53'
+  issue: '4'
+  pages: 353-359
+  doi: 10.1002/qua.560530402

@@ -62,6 +62,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - Juan Felipe Huan Lew-Yee
   - Jorge M. del Campo
@@ -277,6 +278,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - Juan Felipe Huan Lew-Yee
   - Mario Piris
@@ -311,6 +313,7 @@ items:
   tags:
   - NOFT
   - MatCat-KT
+  - NOFT-KT
   authors:
   - Élodie Boutou
   - Juan Felipe Huan Lew-Yee
@@ -500,6 +503,8 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
+  url: "https://www.revistacubanadefisica.org/index.php/rcf/article/view/53"
   authors:
   - Juan Felipe Huan Lew-Yee
   - Mario Piris

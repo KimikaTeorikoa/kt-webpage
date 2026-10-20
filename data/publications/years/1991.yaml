@@ -74,3 +74,35 @@ items:
   - C. Barrientos
   - J. M. Ugalde
   teachpress_id: '536'
+- id: capote-1991-pcross-report-247
+  type: techreport
+  title: Analysis of experimental data on neutron-induced reactions and development of PCROSS code for the calculation of differential pre-equilibrium spectra
+  year: 1991
+  authors:
+  - R. Capote
+  - E. Herrera
+  - R. Lopez
+  - V. Osorio
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  institution: International Atomic Energy Agency
+  report_number: INDC-247
+- id: capote-1991-pcross-report-004
+  type: techreport
+  title: Analysis of experimental data on neutron-induced reactions and development of PCROSS code for the calculation of differential pre-equilibrium emission spectra with modelling of level density function
+  year: 1991
+  authors:
+  - R. Capote
+  - E. Herrera
+  - R. Lopez
+  - V. Osorio
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  institution: International Atomic Energy Agency
+  report_number: INDC-004

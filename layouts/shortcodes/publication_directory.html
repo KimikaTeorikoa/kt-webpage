@@ -57,7 +57,8 @@
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ if and $inGroup (eq .type "article") }}
+  {{ $isTaggedNoftItem := and (eq $group "noft") (in (.tags | default (slice)) "NOFT-KT") }}
+  {{ if and $inGroup (or (eq .type "article") $isTaggedNoftItem) }}
     {{ $matches = $matches | append . }}
     {{ $years = $years | append (printf "%v" .year) }}
     {{ range (split (partial "publication-member-ids.html" (dict "publication" . "memberAliases" $memberAliases)) " ") }}
@@ -79,6 +80,9 @@
         {{ $showInToolbar = true }}
       {{ end }}
       {{ if and $group (in . "MatCat") }}
+        {{ $showInToolbar = true }}
+      {{ end }}
+      {{ if and (eq $group "noft") (eq . "NOFT-KT") }}
         {{ $showInToolbar = true }}
       {{ end }}
       {{ if and $showInToolbar (not (in $tagSet .)) }}
@@ -193,9 +197,10 @@
         <ol class="publication-list" data-publication-list>
           {{ range (sort $matches "year" "asc" | collections.Reverse) }}
         {{ $tagSlugs := slice }}
+        {{ $bibType := .type | default "article" }}
         {{ $bibKey := .id | default ((replace .title " " "-") | urlize) }}
         {{ $bibtexLines := slice
-          (printf "@article{%s," $bibKey)
+          (printf "@%s{%s," $bibType $bibKey)
           (printf "  title = {%s}," .title)
         }}
         {{ with .authors }}
@@ -203,6 +208,18 @@
         {{ end }}
         {{ with .journal }}
           {{ $bibtexLines = $bibtexLines | append (printf "  journal = {%s}," .) }}
+        {{ end }}
+        {{ with .booktitle }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  booktitle = {%s}," .) }}
+        {{ end }}
+        {{ with .publisher }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  publisher = {%s}," .) }}
+        {{ end }}
+        {{ with .isbn }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  isbn = {%s}," .) }}
+        {{ end }}
+        {{ with .institution }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  institution = {%s}," .) }}
         {{ end }}
         {{ with .year }}
           {{ $bibtexLines = $bibtexLines | append (printf "  year = {%v}," .) }}
@@ -218,9 +235,17 @@
         {{ with .pages }}
           {{ $bibtexLines = $bibtexLines | append (printf "  pages = {%s}," .) }}
         {{ end }}
-        {{ with .doi }}
-          {{ $bibtexLines = $bibtexLines | append (printf "  doi = {%s}," .) }}
-          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," (printf "https://doi.org/%s" .)) }}
+        {{ with .chapter }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  chapter = {%s}," .) }}
+        {{ end }}
+        {{ with .report_number }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  number = {%s}," .) }}
+        {{ end }}
+        {{ if .doi }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  doi = {%s}," .doi) }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," (printf "https://doi.org/%s" .doi)) }}
+        {{ else if .url }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," .url) }}
         {{ end }}
         {{ $bibtexLines = $bibtexLines | append "}" }}
         {{ $bibtex := delimit $bibtexLines "\n" }}
@@ -242,8 +267,10 @@
           {{ end }}
 
           <h3 class="publication-entry__title">
-            {{ with $publication.doi }}
-              <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
+            {{ if $publication.doi }}
+              <a href="https://doi.org/{{ $publication.doi }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
+            {{ else if $publication.url }}
+              <a href="{{ $publication.url }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
             {{ else }}
               {{ $publication.title }}
             {{ end }}
@@ -251,11 +278,18 @@
 
           <div class="publication-entry__citation-row">
             <p class="publication-entry__citation">
-            {{ with .journal }}<em>{{ . }}</em>{{ end }},
+            {{ if $publication.booktitle }}
+              <em>{{ $publication.booktitle }}</em>
+            {{ else if $publication.journal }}
+              <em>{{ $publication.journal }}</em>
+            {{ end }}
             <strong>{{ .year }}</strong>
             {{ with .volume }}, {{ . }}{{ end }}
             {{ with .issue }}({{ . }}){{ end }}
             {{ with .pages }}, {{ . }}{{ end }}
+            {{ with .publisher }}, {{ . }}{{ end }}
+            {{ with .institution }}, {{ . }}{{ end }}
+            {{ with .report_number }}, {{ . }}{{ end }}
             </p>
             <div class="publication-entry__actions publication-entry__actions--inline">
               {{ with .doi }}

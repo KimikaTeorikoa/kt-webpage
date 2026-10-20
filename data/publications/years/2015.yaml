@@ -248,6 +248,7 @@ items:
   - NOFT
   - QCD-KT
   - Bio-KT
+  - NOFT-KT
   authors:
   - Eloy Ramos-Cordoba
   - Xabier Lopez
@@ -323,6 +324,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - N. H. March
@@ -362,6 +364,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - N. H. March
@@ -401,6 +404,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - X. Lopez
   - M. Piris
@@ -466,6 +470,7 @@ items:
   tags:
   - NOFT
   - Bio-KT
+  - NOFT-KT
   authors:
   - X. Lopez
   - M. Piris
@@ -551,6 +556,7 @@ items:
   tags:
   - NOFT
   - QCD-KT
+  - NOFT-KT
   authors:
   - Jerzy Cioslowski
   - Mario Piris

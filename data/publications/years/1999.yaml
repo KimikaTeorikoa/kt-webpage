@@ -118,3 +118,47 @@ items:
   - J. M. Ugalde
   - R. J. Boyd
   teachpress_id: '379'
+- id: piris-1999-estudio-aciltioureas
+  type: article
+  title: Estudio estructural de aciltioureas 3,3-dimetilsustituidas
+  year: 1999
+  authors:
+  - M. Sosa
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Revista Cubana de Química
+  volume: '11'
+  issue: '3'
+  pages: '51'
+  url: https://www.uo.edu.cu/ojs/index.php/cq/issue/archive?issuesPage=2
+- id: piris-1999-fisica-cuantica
+  type: book
+  title: Física Cuántica
+  year: 1999
+  authors:
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  publisher: Editorial ISCTN, La Habana, Cuba
+  isbn: 959-7136-11-2
+  url: https://www.ehu.eus/chemistry/theory/old/wordpress/wp-content/uploads/fisica_cuantica_Piris.pdf
+- id: 10-1023-a-1019111828412
+  type: article
+  title: A generalized self-consistent-field procedure in the improved BCS theory
+  year: 1999
+  authors:
+  - Mario Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Journal of Mathematical Chemistry
+  volume: '25'
+  issue: '1'
+  pages: 47-54
+  doi: 10.1023/A:1019111828412

@@ -200,3 +200,19 @@ items:
   - J. M. Mercero
   - J. M. Ugalde
   teachpress_id: '278'
+- id: 10-1016-s0022-2860-01-00626-3
+  type: article
+  title: Conformational analysis of 3,3-disubstituted benzoylthioureas using X-ray diffraction and ab initio calculations
+  year: 2001
+  authors:
+  - M. Sosa-Albertus
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Journal of Molecular Structure
+  volume: '598'
+  issue: 2-3
+  pages: 261-265
+  doi: 10.1016/S0022-2860(01)00626-3

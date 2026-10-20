@@ -97,6 +97,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Ugalde
@@ -186,6 +187,7 @@ items:
   - MatCat-KT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Mercero
   - M. Piris
@@ -207,6 +209,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Matxain
@@ -277,6 +280,7 @@ items:
   tags:
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Matxain
   - M. Piris

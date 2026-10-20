@@ -12,6 +12,7 @@ items:
   tags:
   - IT2067
   - NOFT
+  - NOFT-KT
   authors:
   - Ion Mitxelena
   - Juan Felipe Huan Lew-Yee
@@ -116,6 +117,7 @@ items:
   tags:
   - IT2067
   - NOFT
+  - NOFT-KT
   authors:
   - Juan Felipe Huan Lew-Yee
   - Ion Mitxelena
@@ -824,3 +826,30 @@ items:
   volume: '17'
   issue: '1'
   pages: '4732'
+- id: 10-26434-chemrxiv-15008226-v1
+  type: misc
+  title: Occupation-Space Variational Quantum Optimization
+  year: 2026
+  authors:
+  - Edison X. Salazar
+  - Mario Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  doi: 10.26434/chemrxiv.15008226/v1
+  journal: ChemRxiv
+- id: salazar-2026-electronic-structure-occupation-numbers
+  type: misc
+  title: Electronic Structure Calculations from Occupation Numbers on Quantum Computers
+  year: 2026
+  authors:
+  - E. X. Salazar
+  - J. F. H. Lew-Yee
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: arXiv:2607.15425 [physics.chem-ph]
+  url: https://arxiv.org/abs/2607.15425

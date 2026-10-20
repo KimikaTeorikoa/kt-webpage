@@ -238,3 +238,33 @@ items:
   - A. Castro
   - A. Rubio
   teachpress_id: '600'
+- id: piris-2003-second-quantization-fermions
+  type: inbook
+  title: Second Cuantization for Fermions
+  year: 2003
+  authors:
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: Introduction to Advanced Topics in Computational Chemistry
+  pages: 29-39
+  publisher: Havana, Cuba
+  url: http://www.ehu.es/chemistry/theory/mario.piris/files/second_quantization.pdf
+- id: 10-1002-qua-10707
+  type: article
+  title: One-particle density matrix functional for correlation in molecular systems
+  year: 2003
+  authors:
+  - Mario Piris
+  - Peter Otto
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: International Journal of Quantum Chemistry
+  volume: '94'
+  issue: '6'
+  pages: 317-323
+  doi: 10.1002/qua.10707

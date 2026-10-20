@@ -180,3 +180,20 @@ items:
   - C. Sarasola
   - J. M. Ugalde
   teachpress_id: '570'
+- id: 10-1063-1-474363
+  type: article
+  title: The Bardeen-Cooper-Schrieffer approach to electron correlation in the density matrix formalism
+  year: 1997
+  authors:
+  - M. Piris
+  - L. A. Montero
+  - N. Cruz
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: The Journal of Chemical Physics
+  volume: '107'
+  issue: '1'
+  pages: 180-187
+  doi: 10.1063/1.474363

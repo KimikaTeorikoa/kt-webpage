@@ -75,6 +75,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - I. Mitxelena
   - M. Piris
@@ -214,6 +215,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '674'
@@ -542,6 +544,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - I. Mitxelena
   - M. Piris
@@ -639,6 +642,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - I. Mitxelena
   - M. Rodriguez-Mayorga
@@ -1014,3 +1018,33 @@ items:
   authors:
   - Eduard Matito
   teachpress_id: '995'
+- id: piris-2018-role-n-representability
+  type: inbook
+  title: The role of the N-representability in one-particle functional theories
+  year: 2018
+  authors:
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: 'Many-body approaches at different scales: a tribute to N. H. March on the occasion of his 90th birthday'
+  chapter: '22'
+  pages: 261-278
+  publisher: Springer
+  doi: 10.1007/978-3-319-72374-7
+- id: piris-2018-electron-pairing-approach-noft
+  type: inbook
+  title: The electron pairing approach in Natural Orbital Functional Theory
+  year: 2018
+  authors:
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: Theoretical and Quantum Chemistry at the Dawn of the 21st Century
+  chapter: '22'
+  pages: 593-620
+  publisher: Apple Academic Press
+  doi: 10.1201/9781351170963

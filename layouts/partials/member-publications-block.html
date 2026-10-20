@@ -96,6 +96,18 @@
         {{ with $publication.journal }}
           {{ $bibtexLines = $bibtexLines | append (printf "  journal = {%s}," .) }}
         {{ end }}
+        {{ with $publication.booktitle }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  booktitle = {%s}," .) }}
+        {{ end }}
+        {{ with $publication.publisher }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  publisher = {%s}," .) }}
+        {{ end }}
+        {{ with $publication.isbn }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  isbn = {%s}," .) }}
+        {{ end }}
+        {{ with $publication.institution }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  institution = {%s}," .) }}
+        {{ end }}
         {{ with $publication.year }}
           {{ $bibtexLines = $bibtexLines | append (printf "  year = {%v}," .) }}
         {{ end }}
@@ -110,9 +122,17 @@
         {{ with $publication.pages }}
           {{ $bibtexLines = $bibtexLines | append (printf "  pages = {%s}," .) }}
         {{ end }}
-        {{ with $publication.doi }}
-          {{ $bibtexLines = $bibtexLines | append (printf "  doi = {%s}," .) }}
-          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," (printf "https://doi.org/%s" .)) }}
+        {{ with $publication.chapter }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  chapter = {%s}," .) }}
+        {{ end }}
+        {{ with $publication.report_number }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  number = {%s}," .) }}
+        {{ end }}
+        {{ if $publication.doi }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  doi = {%s}," $publication.doi) }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," (printf "https://doi.org/%s" $publication.doi)) }}
+        {{ else if $publication.url }}
+          {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," $publication.url) }}
         {{ end }}
         {{ $bibtexLines = $bibtexLines | append "}" }}
         {{ $bibtex := delimit $bibtexLines "\n" }}
@@ -125,8 +145,10 @@
           {{ end }}
 
           <h3 class="publication-entry__title">
-            {{ with $publication.doi }}
-              <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
+            {{ if $publication.doi }}
+              <a href="https://doi.org/{{ $publication.doi }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
+            {{ else if $publication.url }}
+              <a href="{{ $publication.url }}" target="_blank" rel="noopener">{{ $publication.title }}</a>
             {{ else }}
               {{ $publication.title }}
             {{ end }}
@@ -134,11 +156,18 @@
 
           <div class="publication-entry__citation-row">
             <p class="publication-entry__citation">
-              {{ with $publication.journal }}<em>{{ . }}</em>{{ end }}
+              {{ if $publication.booktitle }}
+                <em>{{ $publication.booktitle }}</em>
+              {{ else if $publication.journal }}
+                <em>{{ $publication.journal }}</em>
+              {{ end }}
               {{ with $publication.year }}, <strong>{{ . }}</strong>{{ end }}
               {{ with $publication.volume }}, {{ . }}{{ end }}
               {{ with $publication.issue }}({{ . }}){{ end }}
               {{ with $publication.pages }}, {{ . }}{{ end }}
+              {{ with $publication.publisher }}, {{ . }}{{ end }}
+              {{ with $publication.institution }}, {{ . }}{{ end }}
+              {{ with $publication.report_number }}, {{ . }}{{ end }}
             </p>
             <div class="publication-entry__actions publication-entry__actions--inline">
               {{ with $publication.doi }}

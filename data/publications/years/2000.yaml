@@ -177,3 +177,36 @@ items:
   - I. Alkorta
   - J. Elguero
   teachpress_id: '781'
+- id: 10-3390-50300445
+  type: article
+  title: '3,3-Dimethylacylthioureas: "S", "-S", "U" or "W" Conformation?'
+  year: 2000
+  authors:
+  - M. Sosa
+  - M. Piris
+  - G. Burton
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Molecules
+  volume: '5'
+  issue: '3'
+  pages: 445-446
+  doi: 10.3390/50300445
+- id: 10-1063-1-481419
+  type: article
+  title: The improved Bardeen-Cooper-Schrieffer method in polymers
+  year: 2000
+  authors:
+  - Mario Piris
+  - Peter Otto
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: The Journal of Chemical Physics
+  volume: '112'
+  issue: '18'
+  pages: 8187-8190
+  doi: 10.1063/1.481419

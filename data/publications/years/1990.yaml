@@ -56,3 +56,19 @@ items:
   - J. M. Ugalde
   - R. J. Boyd
   teachpress_id: '744'
+- id: voronov-1990-decay-giant-resonances
+  type: article
+  title: Decay of Giant Resonances
+  year: 1990
+  authors:
+  - V. V. Voronov
+  - M. Piris
+  - V. Y. Ponomarev
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Soviet Journal of Nuclear Physics
+  volume: '51'
+  pages: '49'
+  url: https://www.researchgate.net/publication/270566424_Gamma-Decay_of_Giant_Resonances

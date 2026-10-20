@@ -31,6 +31,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '669'
@@ -64,6 +65,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '670'
@@ -81,6 +83,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Matxain
   - F. Ruiperez
@@ -135,6 +138,7 @@ items:
   tags:
   - NOFT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Matxain
   - F. Ruiperez
@@ -332,6 +336,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '671'
@@ -561,6 +566,7 @@ items:
   - MatCat-NanoSurf
   - MatCat-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - E. Jimenez-Izal
   - J. M. Matxain
@@ -608,6 +614,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Matxain
@@ -627,6 +634,7 @@ items:
   tags:
   - NOFT
   - POL-KT
+  - NOFT-KT
   authors:
   - F. Ruiperez
   - M. Piris
@@ -647,6 +655,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Matxain

@@ -203,6 +203,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - N. H. March
@@ -579,6 +580,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - I. Mitxelena
   - M. Piris
@@ -727,6 +729,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - N. H. March
@@ -830,6 +833,8 @@ items:
   volume: '114'
   issue: '24'
   pages: 3650-3657
+  tags:
+  - NOFT-KT
   authors:
   - L. A. Montero-Cabrera
   - Y. Perez-Badell
@@ -890,6 +895,7 @@ items:
   tags:
   - NOFT
   - Bio-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - X. Lopez
@@ -979,3 +985,19 @@ items:
   - J. I. Mujika
   - C. Exley
   teachpress_id: '319'
+- id: 10-1002-chemv-201600022
+  type: article
+  title: Why Does C2 Cause so Many Problems?
+  year: 2016
+  authors:
+  - A. Deveson
+  - D. Cremer
+  - G. Frenking
+  - M. Piris
+  - S. Shaik
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: ChemViews
+  doi: 10.1002/chemv.201600022

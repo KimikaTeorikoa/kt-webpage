@@ -90,6 +90,7 @@ items:
   tags:
   - NOFT
   - MatCat-KT
+  - NOFT-KT
   authors:
   - J. M. Mercero
   - J. M. Ugalde
@@ -220,6 +221,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Rodriguez-Mayorga
   - I. Mitxelena
@@ -237,6 +239,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - I. Mitxelena
@@ -379,6 +382,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '677'
@@ -757,6 +761,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - J. F. H. Lew-Yee
   - M. Piris
@@ -865,6 +870,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - R. Quintero-Monsebaiz
   - L. I. Perea-Ramirez

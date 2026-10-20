@@ -373,3 +373,67 @@ items:
   - J. M. Mercero
   - X. Lopez
   teachpress_id: '262'
+- id: 10-1063-1-2135289
+  type: article
+  title: Assessment of a new approach for the two-electron cumulant in natural-orbital-functional theory
+  year: 2005
+  authors:
+  - P. Leiva
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: The Journal of Chemical Physics
+  volume: '123'
+  issue: '21'
+  pages: '214102'
+  doi: 10.1063/1.2135289
+- id: 10-1142-s0219633605001969
+  type: article
+  title: A Natural Orbital Functional Study for the Electric Response Properties of Molecules
+  year: 2005
+  authors:
+  - Pavel Leiva
+  - Mario Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Journal of Theoretical and Computational Chemistry
+  volume: '4'
+  issue: '4'
+  pages: 1165-1173
+  doi: 10.1142/S0219633605001969
+- id: 10-1016-j-theochem-2005-01-023
+  type: article
+  title: 'Natural orbital functional theory: ionization potentials, equilibrium geometries and vibrational frequencies'
+  year: 2005
+  authors:
+  - Pavel Leiva
+  - Mario Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: 'Journal of Molecular Structure: THEOCHEM'
+  volume: '719'
+  issue: 1-3
+  pages: 63-67
+  doi: 10.1016/j.theochem.2005.01.023
+- id: 10-1002-qua-20291
+  type: article
+  title: Natural orbital functional for correlation in polymers
+  year: 2005
+  authors:
+  - Mario Piris
+  - Peter Otto
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: International Journal of Quantum Chemistry
+  volume: '102'
+  issue: '1'
+  pages: 90-97
+  doi: 10.1002/qua.20291

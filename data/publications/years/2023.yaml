@@ -312,6 +312,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - Juan Felipe Huan Lew-Yee
   - Jorge M. del Campo
@@ -517,6 +518,7 @@ items:
   tags:
   - NOFT
   - MatCat-KT
+  - NOFT-KT
   authors:
   - Jose M. Mercero
   - Rafael Grande-Aztatzi
@@ -587,6 +589,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - J. F. H. Lew-Yee
   - M. Piris

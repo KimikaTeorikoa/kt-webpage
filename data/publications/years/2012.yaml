@@ -359,6 +359,7 @@ items:
   - QCD-KT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - X. Lopez
   - F. Ruiperez
@@ -430,6 +431,7 @@ items:
   - MatCat-NanoSurf
   - MatCat-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - E. Jimenez-Izal
   - J. M. Matxain
@@ -451,6 +453,7 @@ items:
   - MatCat-KT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Matxain
   - M. Piris
@@ -485,6 +488,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Matxain
@@ -506,6 +510,7 @@ items:
   - NOFT
   - Bio-KT
   - POL-KT
+  - NOFT-KT
   authors:
   - J. M. Matxain
   - M. Piris

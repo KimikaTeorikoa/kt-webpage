@@ -158,3 +158,18 @@ items:
   - J. M. Ugalde
   - C. Sarasola
   teachpress_id: '785'
+- id: capote-1994-quasiparticle-state-densities
+  type: inproceedings
+  title: 'One and Two Quasiparticle State Densities in the ESM: Combinatorial Approach vs. Exact Results'
+  year: 1994
+  authors:
+  - R. Capote
+  - M. Piris
+  - R. Pedrosa
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: Proceedings of the International Conference on Nuclear Data for Science and Technology
+  volume: '1'
+  pages: '490'

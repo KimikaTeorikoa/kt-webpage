@@ -262,3 +262,53 @@ items:
   - A. Irigoras
   - J. M. Ugalde
   teachpress_id: '324'
+- id: piris-2004-natural-orbital-functional-polymers
+  type: inbook
+  title: 'Natural orbital functional theory: Molecules and Polymers'
+  year: 2004
+  authors:
+  - M. Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: Recent Research Developments in Quantum Chemistry
+  volume: '4'
+  pages: 43-69
+  publisher: Transworld Research Network
+  url: http://www.ehu.es/chemistry/theory/mario.piris/files/Recent_Res_Devel_Quantum_Chem.pdf
+- id: 10-1016-s0379-6779-03-00417-x
+  type: article
+  title: Dynamic (hyper)polarizability calculations for polymers with linear and cyclic pi-conjugated elementary cells
+  year: 2004
+  authors:
+  - P. Otto
+  - M. Piris
+  - A. Martinez
+  - J. Ladik
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Synthetic Metals
+  volume: '141'
+  issue: '3'
+  pages: 277-280
+  doi: 10.1016/S0379-6779(03)00417-X
+- id: 10-1002-qua-10799
+  type: article
+  title: 'Natural orbital functional approach: Calculation of dielectric properties in molecules'
+  year: 2004
+  authors:
+  - Mario Piris
+  - Alberto Martinez
+  - Peter Otto
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: International Journal of Quantum Chemistry
+  volume: '97'
+  issue: '4'
+  pages: 827-831
+  doi: 10.1002/qua.10799

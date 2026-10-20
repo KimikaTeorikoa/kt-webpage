@@ -51,6 +51,7 @@ items:
   tags:
   - NOFT
   - POL-KT
+  - NOFT-KT
   authors:
   - M. Piris
   - F. Ruiperez
@@ -368,6 +369,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   teachpress_id: '672'
@@ -439,6 +441,7 @@ items:
   tags:
   - NOFT
   - Bio-KT
+  - NOFT-KT
   authors:
   - X. Lopez
   - M. Piris
@@ -557,6 +560,7 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - J. M. Ugalde
@@ -671,6 +675,7 @@ items:
   tags:
   - NOFT
   - QCD-KT
+  - NOFT-KT
   authors:
   - Eloy Ramos-Cordoba
   - Pedro Salvador
@@ -690,7 +695,26 @@ items:
   - noft
   tags:
   - NOFT
+  - NOFT-KT
   authors:
   - M. Piris
   - N. H. March
   teachpress_id: '684'
+- id: piris-2014-one-electron-picture-pnof5-chapter
+  type: inbook
+  title: The one-electron picture in the Piris Natural Orbital Functional 5 (PNOF5)
+  year: 2014
+  authors:
+  - M. Piris
+  - J. M. Matxain
+  - X. Lopez
+  - J. M. Ugalde
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  booktitle: Highlights in Theoretical Chemistry
+  volume: '5'
+  pages: 5-15
+  publisher: Springer
+  url: http://www.springer.com/la/book/9783642412714

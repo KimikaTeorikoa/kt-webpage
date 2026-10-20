@@ -133,3 +133,34 @@ items:
   - J. E. Fowler
   - J. M. Ugalde
   teachpress_id: '493'
+- id: piris-1998-hfb-correlation-molecular
+  type: article
+  title: Método de HFB en la correlación molecular
+  year: 1998
+  authors:
+  - M. Piris
+  - R. Cruz
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Revista Cubana de Física
+  volume: '15'
+  issue: '1'
+  pages: '3'
+  url: http://www.fisica.uh.cu/biblioteca/revcubfi/1998/Vol.15,%20No.1/index.htm
+- id: 10-1023-a-1019141812966
+  type: article
+  title: Analytic gradients in the improved BCS method
+  year: 1998
+  authors:
+  - Mario Piris
+  groups:
+  - noft
+  tags:
+  - NOFT-KT
+  journal: Journal of Mathematical Chemistry
+  volume: '23'
+  issue: 3-4
+  pages: 399-404
+  doi: 10.1023/A:1019141812966
