@@ -200,7 +200,14 @@ def build_publication_entry_from_crossref(message: dict, group: str, slug: str) 
     # Extract basic fields (robustness modest for prototype)
     def first_title(msg):
         titles = msg.get("title") or []
-        return str(titles[0]) if titles else ""
+        if not titles:
+            return ""
+        # Crossref titles may carry JATS markup (e.g. <scp>ii</scp>) and embedded
+        # newlines/indentation; strip tags and collapse whitespace.
+        title = re.sub(r"<scp>(.*?)</scp>", lambda m: m.group(1).strip().upper(), str(titles[0]), flags=re.S)
+        title = re.sub(r"<[^>]+>", "", title)
+        title = re.sub(r"\s+", " ", title).strip()
+        return re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", title))
 
     def extract_authors(msg):
         out = []
@@ -335,6 +342,15 @@ def write_group_research_index(group: str, fm: dict, dry_run: bool = False, forc
         "weight": 2,
         "header": header,
     }
+    # Preserve redirect aliases on the existing index (e.g. URLs of retired
+    # research lines that now point to the research index).
+    if out_file.exists():
+        try:
+            existing_fm, _ = load_front_matter(out_file)
+            if existing_fm.get("aliases"):
+                front["aliases"] = list(existing_fm["aliases"])
+        except Exception as exc:
+            print(f"Warning: could not read existing aliases from {out_file}: {exc}")
     body = "{{< research_index_list >}}\n"
 
     if dry_run:
@@ -487,6 +503,10 @@ def write_research_page(group: str, rl: dict, publications: list[dict], dry_run:
         "hide_page_hero": True,
         "content_frame": False,
     }
+    # Hugo redirect aliases (e.g. old URLs after a slug rename) are declared on the
+    # research line in the group's _index.md so they survive regeneration.
+    if rl.get("aliases"):
+        fm["aliases"] = list(rl["aliases"])
 
     # If a page already exists, preserve any existing toc_image/toc_from/toc_landing
     # for matching publications (match by DOI). The generated list is authoritative:
@@ -571,10 +591,11 @@ def process_group(group: str, args) -> int:
     modified = False
     for idx, rl in enumerate(lines):
         slug = rl.get("slug") or slugify(rl.get("title", "line"))
-        # ensure card_excerpt (short, 4-5 words) and card_tone (group key) exist
+        # ensure card_excerpt (short, 4-5 words) and card_tone (group key) exist;
+        # keep a hand-written card_excerpt if one is already set
         summary = rl.get("summary") or rl.get("intro") or ""
         short = make_card_excerpt(summary, nwords=excerpt_words)
-        if rl.get("card_excerpt") != short:
+        if not rl.get("card_excerpt"):
             rl["card_excerpt"] = short
             modified = True
         if rl.get("card_tone") != group:

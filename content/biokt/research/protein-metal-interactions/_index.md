@@ -1,6 +1,6 @@
 ---
-title: Quantum mechanics of protein-metal interactions
-eyebrow: Protein Metal Interactions
+title: Quantum mechanics of protein–metal interactions
+eyebrow: Protein–Metal Interactions
 slug: protein-metal-interactions
 weight: 1
 publications:
@@ -16,11 +16,52 @@ publications:
   volume: '25'
   issue: '39'
   pages: 26429-26442
+- doi: 10.1039/d3cp02070c
+  title: Rules governing metal coordination in Aβ–Zn(II) complex models from quantum
+    mechanical calculations
+  authors:
+  - Julen Aduriz-Arrizabalaga
+  - Jose M. Mercero
+  - David De Sancho
+  - Xabier Lopez
+  year: 2023
+  journal: Physical Chemistry Chemical Physics
+  volume: '25'
+  issue: '40'
+  pages: 27618-27627
+- doi: 10.1016/j.jinorgbio.2024.112807
+  title: 'Designing mimosine-containing peptides as efficient metal chelators: Insights
+    from molecular dynamics and quantum calculations'
+  authors:
+  - D. Silva-Brea
+  - J. Aduriz-Arrizabalaga
+  - D. De Sancho
+  - X. Lopez
+  year: 2025
+  journal: Journal of Inorganic Biochemistry
+  volume: '264'
+  issue: ''
+  pages: '112807'
+- doi: 10.1016/j.jinorgbio.2020.111169
+  title: 'Theoretical characterization of Al(III) binding to KSPVPKSPVEEKG: Insights
+    into the propensity of aluminum to interact with key sequences for neurofilament
+    formation'
+  authors:
+  - Rafael Grande-Aztatzi
+  - Elena Formoso
+  - Jon I. Mujika
+  - David de Sancho
+  - Xabier Lopez
+  year: 2020
+  journal: Journal of Inorganic Biochemistry
+  volume: '210'
+  issue: ''
+  pages: '111169'
 hide_page_hero: true
 content_frame: false
 ---
 
-Aluminum is the third most abundant element in earth’s crust, but its chemical properties have prevented its presence in the biological cycle of living organisms. Nevertheless, the acidification of the environment due mainly to human intervention has facilitated its solubilitation, thus increasing its bioavailability. Toxic effects of aluminum in the human body have been reported, and this element has been related with neurodegerentative diseases such as Alzheimer Disease .
+Aluminium is the third most abundant element in the Earth's crust, yet its chemistry has kept it out of the biological cycle. Environmental acidification, driven mainly by human activity, has increased its solubility and therefore its bioavailability, and aluminium toxicity has been linked to neurodegenerative diseases such as Alzheimer's disease. We combine quantum-mechanical calculations and molecular dynamics to characterise how aluminium and other metal ions, such as zinc, bind to peptides and proteins, how binding reshapes their conformational landscapes, and how metal-chelating peptides can be designed.
 
 {{< research_line_publications >}}
 
