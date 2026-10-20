@@ -1,4 +1,4 @@
-{{ if in (slice "matcat" "isom") .Page.Parent.Section }}
+{{ if in (slice "matcat" "isom" "biokt") .Page.Parent.Section }}
   {{ $parent := .Page.Parent }}
   {{ $imageOverrides := dict "heterogeneous-catalysis-and-electrocatalysis" "/images/publications/toc/cctc-202301137.png" }}
   {{ partial "groups/research-lines.html" (dict "page" $parent "imageOverrides" $imageOverrides) }}

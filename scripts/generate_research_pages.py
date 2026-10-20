@@ -591,10 +591,11 @@ def process_group(group: str, args) -> int:
     modified = False
     for idx, rl in enumerate(lines):
         slug = rl.get("slug") or slugify(rl.get("title", "line"))
-        # ensure card_excerpt (short, 4-5 words) and card_tone (group key) exist
+        # ensure card_excerpt (short, 4-5 words) and card_tone (group key) exist;
+        # keep a hand-written card_excerpt if one is already set
         summary = rl.get("summary") or rl.get("intro") or ""
         short = make_card_excerpt(summary, nwords=excerpt_words)
-        if rl.get("card_excerpt") != short:
+        if not rl.get("card_excerpt"):
             rl["card_excerpt"] = short
             modified = True
         if rl.get("card_tone") != group:

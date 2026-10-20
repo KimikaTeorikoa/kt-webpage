@@ -15,9 +15,6 @@ publications:
   volume: '14'
   issue: ''
   pages: RP104950
-  toc_image: /images/publications/toc/condensates-idps-10.7554-elife.104950.png
-  toc_from: landing_page
-  toc_landing: https://doi.org/10.7554/elife.104950
 - doi: 10.1038/s42004-026-02075-7
   title: Molecular determinants of arginine versus lysine cation–π interactions in
     biomolecular condensates

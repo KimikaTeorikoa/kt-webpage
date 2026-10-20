@@ -48,7 +48,8 @@ research_lines:
   - 10.7554/elife.104950
   - 10.1038/s42004-026-02075-7
   - 10.1039/d0cp00328j
-  card_excerpt: Intrinsically disordered proteins are
+  image: /images/publications/toc/condensates-idps-10.1038-s42004-026-02075-7.png
+  card_excerpt: How disordered proteins interact, from coupled folding and binding to biomolecular condensates.
   card_tone: biokt
 - slug: protein-metal-interactions
   eyebrow: Protein–Metal Interactions
@@ -66,7 +67,7 @@ research_lines:
   - 10.1039/d3cp02070c
   - 10.1016/j.jinorgbio.2024.112807
   - 10.1016/j.jinorgbio.2020.111169
-  card_excerpt: Aluminium is the third
+  card_excerpt: How aluminium and other metal ions bind peptides and reshape their conformations.
   card_tone: biokt
 - slug: enzyme-immobilisation
   eyebrow: Enzyme Immobilisation
@@ -80,7 +81,7 @@ research_lines:
   dois:
   - 10.1021/acs.jpclett.5c03753
   - 10.1021/acs.jcim.6c00953
-  card_excerpt: We use coarse-grained molecular
+  card_excerpt: Coarse-grained simulations of how enzymes orient when immobilised on surfaces.
   card_tone: biokt
 resources:
   title: Software and Data Repositories
