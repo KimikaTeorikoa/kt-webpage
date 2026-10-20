@@ -14,6 +14,7 @@ group_labels: ["Bio-KT"]
 role: "Bio-KT Group Co-Leader"
 position: "Investigador Doctor Permanente"
 affiliation: "EHU & DIPC"
+email: "david.desancho [@] ehu.eus"
 publication_names:
   - "David de Sancho"
   - "D. de Sancho"

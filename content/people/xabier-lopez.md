@@ -15,6 +15,7 @@ group_labels: ["Bio-KT"]
 role: "KT Group Co-Leader"
 position: "Catedratico de Universidad"
 affiliation: "EHU & DIPC"
+email: "xabier.lopez [@] ehu.eus"
 publication_names:
   - "Xabier Lopez"
   - "X. Lopez"
