@@ -16,6 +16,7 @@ position: "Investigador Doctor Permanente"
 affiliation: "EHU & DIPC"
 email: "david.desancho [@] ehu.eus"
 google_scholar: "https://scholar.google.es/citations?user=KJizEBYAAAAJ"
+twitter: "https://x.com/daviddesancho"
 publication_names:
   - "David de Sancho"
   - "D. de Sancho"
