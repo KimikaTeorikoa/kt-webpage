@@ -9,7 +9,7 @@ photo: "/images/members/researchers/elisa.jpg"
 groups: ["matcat"]
 group_labels: ["MatCat-KT"]
 role: "MatCat-KT Group Co-Leader"
-position: "Profesora Adjunta"
+position: "Profesora Agregada"
 affiliation: "EHU & DIPC"
 publication_names:
   - "Elisa Jimenez-Izal"
