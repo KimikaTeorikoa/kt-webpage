@@ -48,7 +48,7 @@ research_lines:
   - 10.7554/elife.104950
   - 10.1038/s42004-026-02075-7
   - 10.1039/d0cp00328j
-  image: /images/publications/toc/condensates-idps-10.1038-s42004-026-02075-7.png
+  image: /images/research/biokt/condensates-idps.jpg
   card_excerpt: How disordered proteins interact, from coupled folding and binding to biomolecular condensates.
   card_tone: biokt
 - slug: protein-metal-interactions
