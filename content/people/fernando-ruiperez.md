@@ -26,7 +26,7 @@ header:
   variant: "subgroup"
   menu: "polkt"
   accent: "polkt"
-  brand_name: "Pol-KT Lab"
+  brand_name: "Pol-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/polkt/"
 ---

@@ -23,7 +23,7 @@ header:
   variant: "subgroup"
   menu: "noft"
   accent: "noft"
-  brand_name: "NOFT-KT Lab"
+  brand_name: "NOFT-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/noft/"
 ---

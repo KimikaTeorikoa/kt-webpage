@@ -2,7 +2,7 @@
 title: "MoMag-KT"
 layout: subgroup
 hide_hero: true
-home_title: "Welcome to the MoMag-KT Laboratory"
+home_title: "Welcome to the MoMag-KT Group"
 weight: 8
 research_group_card:
   key: "momag"
@@ -17,6 +17,6 @@ research_group_card:
       name: "Dani Reta"
 ---
 
-MoMag-KT Laboratory operates within the Donostia Kimika Teorikoa research group and focuses on molecular magnetism, magnetic materials and the electronic-structure origins of structure-property relationships in open-shell systems. The section now uses the same content-first subgroup landing pattern as the other KT groups.
+MoMag-KT Group operates within the Donostia Kimika Teorikoa Laboratory and focuses on molecular magnetism, magnetic materials and the electronic-structure origins of structure-property relationships in open-shell systems. The section now uses the same content-first subgroup landing pattern as the other KT groups.
 
 The visual block on the right condenses three broad directions that can later branch into specific research-line pages.

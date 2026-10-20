@@ -7,7 +7,7 @@ aliases:
 hide_page_hero: true
 weight: 124
 member_type: "postdoc"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 photo: "/images/members/postdocs/dulce-guzman-ocampo.jpg"
 role: "Postdoctoral Researcher"
@@ -31,7 +31,7 @@ header:
   variant: "subgroup"
   menu: "biokt"
   accent: "biokt"
-  brand_name: "Bio-KT Lab"
+  brand_name: "Bio-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/biokt/"
 ---

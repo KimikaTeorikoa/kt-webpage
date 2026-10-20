@@ -8,7 +8,7 @@ header:
   variant: subgroup
   menu: noft
   accent: noft
-  brand_name: NOFT Lab
+  brand_name: NOFT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /noft/
 contact:

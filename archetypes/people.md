@@ -33,7 +33,7 @@ member_type: "researcher"
 
 # Optional structured contact information.
 # Leave the field empty or remove it if not available.
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 phone: "+34 000 000 000"
 email: "name.surname [@] ehu.eus"
@@ -94,7 +94,7 @@ header:
   variant: "subgroup"
   menu: "matcat"
   accent: "matcat"
-  brand_name: "MatCat-KT Lab"
+  brand_name: "MatCat-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/matcat/"
 ---

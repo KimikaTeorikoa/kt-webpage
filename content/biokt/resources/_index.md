@@ -8,13 +8,13 @@ header:
   variant: subgroup
   menu: biokt
   accent: biokt
-  brand_name: Bio-KT Lab
+  brand_name: Bio-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /biokt/
 resources:
   title: Software, Data and Group Resources
   items:
-  - name: BIOKT Lab Handbook
+  - name: BIOKT Group Handbook
     summary: How we work in the BIOKT group, from arrival and project organisation
       to MD simulation checklists, and the reasons behind each practice.
     link: https://biokt.github.io/lab-handbook/

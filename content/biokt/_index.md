@@ -1,14 +1,14 @@
 ---
-title: Bio-KT Lab
+title: Bio-KT Group
 layout: subgroup
 hide_hero: true
-home_title: Welcome to the Bio-KT Laboratory
+home_title: Welcome to the Bio-KT Group
 weight: 1
 header:
   variant: subgroup
   menu: biokt
   accent: biokt
-  brand_name: Bio-KT Lab
+  brand_name: Bio-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /biokt/
 cascade:
@@ -16,7 +16,7 @@ cascade:
     variant: subgroup
     menu: biokt
     accent: biokt
-    brand_name: Bio-KT Lab
+    brand_name: Bio-KT Group
     brand_note: Euskal Herriko Unibertsitatea & DIPC
     brand_url: /biokt/
 research_group_card:
@@ -88,7 +88,7 @@ research_lines:
 resources:
   title: Software, Data and Group Resources
   items:
-  - name: BIOKT Lab Handbook
+  - name: BIOKT Group Handbook
     summary: How we work in the BIOKT group, from arrival and project organisation
       to MD simulation checklists, and the reasons behind each practice.
     link: https://biokt.github.io/lab-handbook/
@@ -116,6 +116,6 @@ contact:
       github: https://github.com/daviddesancho
 ---
 
-Bio-KT Laboratory operates within the Donostia Kimika Teorikoa research group and focuses on theoretical chemistry tools for biologically relevant molecules, recognition processes, conformational dynamics and reactive systems. The subgroup now follows the same shared landing structure used across the KT migration.
+Bio-KT Group operates within the Donostia Kimika Teorikoa Laboratory and focuses on theoretical chemistry tools for biologically relevant molecules, recognition processes, conformational dynamics and reactive systems. The subgroup now follows the same shared landing structure used across the KT migration.
 
 The diagram on the right points to three broad research directions that can later unfold into more specific project pages. 

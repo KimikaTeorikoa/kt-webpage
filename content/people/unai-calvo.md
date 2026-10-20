@@ -7,7 +7,7 @@ aliases:
 hide_page_hero: true
 weight: 226
 member_type: "phd"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 groups: ["polkt"]
 group_labels: ["Pol-KT"]
@@ -23,7 +23,7 @@ header:
   variant: "subgroup"
   menu: "polkt"
   accent: "polkt"
-  brand_name: "Pol-KT Lab"
+  brand_name: "Pol-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/polkt/"
 ---

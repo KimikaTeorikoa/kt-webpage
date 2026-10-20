@@ -16,15 +16,15 @@ This file contains the group metadata, research lines and optional resources. Th
 
 ```yaml
 ---
-title: "Bio-KT Lab"
+title: "Bio-KT Group"
 hide_hero: true
-home_title: "Welcome to the Bio-KT Laboratory"
+home_title: "Welcome to the Bio-KT Group"
 weight: 3
 header:
   variant: "subgroup"
   menu: "biokt"
   accent: "biokt"
-  brand_name: "Bio-KT Lab"
+  brand_name: "Bio-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/biokt/"
 research_group_card:
@@ -54,7 +54,7 @@ resources:
       link: "https://github.com/daviddesancho/MasterMSM"
 ---
 
-Bio-KT Laboratory operates within the Donostia Kimika Teorikoa research group...
+Bio-KT Group operates within the Donostia Kimika Teorikoa Laboratory...
 ```
 
 ### Key front-matter fields
@@ -94,7 +94,7 @@ python3 scripts/add_group.py
 The command can also be scripted:
 
 ```bash
-python3 scripts/add_group.py --slug new-kt --label New-KT --title "New-KT Lab"
+python3 scripts/add_group.py --slug new-kt --label New-KT --title "New-KT Group"
 ```
 
 It creates the group landing page, members, publications, research and contact

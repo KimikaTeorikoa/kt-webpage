@@ -6,7 +6,7 @@ hide_page_hero: true
 weight: 17
 member_type: "researcher"
 email: "jm.mercero [@] ehu.eus"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 phone: "+34 943 015 312"
 photo: "/images/members/researchers/txema.png"
@@ -28,7 +28,7 @@ header:
   variant: "subgroup"
   menu: "matcat"
   accent: "matcat"
-  brand_name: "MatCat-KT Lab"
+  brand_name: "MatCat-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/matcat/"
 ---

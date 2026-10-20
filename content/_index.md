@@ -6,7 +6,7 @@ header:
   variant: "main"
   menu: "general"
   accent: "primary"
-  brand_name: "Donostia Kimika Teorikoa Group"
+  brand_name: "Donostia Kimika Teorikoa Laboratory"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/"
 ---
