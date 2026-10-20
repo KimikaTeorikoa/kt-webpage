@@ -87,7 +87,7 @@
         </div>
       {{ end }}
 
-      {{ if or $member.Params.orcid $member.Params.researcher_id $member.Params.google_scholar $member.Params.research_gate $member.Params.scopus $member.Params.twitter $member.Params.bluesky }}
+      {{ if or $member.Params.orcid $member.Params.researcher_id $member.Params.google_scholar $member.Params.research_gate $member.Params.scopus $member.Params.twitter $member.Params.bluesky $member.Params.linkedin }}
         <div class="member-profile__links">
           {{ with $member.Params.orcid }}
             <a href="{{ . }}" aria-label="ORCID" title="ORCID">
@@ -125,6 +125,13 @@
             <a href="{{ . }}" aria-label="Bluesky" title="Bluesky" class="member-profile__social-link">
               <svg viewBox="0 0 64 57" role="img" focusable="false" aria-hidden="true">
                 <path d="M13.5 4.1C20.2 9.1 27.4 19.3 32 28.4c4.6-9.1 11.8-19.3 18.5-24.3C55.4.5 63-.7 63 8.5c0 1.8-1 15-1.6 17.2-2.1 7.7-9.8 9.6-16.6 8.4 11.9 2 14.9 8.7 8.4 15.4-12.4 12.8-17.8-3.2-19.2-7.3-.3-.8-.4-1.1-.4-.6 0-.5-.1-.2-.4.6-1.4 4.1-6.8 20.1-19.2 7.3-6.5-6.7-3.5-13.4 8.4-15.4-6.8 1.2-14.5-.7-16.6-8.4C2 23.5 1 10.3 1 8.5 1-.7 8.6.5 13.5 4.1z" fill="currentColor"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with $member.Params.linkedin }}
+            <a href="{{ . }}" aria-label="LinkedIn" title="LinkedIn" class="member-profile__social-link">
+              <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" fill="currentColor"/>
               </svg>
             </a>
           {{ end }}
