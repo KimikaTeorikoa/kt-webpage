@@ -3,7 +3,7 @@
 
 Usage:
     python3 scripts/add_group.py
-    python3 scripts/add_group.py --slug new-kt --label New-KT --title "New-KT Lab"
+    python3 scripts/add_group.py --slug new-kt --label New-KT --title "New-KT Group"
 """
 
 from __future__ import annotations
@@ -71,7 +71,7 @@ def group_navigation(slug: str) -> str:
             {"name": "Research", "url": f"/{slug}/research/"},
             {"name": "Publications", "url": f"/{slug}/publications/"},
             {"name": "Contact", "url": f"/{slug}/contact/"},
-            {"name": "KT-Group", "url": "/"},
+            {"name": "KT-Home", "url": "/"},
         ]
     }
     return yaml.safe_dump(payload, allow_unicode=True, sort_keys=False)
@@ -81,7 +81,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--slug", help="Lowercase group key, for example new-kt")
     parser.add_argument("--label", help="Public label, for example New-KT")
-    parser.add_argument("--title", help="Full title, for example New-KT Lab")
+    parser.add_argument("--title", help="Full title, for example New-KT Group")
     parser.add_argument("--logo", help="Logo path below static/, for example /images/groups/new-kt.png")
     parser.add_argument("--summary", help="Short group summary for the Research Groups directory")
     parser.add_argument("--dry-run", action="store_true", help="Show files that would be created")
@@ -97,7 +97,7 @@ def main(argv: list[str] | None = None) -> int:
 
     label_default = slug.upper()
     label = (args.label or (label_default if args.dry_run else prompt("Public label", label_default))).strip()
-    title_default = f"{label} Lab"
+    title_default = f"{label} Group"
     title = (args.title or (title_default if args.dry_run else prompt("Full title", title_default))).strip()
     logo_default = f"/images/groups/{slug}.png"
     logo = (args.logo or (logo_default if args.dry_run else prompt("Logo path", logo_default))).strip()

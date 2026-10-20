@@ -1,14 +1,14 @@
 ---
-title: Pol-KT Lab
+title: Pol-KT Group
 layout: subgroup
 hide_hero: true
-home_title: Welcome to the Pol-KT Laboratory
+home_title: Welcome to the Pol-KT Group
 weight: 4
 header:
   variant: subgroup
   menu: polkt
   accent: polkt
-  brand_name: Pol-KT Lab
+  brand_name: Pol-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /polkt/
 cascade:
@@ -16,7 +16,7 @@ cascade:
     variant: subgroup
     menu: polkt
     accent: polkt
-    brand_name: Pol-KT Lab
+    brand_name: Pol-KT Group
     brand_note: Euskal Herriko Unibertsitatea & DIPC
     brand_url: /polkt/
 research_group_card:
@@ -67,6 +67,6 @@ contact:
   Web under development
 </h2>
 
-Pol-KT Laboratory operates within the Donostia Kimika Teorikoa research group and develops theory and simulation strategies for polymers, soft materials and responsive molecular assemblies. This landing page now follows the same subgroup-home structure used throughout the migration so the section can grow consistently.
+Pol-KT Group operates within the Donostia Kimika Teorikoa Laboratory and develops theory and simulation strategies for polymers, soft materials and responsive molecular assemblies. This landing page now follows the same subgroup-home structure used throughout the migration so the section can grow consistently.
 
 The visual block on the right acts as a compact three-line overview of the current Pol-KT research landscape.

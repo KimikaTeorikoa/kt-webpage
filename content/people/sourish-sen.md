@@ -37,7 +37,7 @@ weight: 100
 member_type: "phd"
 
 # Office / building (optional)
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 
 # Full postal address (optional)
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
@@ -82,7 +82,7 @@ researcher_id: "https://scholar.google.com/citations?user=BZNTCI4AAAAJ&hl=en"
 #   variant: "subgroup"
 #   menu: "<group>"
 #   accent: "<group>"
-#   brand_name: "Your Group Lab"
+#   brand_name: "Your-KT Group"
 #   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
 #   brand_url: "/<group>/"
 ---

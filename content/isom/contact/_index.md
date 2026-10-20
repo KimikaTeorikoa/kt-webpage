@@ -8,7 +8,7 @@ header:
   variant: subgroup
   menu: isom
   accent: isom
-  brand_name: ISoM-KT Lab
+  brand_name: ISoM-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /isom/
 contact:

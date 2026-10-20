@@ -24,7 +24,7 @@ header:
   variant: "subgroup"
   menu: "isom"
   accent: "isom"
-  brand_name: "iSoM-KT Lab"
+  brand_name: "iSoM-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/isom/"
 ---

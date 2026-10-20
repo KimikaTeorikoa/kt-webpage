@@ -1,14 +1,14 @@
 ---
-title: MatCat-KT Lab
+title: MatCat-KT Group
 layout: subgroup
 hide_hero: true
-home_title: Welcome to the MatCat Laboratory
+home_title: Welcome to the MatCat Group
 weight: 1
 header:
   variant: subgroup
   menu: matcat
   accent: matcat
-  brand_name: MatCat-KT Lab
+  brand_name: MatCat-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /matcat/
   subgroup_logo: /images/groups/matcat2.png
@@ -18,7 +18,7 @@ cascade:
     variant: subgroup
     menu: matcat
     accent: matcat
-    brand_name: MatCat-KT Lab
+    brand_name: MatCat-KT Group
     brand_note: Euskal Herriko Unibertsitatea & DIPC
     brand_url: /matcat/
     subgroup_logo: /images/groups/matcat2.png
@@ -101,6 +101,6 @@ contact:
       github: https://github.com/pobmelat
 ---
 
-MatCat Laboratory operates within the Donostia Kimika Teorikoa research group and specializes in theoretical and computational approaches to catalysis and materials. Under the leadership of Dr. Elisa Jimenez-Izal and Prof. Jose M. Mercero, the lab aims to advance fundamental understanding of catalytic processes at surfaces, electrochemical interfaces and materials with uncommon chemical bonding through state-of-the-art electronic structure methods and multiscale modeling.
+MatCat Group operates within the Donostia Kimika Teorikoa Laboratory and specializes in theoretical and computational approaches to catalysis and materials. Under the leadership of Dr. Elisa Jimenez-Izal and Prof. Jose M. Mercero, the group aims to advance fundamental understanding of catalytic processes at surfaces, electrochemical interfaces and materials with uncommon chemical bonding through state-of-the-art electronic structure methods and multiscale modeling.
 
-The core research lines of the laboratory are outlined below.
+The core research lines of the group are outlined below.

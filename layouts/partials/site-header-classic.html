@@ -4,7 +4,7 @@
 {{ $menu := index site.Data.navigation $menuKey }}
 {{ $current := .RelPermalink }}
 {{ $brandName := $header.brand_name | default site.Title }}
-{{ $brandNameCompact := replaceRE " Lab$" "" $brandName }}
+{{ $brandNameCompact := replaceRE " Group$" "" $brandName }}
 {{ $brandNote := $header.brand_note | default site.Params.site_tagline }}
 {{ $homeURL := "" | absURL }}
 {{ $brandURL := (strings.TrimPrefix "/" ($header.brand_url | default "/")) | absURL }}
