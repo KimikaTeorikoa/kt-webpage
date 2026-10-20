@@ -8,7 +8,7 @@ hide_page_hero: true
 weight: 20
 member_type: "researcher"
 office: "DIPC; Building 4"
-photo: "/images/members/researchers/david-de-sancho.png"
+photo: "/images/members/researchers/david-de-sancho.jpg"
 groups: ["biokt"]
 group_labels: ["Bio-KT"]
 role: "Bio-KT Group Co-Leader"
