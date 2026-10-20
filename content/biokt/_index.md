@@ -23,8 +23,7 @@ research_group_card:
   key: biokt
   label: Bio-KT
   logo: /images/groups/biokt.png
-  logo_class: group-logo--wide
-  external_url: "https://sites.google.com/view/biokt"
+  logo_class: group-logo--wide  
   summary: Electronic structure and modelling strategies aimed at biologically relevant
     molecules, processes and interactions
   leadership_label: co-led by
