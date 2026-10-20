@@ -342,6 +342,15 @@ def write_group_research_index(group: str, fm: dict, dry_run: bool = False, forc
         "weight": 2,
         "header": header,
     }
+    # Preserve redirect aliases on the existing index (e.g. URLs of retired
+    # research lines that now point to the research index).
+    if out_file.exists():
+        try:
+            existing_fm, _ = load_front_matter(out_file)
+            if existing_fm.get("aliases"):
+                front["aliases"] = list(existing_fm["aliases"])
+        except Exception as exc:
+            print(f"Warning: could not read existing aliases from {out_file}: {exc}")
     body = "{{< research_index_list >}}\n"
 
     if dry_run:

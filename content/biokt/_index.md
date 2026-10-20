@@ -34,6 +34,22 @@ research_group_card:
     name: David de Sancho
 research_intro: false
 research_lines:
+- slug: condensates-idps
+  eyebrow: Condensates and IDPs
+  title: Intrinsically disordered proteins and biomolecular condensates
+  summary: Intrinsically disordered proteins are a central focus of our research.
+    We use molecular simulations to understand how these proteins interact, both in
+    coupled folding and binding to folded partners and with each other in biomolecular
+    condensates. We have studied the competitive binding of HIF-1α and CITED2 to the
+    TAZ1 domain of CBP, found a crossover in interaction strength between the aromatic
+    amino acids tyrosine and phenylalanine in condensates, and identified the molecular
+    determinants that distinguish arginine from lysine in cation–π interactions.
+  dois:
+  - 10.7554/elife.104950
+  - 10.1038/s42004-026-02075-7
+  - 10.1039/d0cp00328j
+  card_excerpt: Intrinsically disordered proteins are
+  card_tone: biokt
 - slug: protein-metal-interactions
   eyebrow: Protein–Metal Interactions
   title: Quantum mechanics of protein–metal interactions
@@ -49,41 +65,22 @@ research_lines:
   - 10.1039/d3cp03179a
   - 10.1039/d3cp02070c
   - 10.1016/j.jinorgbio.2024.112807
+  - 10.1016/j.jinorgbio.2020.111169
   card_excerpt: Aluminium is the third
   card_tone: biokt
-- slug: protein-conformational-transitions
-  eyebrow: Protein Conformational Transitions
-  title: Simulations of protein conformational transitions
-  aliases:
-  - /biokt/research/metal-nanoclusters-on-surfaces/
-  summary: A major interest of the group is the simulation of protein conformational
-    transitions such as folding and binding. We study ultrafast and downhill folding
-    proteins, the coupled folding and binding of intrinsically disordered proteins,
-    and the response of proteins to mechanical force, as probed in single-molecule
-    force spectroscopy with optical tweezers or atomic force microscopes. We also
-    develop analysis tools that resolve the molecular interactions driving these transitions
-    along simulation trajectories.
+- slug: enzyme-immobilisation
+  eyebrow: Enzyme Immobilisation
+  title: Coarse-grained simulations of immobilised enzymes
+  summary: We use coarse-grained molecular simulations with the Martini force field
+    to study enzymes and other biomolecules immobilised on surfaces. A key question
+    is what determines the orientation that an enzyme adopts when it is immobilised,
+    and we have used Martini simulations to identify the mechanistic determinants
+    of oriented enzyme immobilisation. We have also developed MartiniSurf, a tool
+    for automated simulations of surface-immobilised biomolecular systems with Martini.
   dois:
-  - 10.1021/acs.jcim.5c01501
-  - 10.1038/s42005-022-01125-5
-  - 10.1039/d0cp00328j
-  card_excerpt: A major interest of
-  card_tone: biokt
-- slug: kinetic-models
-  eyebrow: Kinetic Models
-  title: Kinetic models of metastable states
-  summary: We describe conformational transitions with master equation models, also
-    known as Markov state models, which represent molecular kinetics as transitions
-    between metastable states identified from simulations. We have applied these methods
-    to protein and peptide folding and to gas diffusion within enzymes, and we develop
-    new ways of building them, such as hierarchical density-based state assignment
-    and coupling to reaction–diffusion simulations. Our open-source package [MasterMSM](https://github.com/daviddesancho/MasterMSM)
-    makes the construction and analysis of these models available to others.
-  dois:
-  - 10.1063/5.0056748
-  - 10.1021/acs.jcim.9b00468
-  - 10.1063/1.5020294
-  card_excerpt: We describe conformational transitions
+  - 10.1021/acs.jpclett.5c03753
+  - 10.1021/acs.jcim.6c00953
+  card_excerpt: We use coarse-grained molecular
   card_tone: biokt
 resources:
   title: Software and Data Repositories

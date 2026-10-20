@@ -42,6 +42,21 @@ publications:
   volume: '264'
   issue: ''
   pages: '112807'
+- doi: 10.1016/j.jinorgbio.2020.111169
+  title: 'Theoretical characterization of Al(III) binding to KSPVPKSPVEEKG: Insights
+    into the propensity of aluminum to interact with key sequences for neurofilament
+    formation'
+  authors:
+  - Rafael Grande-Aztatzi
+  - Elena Formoso
+  - Jon I. Mujika
+  - David de Sancho
+  - Xabier Lopez
+  year: 2020
+  journal: Journal of Inorganic Biochemistry
+  volume: '210'
+  issue: ''
+  pages: '111169'
 hide_page_hero: true
 content_frame: false
 ---
