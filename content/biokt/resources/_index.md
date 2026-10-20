@@ -14,6 +14,10 @@ header:
 resources:
   title: Software, Data and Group Resources
   items:
+  - name: BIOKT Lab Handbook
+    summary: How we work in the BIOKT group, from arrival and project organisation
+      to MD simulation checklists, and the reasons behind each practice.
+    link: https://biokt.github.io/lab-handbook/
   - name: MasterMSM
     summary: Code for building master equation (Markov state) models of molecular
       kinetics.
@@ -26,10 +30,6 @@ resources:
     summary: Notebooks for building Markov state models from hierarchical density-based
       clustering (HDBSCAN) of molecular simulation trajectories.
     link: https://github.com/BioKT/hdbMSM
-  - name: BIOKT Lab Handbook
-    summary: How we work in the BIOKT group, from arrival and project organisation
-      to MD simulation checklists, and the reasons behind each practice.
-    link: https://biokt.github.io/lab-handbook/
 ---
 
 {{< resources_list >}}
