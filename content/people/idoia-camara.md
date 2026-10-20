@@ -17,7 +17,7 @@ header:
   variant: "subgroup"
   menu: "matcat"
   accent: "matcat"
-  brand_name: "MatCat-KT Lab"
+  brand_name: "MatCat-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/matcat/"
 ---

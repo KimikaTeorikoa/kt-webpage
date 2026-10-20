@@ -5,7 +5,7 @@ url: "/people/mikel-loizate/"
 hide_page_hero: true
 weight: 215
 member_type: "phd"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 groups: ["isom"]
 photo: "/images/members/phd/mikel-loizate.jpg"
@@ -19,7 +19,7 @@ header:
   variant: "subgroup"
   menu: "isom"
   accent: "isom"
-  brand_name: "iSoM-KT Lab"
+  brand_name: "iSoM-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/isom/"
 ---

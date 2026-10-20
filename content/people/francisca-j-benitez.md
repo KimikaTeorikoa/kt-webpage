@@ -5,7 +5,7 @@ url: "/people/francisca-j-benitez/"
 hide_page_hero: true
 weight: 123
 member_type: "postdoc"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 photo: "/images/members/postdocs/francisca.jpeg"
 groups: ["isom"]
@@ -25,7 +25,7 @@ header:
   variant: "subgroup"
   menu: "isom"
   accent: "isom"
-  brand_name: "iSoM-KT Lab"
+  brand_name: "iSoM-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/isom/"
 ---

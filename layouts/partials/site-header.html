@@ -63,7 +63,7 @@
   <div class="brand-band">
     <div class="container brand-row">
       {{ $brandName := $header.brand_name | default site.Title }}
-      {{ $brandNameCompact := replaceRE " Lab$" "" $brandName }}
+      {{ $brandNameCompact := replaceRE " Group$" "" $brandName }}
       <div class="brand-lockup">
         <a class="brand-lockup__logo-link" href="{{ $homeURL }}" aria-label="Kimika Teorikoa home">
           <img class="brand-lockup__logo" src="{{ "images/logo.png" | relURL }}" alt="Kimika Teorikoa logo">
@@ -76,7 +76,7 @@
         <a class="brand-lockup__text-link" href="{{ $brandURL }}">
         <span class="brand-lockup__text">
           <span class="brand-lockup__note">{{ if eq $brandNote "Euskal Herriko Unibertsitatea" }}{{ site.Params.site_tagline }}{{ else }}{{ $brandNote }}{{ end }}</span>
-          <span class="brand-lockup__name">{{ $brandNameCompact }}{{ if ne $brandNameCompact $brandName }}<span class="brand-lockup__name-suffix"> Lab</span>{{ end }}</span>
+          <span class="brand-lockup__name">{{ $brandNameCompact }}{{ if ne $brandNameCompact $brandName }}<span class="brand-lockup__name-suffix"> Group</span>{{ end }}</span>
         </span>
         </a>
       </div>

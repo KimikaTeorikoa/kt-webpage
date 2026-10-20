@@ -7,7 +7,7 @@ office: "DIPC; Building 4"
 weight: 10
 member_type: "researcher"
 photo: "/images/members/researchers/jesus-m-ugalde.png"
-role: "KT Group Leader"
+role: "KT Laboratory Leader"
 position: "Catedratico de Universidad"
 affiliation: "EHU & DIPC"
 publication_names:

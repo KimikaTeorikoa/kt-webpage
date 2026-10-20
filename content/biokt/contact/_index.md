@@ -8,7 +8,7 @@ header:
   variant: subgroup
   menu: biokt
   accent: biokt
-  brand_name: Bio-KT Lab
+  brand_name: Bio-KT Group
   brand_note: Euskal Herriko Unibertsitatea & DIPC
   brand_url: /biokt/
 contact:

@@ -5,7 +5,7 @@ url: "/people/nicholus-bhattacharjee/"
 hide_page_hero: true
 weight: 115
 member_type: "postdoc"
-office: "Kimika Teorikoa Lab; Kimika Fakultatea"
+office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"
 photo: "/images/members/postdocs/Nicholus.jpg"
 role: "Postdoctoral Researcher"
@@ -21,7 +21,7 @@ header:
   variant: "subgroup"
   menu: "momag"
   accent: "momag"
-  brand_name: "MolMag-KT Lab"
+  brand_name: "MolMag-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/momag/"
 ---
