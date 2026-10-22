@@ -3,6 +3,8 @@ items:
     url: /noft/
   - name: Members
     url: /noft/members/
+  - name: Software
+    url: /noft/software/
   - name: Research
     url: /noft/research/
   - name: Publications

@@ -16,6 +16,7 @@
 {{ $brandNote := $header.brand_note | default site.Params.site_tagline }}
 {{ $homeURL := "" | absURL }}
 {{ $brandURL := (strings.TrimPrefix "/" ($header.brand_url | default "/")) | absURL }}
+{{ $subgroupLogoURL := $header.subgroup_logo_url | default $brandURL }}
 {{ $groupPages := sort (where site.Pages "Params.research_group_card" "ne" nil) "Params.weight" "asc" }}
 {{ $subgroupLogo := $header.subgroup_logo }}
 {{ if and (not $subgroupLogo) (eq ($header.variant | default "main") "subgroup") }}
@@ -23,6 +24,14 @@
   {{ with site.GetPage (printf "/%s/" $groupKey) }}
     {{ with .Params.research_group_card }}
       {{ $subgroupLogo = .logo }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if and (not $header.subgroup_logo_url) (eq ($header.variant | default "main") "subgroup") }}
+  {{ $groupKey := $header.menu | default $header.accent }}
+  {{ with site.GetPage (printf "/%s/" $groupKey) }}
+    {{ with .Params.header.subgroup_logo_url }}
+      {{ $subgroupLogoURL = . }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -69,7 +78,7 @@
           <img class="brand-lockup__logo" src="{{ "images/logo.png" | relURL }}" alt="Kimika Teorikoa logo">
         </a>
         {{ with $subgroupLogo }}
-          <a class="brand-lockup__subgroup-logo-link" href="{{ $brandURL }}" aria-label="{{ $brandName }}">
+          <a class="brand-lockup__subgroup-logo-link" href="{{ $subgroupLogoURL }}" aria-label="{{ $header.subgroup_logo_alt | default ($brandName | default "Subgroup logo") }}">
             <img class="brand-lockup__subgroup-logo" src="{{ (strings.TrimPrefix "/" .) | absURL }}" alt="{{ $header.subgroup_logo_alt | default ($brandName | default "Subgroup logo") }}">
           </a>
         {{ end }}

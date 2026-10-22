@@ -10,6 +10,7 @@ header:
   accent: "noft"
   brand_name: "NOFT-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
+  subgroup_logo_url: "https://donof.readthedocs.io/en/latest/intro.html"
   brand_url: "/noft/"
 cascade:
   header:
@@ -19,6 +20,7 @@ cascade:
     brand_name: "NOFT-KT Group"
     brand_note: "Euskal Herriko Unibertsitatea & DIPC"
     subgroup_logo: "/images/groups/donof.png"
+    subgroup_logo_url: "https://donof.readthedocs.io/en/latest/intro.html"
     brand_url: "/noft/"
 research_group_card:
   key: "noft"
