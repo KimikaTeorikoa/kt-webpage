@@ -8,6 +8,7 @@ items:
       - "Miquel Solà"
       - "Eduard Matito"
       - "Albert Poater"
+    pdf: "/files/theses/34-SilviaEscayolaGordils.pdf"
   - number: 33
     author: "Aaron Rodríguez"
     title: "Development, Implementation and Applications of Hybrid Quantum Chemistry Models"
@@ -15,6 +16,7 @@ items:
     supervisors:
       - "David Casanova"
       - "Eduard Matito"
+    pdf: "/files/theses/33-AaronRodriguez.pdf"
   - number: 32
     author: "Andoni Ugartemendia Biurrun"
     title: "Theoretical Design of CO Poisoning Resistant Pt Catalysts through Ge Alloying"
@@ -32,6 +34,7 @@ items:
     supervisors:
       - "Eduard Matito"
       - "Eloy Ramos-Cordoba"
+    pdf: "/files/theses/31-XiangXu.pdf"
   - number: 30
     author: "Carmelo Naim"
     title: "Determination of Nonlinear Optical Properties from Quantum Chemistry: From Benchmarks to Experimental Systems"
@@ -39,6 +42,7 @@ items:
     supervisors:
       - "Eduard Matito"
       - "Frédéric Castet"
+    pdf: "/files/theses/30-CarmeloNaim.pdf"
   - number: 29
     author: "Sebastian Sitkiewicz"
     title: "Insights into the Efficient Quantum Chemical Simulations of Nonlinear Optical Properties"
@@ -46,6 +50,7 @@ items:
     supervisors:
       - "Eduard Matito"
       - "Josep M. Luis"
+    pdf: "/files/theses/29-SebastianSitkiewicz.pdf"
   - number: 28
     author: "Maria Zubiria Ulacia"
     title: "Theoretical Study of Excited Triplet States of Aromatic Molecules for Optoelectronic Applications"
