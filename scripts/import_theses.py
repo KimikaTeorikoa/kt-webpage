@@ -142,7 +142,11 @@ def parse_theses() -> list[dict[str, object]]:
             thesis["notes"] = notes
         theses.append(thesis)
 
-    return sorted(theses, key=lambda item: int(item["number"]), reverse=True)
+    return sorted(
+        theses,
+        key=lambda item: (int(item.get("year") or 0), int(item["number"])),
+        reverse=True,
+    )
 
 
 def write_yaml(theses: list[dict[str, object]]) -> None:

@@ -1,295 +1,454 @@
 # Generated from https://www.ehu.eus/chemistry/theory/3_publications/thesis/
 items:
-  - number: 34
-    author: "Sílvia Escayola Gordils"
-    title: "Exploring the Boundaries of Aromaticity through Computational Analysis of Excited States and Complex Molecular Topologies"
-    year: 2024
-    supervisors:
-      - "Miquel Solà"
-      - "Eduard Matito"
-      - "Albert Poater"
-    pdf: "/files/theses/34-SilviaEscayolaGordils.pdf"
-  - number: 33
-    author: "Aaron Rodríguez"
-    title: "Development, Implementation and Applications of Hybrid Quantum Chemistry Models"
-    year: 2024
-    supervisors:
-      - "David Casanova"
-      - "Eduard Matito"
-    pdf: "/files/theses/33-AaronRodriguez.pdf"
-  - number: 32
-    author: "Andoni Ugartemendia Biurrun"
-    title: "Theoretical Design of CO Poisoning Resistant Pt Catalysts through Ge Alloying"
-    year: 2024
-    supervisors:
-      - "Elisa Jimenez Izal"
-      - "Jose M. Mercero Larraza"
-    pdf: "/files/theses/32-andoni-ugartemendia-biurrun.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/andoni_ugartemendia_tesia_reduced.pdf"
-    pdf_status: "downloaded"
-  - number: 31
-    author: "Xiang Xu"
-    title: "Two Aspects of Electron Correlation: Multireference Diagnostics and London Dispersion Interactions"
-    year: 2023
-    supervisors:
-      - "Eduard Matito"
-      - "Eloy Ramos-Cordoba"
-    pdf: "/files/theses/31-XiangXu.pdf"
-  - number: 30
-    author: "Carmelo Naim"
-    title: "Determination of Nonlinear Optical Properties from Quantum Chemistry: From Benchmarks to Experimental Systems"
-    year: 2022
-    supervisors:
-      - "Eduard Matito"
-      - "Frédéric Castet"
-    pdf: "/files/theses/30-CarmeloNaim.pdf"
-  - number: 29
-    author: "Sebastian Sitkiewicz"
-    title: "Insights into the Efficient Quantum Chemical Simulations of Nonlinear Optical Properties"
-    year: 2022
-    supervisors:
-      - "Eduard Matito"
-      - "Josep M. Luis"
-    pdf: "/files/theses/29-SebastianSitkiewicz.pdf"
-  - number: 28
-    author: "Maria Zubiria Ulacia"
-    title: "Theoretical Study of Excited Triplet States of Aromatic Molecules for Optoelectronic Applications"
-    year: 2022
-    supervisors:
-      - "David Casanova Casas"
-      - "Jon Mattin Matxain Beraza"
-    pdf: "/files/theses/28-maria-zubiria-ulacia.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maria.pdf"
-    pdf_status: "downloaded"
-  - number: 27
-    author: "Karina G. Madrigal-Carrillo"
-    title: "Zirconia supported WO3 catalysts for n-hexane isomerization: theoretical study"
-    year: 2022
-    supervisors:
-      - "Elisa Jimenez-Izal"
-      - "Juan I. Rodriguez"
-  - number: 26
-    author: "Mikel Irigoien Urtasun"
-    title: "Theoretical Modeling of Self-Healing Materials"
-    year: 2021
-    supervisors:
-      - "Fernando Ruipérez"
-      - "Jon M. Matxain"
-    pdf: "/files/theses/26-mikel-irigoien-urtasun.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_IRIGOYEN_URTASUN_MIKEL.pdf"
-    pdf_status: "downloaded"
-  - number: 25
-    author: "Irene Casademont"
-    title: "Estudio Computacional de Moléculas Fotosensibilizadoras a partir de Descriptores del Enlace Químico y la Teoría del Funcional de la Densidad"
-    year: 2021
-    supervisors:
-      - "Eduard Matito"
-      - "Eloy Ramos-Córdoba"
-    pdf: "/files/theses/25-irene-casademont.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_CASADEMONT_REIG_IRENE.pdf"
-    pdf_status: "downloaded"
-  - number: 24
-    author: "María Eugenia Sandoval Salinas"
-    title: "Photophysical processes in complex systems"
-    year: 2021
-    supervisors:
-      - "David Casanova"
-    pdf: "/files/theses/24-maria-eugenia-sandoval-salinas.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maru.pdf"
-    pdf_status: "downloaded"
-  - number: 23
-    author: "Raul Quintero-Monsebaiz"
-    title: "Natural orbital functional theory for spin-polarized systems"
-    year: 2021
-    supervisors:
-      - "Alberto Vela"
-      - "Mario Piris"
-    pdf: "/files/theses/23-raul-quintero-monsebaiz.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-raul.pdf"
-    pdf_status: "downloaded"
-  - number: 22
-    author: "Mireia Via Nadal"
-    title: "Electron correlation in density matrices and Coulomb holes"
-    year: 2020
-    supervisors:
-      - "Eduard Matito"
-    pdf: "/files/theses/22-mireia-via-nadal.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesis_Mireia_Via.pdf"
-    pdf_status: "downloaded"
-  - number: 21
-    author: "Ion Mitxelena Etxeberria"
-    title: "Development and applications of Natural Orbital Functional Theory"
-    year: 2020
-    supervisors:
-      - "Mario Piris"
-    pdf: "/files/theses/21-ion-mitxelena-etxeberria.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_MITXELENA_ECHEVERRIA_ION.pdf"
-    pdf_status: "downloaded"
-  - number: 20
-    author: "Gabriele dala Torre"
-    title: "Computational Studies of New Aluminum Chelating Agents"
-    year: 2019
-    supervisors:
-      - "Xabier Lopez Pestaña"
-  - number: 19
-    author: "Mauricio Rodriguez-Mayorga"
-    title: "Reduced Density Matrices: Development and Chemical Applications"
-    year: 2018
-    supervisors:
-      - "Eduard Matito"
-      - "Miquel Sola"
-    pdf: "/files/theses/19-mauricio-rodriguez-mayorga.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tmrm_20180724.pdf"
-    pdf_status: "downloaded"
-  - number: 18
-    author: "Jon Uranga Barandiaran"
-    title: "Protein Oxidation by the Attack of OH Radicals / OH Erradikalen Erasoen bidezko Proteinen Oxidazioa"
-    year: 2017
-    supervisors:
-      - "Jon M. Matxain Beraza"
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/18-jon-uranga-barandiaran.pdf"
-    original_url: "https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesia_Uranga.pdf"
-    pdf_status: "downloaded"
-  - number: 17
-    author: "Elisa Jimenez Izal"
-    title: "Structure and Electronic Properties of Endohedrally Doped II-VI Hollow Nanoclusters"
-    year: 2014
-    supervisors:
-      - "Jon M. Matxain Beraza"
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/17-elisa-jimenez-izal.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/Tesia_Jimenez-Izal.pdf"
-    pdf_status: "downloaded"
-  - number: 16
-    author: "Jon Mikel Azpiroz Apezetxea"
-    title: "Computational Modeling of Semiconductor Nanoclusters"
-    year: 2014
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/16-jon-mikel-azpiroz-apezetxea.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/thesisAzpiroz2.pdf"
-    pdf_status: "downloaded"
-  - number: 15
-    author: "Oier Lakuntza Irigoien"
-    title: "Metanoaren aktibazioa hamargarren taldeko hidrido hidroxido/sulfhidrido katioien bitartez katalizatua"
-    year: 2012
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/15-oier-lakuntza-irigoien.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/Tesia_oier.pdf"
-    pdf_status: "downloaded"
-  - number: 14
-    author: "Elena Formoso Estensoro"
-    title: "Theoretical characterization of pentacovalent oxyphosporane intermediate structures of the hydrolysis of RNA catalyzed by RNase A"
-    year: 2010
-    supervisors:
-      - "Jose J. Lopez Pestaña"
-    pdf: "/files/theses/14-elena-formoso-estensoro.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/EFormoso_Thesis.old.pdf"
-    pdf_status: "downloaded"
-  - number: 13
-    author: "Julen Larrucea Corchero"
-    title: "Aluminio katioiaren aminoazido aromatikoen gaineko eraginaren azterketa konputazionala / Computational study of the effect of aluminum cation on aromatic aminoacids"
-    year: 2009
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/13-julen-larrucea-corchero.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/JulenTes.pdf"
-    pdf_status: "downloaded"
-  - number: 12
-    author: "Elixabete Rezabal Astigarraga"
-    title: "Binding and specificity of aluminum in proteins"
-    year: 2007
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/12-elixabete-rezabal-astigarraga.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/eli_tesis.pdf"
-    pdf_status: "downloaded"
-  - number: 11
-    author: "Eider San Sebastian"
-    title: "Study of protein-protein interactions involved in cancer metastases and autoimmune diseases. Design of new antimetastatic molecules"
-    year: 2007
-    supervisors:
-      - "Jose J. Lopez Pestaña"
-      - "Fernando P. Cossío"
-    pdf: "/files/theses/11-eider-san-sebastian.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/tesia_eider.pdf"
-    pdf_status: "downloaded"
-  - number: 10
-    author: "Jon I. Mujika Gorostidi"
-    title: "Twisted amides: characterization of their electronic structure and analysis of their accelerated hydrolysis"
-    year: 2006
-    supervisors:
-      - "José J. López Pestaña"
-    pdf: "/files/theses/10-jon-i-mujika-gorostidi.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/tesis_joni.pdf"
-    pdf_status: "downloaded"
-  - number: 9
-    author: "Iñaki Silanes Cristóbal"
-    title: "Ethylene polymerization by Group IV transition metal metallocenes"
-    year: 2006
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/09-inaki-silanes-cristobal.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/isc-thesis.pdf"
-    pdf_status: "downloaded"
-  - number: 8
-    author: "Jon M. Matxain Beraza"
-    title: "Small clusters of II-VI materials"
-    year: 2002
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/08-jon-m-matxain-beraza.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/txoni_tesia.pdf"
-    pdf_status: "downloaded"
-    notes: "Doctorado Europeo. Premio Extraordinario de Doctorado 2003. ISBN: 84-8373-461-3. Publisher : Editorial Service of the University of the Basque Country"
-  - number: 7
-    author: "Jose M. Mercero Larraza"
-    title: "Aluminum(III) interactions with aminoacid chains"
-    year: 2001
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    original_url: "http://www.sc.ehu.es/powgep99/dcytp/teoricos/txema/tesia/"
-    notes: "Doctorado Europeo. Premio Extraordinario de Doctorado 2001"
-  - number: 6
-    author: "Arantxa Irigoras Balda"
-    title: "Water Dehydrogenation by First-Row Tansition Metals Cations: A Paradigm for Two-State Reactivity"
-    year: 1999
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-    pdf: "/files/theses/06-arantxa-irigoras-balda.pdf"
-    original_url: "http://www.ehu.es/chemistry/theory/Files/tesi_arantxa.pdf"
-    pdf_status: "downloaded"
-    notes: "Doctorado Europeo. ISBN: 84-8373-197-5. Publisher : Editorial Service of the University of the Basque Country"
-  - number: 5
-    author: "Guillermo Roa Zubia"
-    title: "Estudio teorico de la estructura y reactividad de cetenas e isocianatos"
-    year: 1999
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-      - "Fernando P. Cossío"
-  - number: 4
-    author: "América Graciela García"
-    title: "Aplicaciones de la Teoría del Funcional de la Densidad a Enlaces (2e,3c) y Complejos de Transferencia de Carga"
-    year: 1997
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-  - number: 3
-    author: "Elso Manuel Cruz"
-    title: "La Química del Catión P+. Reacciones en Condiciones Interestelares"
-    year: 1997
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
-  - number: 2
-    author: "Xabier Lopez Pestaña"
-    title: "On The Gas-Phase Chemistry of P+: Ionic Clusters, Dioxides And Interstellar Chemistry"
-    year: 1995
-    supervisors:
-      - "J. M. Ugalde Uribe-Etxebarria"
-    notes: "Doctorado Europeo. Premio Extraordinario de Doctorado (1995)"
-  - number: 1
-    author: "Maria Lourdes Domínguez"
-    title: "Densidades y Distribuciones Bielectrónicas Atómicas y Moleculares a partir de Funciones de Onda Construidas con GTO's"
-    supervisors:
-      - "Jesus M. Ugalde Uribe-Etxebarria"
+- number: 34
+  author: Sílvia Escayola Gordils
+  title: Exploring the Boundaries of Aromaticity through Computational Analysis of Excited States and Complex Molecular Topologies
+  year: 2024
+  supervisors:
+  - Miquel Solà
+  - Eduard Matito
+  - Albert Poater
+  pdf: /files/theses/34-SilviaEscayolaGordils.pdf
+- number: 33
+  author: Aaron Rodríguez
+  title: Development, Implementation and Applications of Hybrid Quantum Chemistry Models
+  year: 2024
+  supervisors:
+  - David Casanova
+  - Eduard Matito
+  pdf: /files/theses/33-AaronRodriguez.pdf
+- number: 32
+  author: Andoni Ugartemendia Biurrun
+  title: Theoretical Design of CO Poisoning Resistant Pt Catalysts through Ge Alloying
+  year: 2024
+  supervisors:
+  - Elisa Jimenez Izal
+  - Jose M. Mercero Larraza
+  pdf: /files/theses/32-andoni-ugartemendia-biurrun.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/andoni_ugartemendia_tesia_reduced.pdf
+  pdf_status: downloaded
+- number: 31
+  author: Xiang Xu
+  title: 'Two Aspects of Electron Correlation: Multireference Diagnostics and London Dispersion Interactions'
+  year: 2023
+  supervisors:
+  - Eduard Matito
+  - Eloy Ramos-Cordoba
+  pdf: /files/theses/31-XiangXu.pdf
+- number: 30
+  author: Carmelo Naim
+  title: 'Determination of Nonlinear Optical Properties from Quantum Chemistry: From Benchmarks to Experimental Systems'
+  year: 2022
+  supervisors:
+  - Eduard Matito
+  - Frédéric Castet
+  pdf: /files/theses/30-CarmeloNaim.pdf
+- number: 29
+  author: Sebastian Sitkiewicz
+  title: Insights into the Efficient Quantum Chemical Simulations of Nonlinear Optical Properties
+  year: 2022
+  supervisors:
+  - Eduard Matito
+  - Josep M. Luis
+  pdf: /files/theses/29-SebastianSitkiewicz.pdf
+- number: 28
+  author: Maria Zubiria Ulacia
+  title: Theoretical Study of Excited Triplet States of Aromatic Molecules for Optoelectronic Applications
+  year: 2022
+  supervisors:
+  - David Casanova Casas
+  - Jon Mattin Matxain Beraza
+  pdf: /files/theses/28-maria-zubiria-ulacia.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maria.pdf
+  pdf_status: downloaded
+- number: 27
+  author: Karina G. Madrigal-Carrillo
+  title: 'Zirconia supported WO3 catalysts for n-hexane isomerization: theoretical study'
+  year: 2022
+  supervisors:
+  - Elisa Jimenez-Izal
+  - Juan I. Rodriguez
+- number: 26
+  author: Mikel Irigoien Urtasun
+  title: Theoretical Modeling of Self-Healing Materials
+  year: 2021
+  supervisors:
+  - Fernando Ruipérez
+  - Jon M. Matxain
+  pdf: /files/theses/26-mikel-irigoien-urtasun.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_IRIGOYEN_URTASUN_MIKEL.pdf
+  pdf_status: downloaded
+- number: 25
+  author: Irene Casademont
+  title: Estudio Computacional de Moléculas Fotosensibilizadoras a partir de Descriptores del Enlace Químico y la Teoría del Funcional de la Densidad
+  year: 2021
+  supervisors:
+  - Eduard Matito
+  - Eloy Ramos-Córdoba
+  pdf: /files/theses/25-irene-casademont.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_CASADEMONT_REIG_IRENE.pdf
+  pdf_status: downloaded
+- number: 24
+  author: María Eugenia Sandoval Salinas
+  title: Photophysical processes in complex systems
+  year: 2021
+  supervisors:
+  - David Casanova
+  pdf: /files/theses/24-maria-eugenia-sandoval-salinas.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maru.pdf
+  pdf_status: downloaded
+- number: 23
+  author: Raul Quintero-Monsebaiz
+  title: Natural orbital functional theory for spin-polarized systems
+  year: 2021
+  supervisors:
+  - Alberto Vela
+  - Mario Piris
+  pdf: /files/theses/23-raul-quintero-monsebaiz.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-raul.pdf
+  pdf_status: downloaded
+- number: 22
+  author: Mireia Via Nadal
+  title: Electron correlation in density matrices and Coulomb holes
+  year: 2020
+  supervisors:
+  - Eduard Matito
+  pdf: /files/theses/22-mireia-via-nadal.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesis_Mireia_Via.pdf
+  pdf_status: downloaded
+- number: 21
+  author: Ion Mitxelena Etxeberria
+  title: Development and applications of Natural Orbital Functional Theory
+  year: 2020
+  supervisors:
+  - Mario Piris
+  pdf: /files/theses/21-ion-mitxelena-etxeberria.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_MITXELENA_ECHEVERRIA_ION.pdf
+  pdf_status: downloaded
+- number: 20
+  author: Gabriele dala Torre
+  title: Computational Studies of New Aluminum Chelating Agents
+  year: 2019
+  supervisors:
+  - Xabier Lopez Pestaña
+- number: 19
+  author: Mauricio Rodriguez-Mayorga
+  title: 'Reduced Density Matrices: Development and Chemical Applications'
+  year: 2018
+  supervisors:
+  - Eduard Matito
+  - Miquel Sola
+  pdf: /files/theses/19-mauricio-rodriguez-mayorga.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tmrm_20180724.pdf
+  pdf_status: downloaded
+- number: 18
+  author: Jon Uranga Barandiaran
+  title: Protein Oxidation by the Attack of OH Radicals / OH Erradikalen Erasoen bidezko Proteinen Oxidazioa
+  year: 2017
+  supervisors:
+  - Jon M. Matxain Beraza
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/18-jon-uranga-barandiaran.pdf
+  original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesia_Uranga.pdf
+  pdf_status: downloaded
+- number: 17
+  author: Elisa Jimenez Izal
+  title: Structure and Electronic Properties of Endohedrally Doped II-VI Hollow Nanoclusters
+  year: 2014
+  supervisors:
+  - Jon M. Matxain Beraza
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/17-elisa-jimenez-izal.pdf
+  original_url: http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/Tesia_Jimenez-Izal.pdf
+  pdf_status: downloaded
+- number: 16
+  author: Jon Mikel Azpiroz Apezetxea
+  title: Computational Modeling of Semiconductor Nanoclusters
+  year: 2014
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/16-jon-mikel-azpiroz-apezetxea.pdf
+  original_url: http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/thesisAzpiroz2.pdf
+  pdf_status: downloaded
+- number: 15
+  author: Oier Lakuntza Irigoien
+  title: Metanoaren aktibazioa hamargarren taldeko hidrido hidroxido/sulfhidrido katioien bitartez katalizatua
+  year: 2012
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/15-oier-lakuntza-irigoien.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/Tesia_oier.pdf
+  pdf_status: downloaded
+- number: 14
+  author: Elena Formoso Estensoro
+  title: Theoretical characterization of pentacovalent oxyphosporane intermediate structures of the hydrolysis of RNA catalyzed by RNase A
+  year: 2010
+  supervisors:
+  - Xabier Lopez Pestaña
+  pdf: /files/theses/14-elena-formoso-estensoro.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/EFormoso_Thesis.old.pdf
+  pdf_status: downloaded
+- number: 13
+  author: Julen Larrucea Corchero
+  title: Aluminio katioiaren aminoazido aromatikoen gaineko eraginaren azterketa konputazionala / Computational study of the effect of aluminum cation on aromatic aminoacids
+  year: 2009
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/13-julen-larrucea-corchero.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/JulenTes.pdf
+  pdf_status: downloaded
+- number: 12
+  author: Elixabete Rezabal Astigarraga
+  title: Binding and specificity of aluminum in proteins
+  year: 2007
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/12-elixabete-rezabal-astigarraga.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/eli_tesis.pdf
+  pdf_status: downloaded
+- number: 11
+  author: Eider San Sebastian
+  title: Study of protein-protein interactions involved in cancer metastases and autoimmune diseases. Design of new antimetastatic molecules
+  year: 2007
+  supervisors:
+  - Jose J. Lopez Pestaña
+  - Fernando P. Cossío
+  pdf: /files/theses/11-eider-san-sebastian.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/tesia_eider.pdf
+  pdf_status: downloaded
+- number: 10
+  author: Jon I. Mujika Gorostidi
+  title: 'Twisted amides: characterization of their electronic structure and analysis of their accelerated hydrolysis'
+  year: 2006
+  supervisors:
+  - José J. López Pestaña
+  pdf: /files/theses/10-jon-i-mujika-gorostidi.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/tesis_joni.pdf
+  pdf_status: downloaded
+- number: 9
+  author: Iñaki Silanes Cristóbal
+  title: Ethylene polymerization by Group IV transition metal metallocenes
+  year: 2006
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/09-inaki-silanes-cristobal.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/isc-thesis.pdf
+  pdf_status: downloaded
+- number: 8
+  author: Jon M. Matxain Beraza
+  title: Small clusters of II-VI materials
+  year: 2002
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/08-jon-m-matxain-beraza.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/txoni_tesia.pdf
+  pdf_status: downloaded
+  notes: 'Doctorado Europeo. Premio Extraordinario de Doctorado 2003. ISBN: 84-8373-461-3. Publisher : Editorial Service of the University of the Basque Country'
+- number: 7
+  author: Jose M. Mercero Larraza
+  title: Aluminum(III) interactions with aminoacid chains
+  year: 2001
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  original_url: http://www.sc.ehu.es/powgep99/dcytp/teoricos/txema/tesia/
+  notes: Doctorado Europeo. Premio Extraordinario de Doctorado 2001
+- number: 6
+  author: Arantxa Irigoras Balda
+  title: 'Water Dehydrogenation by First-Row Tansition Metals Cations: A Paradigm for Two-State Reactivity'
+  year: 1999
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  pdf: /files/theses/06-arantxa-irigoras-balda.pdf
+  original_url: http://www.ehu.es/chemistry/theory/Files/tesi_arantxa.pdf
+  pdf_status: downloaded
+  notes: 'Doctorado Europeo. ISBN: 84-8373-197-5. Publisher : Editorial Service of the University of the Basque Country'
+- number: 5
+  author: Guillermo Roa Zubia
+  title: Estudio teorico de la estructura y reactividad de cetenas e isocianatos
+  year: 1999
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+  - Fernando P. Cossío
+- number: 4
+  author: América Graciela García
+  title: Aplicaciones de la Teoría del Funcional de la Densidad a Enlaces (2e,3c) y Complejos de Transferencia de Carga
+  year: 1997
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+- number: 3
+  author: Elso Manuel Cruz
+  title: La Química del Catión P+. Reacciones en Condiciones Interestelares
+  year: 1997
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+- number: 2
+  author: Xabier Lopez Pestaña
+  title: 'On The Gas-Phase Chemistry of P+: Ionic Clusters, Dioxides And Interstellar Chemistry'
+  year: 1995
+  supervisors:
+  - J. M. Ugalde Uribe-Etxebarria
+  notes: Doctorado Europeo. Premio Extraordinario de Doctorado (1995)
+- number: 1
+  author: Maria Lourdes Domínguez
+  title: Densidades y Distribuciones Bielectrónicas Atómicas y Moleculares a partir de Funciones de Onda Construidas con GTO's
+  supervisors:
+  - Jesus M. Ugalde Uribe-Etxebarria
+- number: 35
+  author: Xabier Telleria Allika
+  title: Computational study of statically confined electron systems by means of quantum chemical and machine learning techniques
+  defense_date: '2022-10-22'
+  year: 2022
+  supervisors:
+  - Jon Mattin Matxain
+  - Jose Maria Mercero
+  pdf: /files/theses/2022-10-22-electron-systems-by-means-of-quantum-chemical-computational-study-of-statically-confined.pdf
+- number: 36
+  author: David Silva Brea
+  title: Aluminium modulation of the dynamics of short disordered peptides
+  defense_date: '2025-07-24'
+  year: 2025
+  supervisors:
+  - Xabier Lopez
+  - David de Sancho
+  pdf: /files/theses/2025-07-24-david-silva-brea-aluminium-modulation-of-the-dynamics-of-short-disordered-pep.pdf
+- number: 37
+  author: Olatz Uranga Barandiaran
+  title: Computational studies on photophysical properties of molecular aggregates
+  defense_date: '2022-03-25'
+  year: 2022
+  supervisors:
+  - David CASANOVA
+  - Frédéric Castet
+  pdf: /files/theses/2022-03-25-olatz-uranga-barandiaran-computational-studies-on-photophysical-properties-of-molecul.pdf
+- number: 38
+  author: Ewa Natalia Szlapa
+  title: Predictive kinetics in homogeneous catalysis
+  defense_date: '2018-11-22'
+  year: 2018
+  supervisors:
+  - J. N. Harvey
+  - and Jesus M. Ugalde
+  pdf: /files/theses/2018-11-22-ewa-natalia-szlapa-predictive-kinetics-in-homogeneous-catalysis.pdf
+- number: 39
+  author: Maialen Galdeano Fraile
+  title: Theoretical characterization of new dynamic bonds for responsive materials and their optical properties
+  defense_date: '2023-06-16'
+  year: 2023
+  supervisors:
+  - Jon Mattin Matxain
+  - Fernando Ruip´erez
+  pdf: /files/theses/2023-06-16-maialen-galdeano-fraile-theoretical-characterization-of-new-dynamic-bonds-for-respon.pdf
+- number: 40
+  author: Paula Andrade Sampedro
+  title: Merging Metal Catalysis & DFT Studies toward the C-H Functionalization of a-Amino Carbonyl Compounds
+  defense_date: '2023-03-27'
+  year: 2023
+  supervisors:
+  - Arkaitz Correa
+  - Jon M. Matxain
+  pdf: /files/theses/2023-03-27-arkaitz-correa-jon-m-matxain-merging-metal-catalysis-dft-studies-toward-the-c-h-functiona.pdf
+- number: 41
+  author: Teotonico Jacopo
+  title: Integrating DFT Calculations and Experimental Approaches for the Design of Dynamic Covalent Networks
+  defense_date: '2025-02-21'
+  year: 2025
+  supervisors:
+  - Nicholas Ballard
+  - Fernando Ruipérez
+  pdf: /files/theses/2025-02-21-teotonico-jacopo-integrating-dft-calculations-and-experimental-approaches-for.pdf
+- number: 42
+  author: Iker Ortiz de Luzuriaga López
+  title: Large-scale and linear-scaling quantum mechanics computational methods to characterize the DNA G-quadruplexes and their interaction with small molecules
+  defense_date: '2023-03-03'
+  year: 2023
+  supervisors:
+  - Adrià Gil
+  - Xabier Lopez
+  pdf_url: https://addi.ehu.eus/bitstream/handle/10810/61331/TESIS_ORTIZ%20DE%20LUZURIAGA_LOPEZ_IKER.pdf
+- number: 43
+  author: Oxana Azpitarte Aguirre
+  title: Computational Multiscale Study of Flavin Redox Chemistry and Mutation Effects in miniSOG-Driven Pt(IV) Prodrug Activation
+  defense_date: '2026-04-20'
+  year: 2026
+  supervisors:
+  - Elixabete Rezabal
+  - Xabier Lopez
+  pdf_url: https://addi.ehu.eus/bitstream/handle/10810/79529/TESIS_OXANA_AZPITARTE_AGUIRRE.pdf?sequence=1&isAllowed=y
+- number: 44
+  author: Jose Lanuza
+  title: How molybdenum species cleave the phosphoester bond
+  defense_date: '2023-07-26'
+  year: 2023
+  supervisors:
+  - Xabier Lopez
+  - Adrià Gil
+  pdf_url: https://addi.ehu.eus/bitstream/handle/10810/62691/TESIS_LANUZA_DELGADO_JOSE%20MANUEL.pdf?sequence=1&isAllowed=y
+- number: 45
+  author: Antonio Cebreiro Gallardo
+  title: 'State-interaction approaches to the molecular g-matrix: implementation, analysis, and applications'
+  defense_date: '2025-10-03'
+  year: 2025
+  supervisors:
+  - David Casanova Casas
+  pdf_url: https://addi.ehu.eus/bitstream/handle/10810/77400/TESIS_ANTONIO_CEBREIRO_GALLARDO.pdf?sequence=1&isAllowed=y
+- number: 46
+  author: Aitor Díaz Andrés
+  title: 'From Electronic Couplings to Exciton Dynamics: Modeling Photophysical Processes in Rubrene Solids'
+  defense_date: '2025-12-19'
+  year: 2025
+  supervisors:
+  - David Casanova
+  pdf: /files/theses/2025-12-19-aitor-diaz-andres-from-electronic-couplings-to-exciton-dynamics-modeling-photo.pdf
+- number: 47
+  author: Xuban Gastearena Irigoien
+  title: 'Theoretical Study of Frustrated Lewis Pairs (FLP) as Catalyst in Chemistry: from Cyclic Polymerizations to N$_2$ Activation'
+  defense_date: '2026-10-16'
+  year: 2026
+  supervisors:
+  - Fernando Ruipérez
+  - Jon Mattin Matxain
+- number: 48
+  author: Julen Aduriz Arrizabalaga
+  title: Conformational study and characterization of chemically restrained instrinsically disordered peptides
+  defense_date: '2026-06-05'
+  year: 2026
+  supervisors:
+  - Xabier Lopez
+  - David de Sancho
+- number: 49
+  author: Coralie Jehanno
+  title: An innovative organocatalyst for the chemical recycling of commodity polymers
+  defense_date: '2019-07-22'
+  year: 2019
+  supervisors:
+  - Fernando Ruiperez
+- number: 50
+  author: Leyre Barandiaran
+  title: Design of ancestral enzymes for engineering nanobiomaterials
+  defense_date: '2019-12-16'
+  year: 2019
+  supervisors:
+  - David de Sancho
+- number: 51
+  author: Diego López Carballeira
+  title: Computational design of organic diradicals for energy applications
+  defense_date: '2018-07-16'
+  year: 2018
+  supervisors:
+  - Fernando Ruiperez
+- number: 52
+  author: Rajendra Sharma
+  title: Computational approaches to investigate coupled folding and binding and assembly
+  defense_date: '2017-09-22'
+  year: 2017
+  supervisors:
+  - David De Sancho Sánchez
+  - Victor Muñoz
+- number: 53
+  author: Aitor Manteca González
+  title: Mechanochemical evolution of the giant muscle protein titin as inferred from resurrected proteins
+  defense_date: '2017-07-07'
+  year: 2017
+  supervisors:
+  - David De Sancho
+  - Raul Pérez

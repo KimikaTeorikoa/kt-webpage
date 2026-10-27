@@ -1,35 +1,47 @@
 {{ $items := hugo.Data.theses.items | default slice }}
+{{ $sortableItems := slice }}
+{{ range $items }}
+  {{ $sortDate := "0000-00-00" }}
+  {{ with .year }}{{ $sortDate = printf "%04d-00-00" . }}{{ end }}
+  {{ with .defense_date }}{{ $sortDate = . }}{{ end }}
+  {{ $sortableItems = $sortableItems | append (merge . (dict "_sort_date" $sortDate)) }}
+{{ end }}
+{{ $orderedItems := sort (sort $sortableItems "number" "desc") "_sort_date" "desc" }}
 
 <section class="thesis-directory">
   <ol class="thesis-list">
-    {{ range sort $items "number" "desc" }}
+    {{ range $index, $thesis := $orderedItems }}
       <li class="thesis-entry">
-        <span class="thesis-entry__number">{{ .number }}.</span>
+        <span class="thesis-entry__number">{{ sub (len $orderedItems) $index }}.</span>
         <div class="thesis-entry__body">
-          <p class="thesis-entry__author">{{ .author }}</p>
+          <p class="thesis-entry__author">{{ $thesis.author }}</p>
           <h2 class="thesis-entry__title">
-            {{ if .pdf }}
-              <a href="{{ (strings.TrimPrefix "/" .pdf) | absURL }}">{{ .title }}</a>
-            {{ else if and .original_url (not (hasSuffix .original_url ".pdf")) }}
-              <a href="{{ .original_url }}">{{ .title }}</a>
+            {{ if $thesis.pdf }}
+              <a href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">{{ $thesis.title }}</a>
+            {{ else if $thesis.pdf_url }}
+              <a href="{{ $thesis.pdf_url }}">{{ $thesis.title }}</a>
+            {{ else if and $thesis.original_url (not (hasSuffix $thesis.original_url ".pdf")) }}
+              <a href="{{ $thesis.original_url }}">{{ $thesis.title }}</a>
             {{ else }}
-              {{ .title }}
+              {{ $thesis.title }}
             {{ end }}
           </h2>
           <p class="thesis-entry__meta">
-            {{ with .year }}<strong>{{ . }}</strong>{{ end }}
-            {{ with .supervisors }}
+            {{ with $thesis.defense_date }}<strong>{{ . }}</strong>{{ else with $thesis.year }}<strong>{{ . }}</strong>{{ end }}
+            {{ with $thesis.supervisors }}
               <span>Supervisor{{ if gt (len .) 1 }}s{{ end }}: {{ delimit . ", " }}</span>
             {{ end }}
           </p>
-          {{ with .notes }}
+          {{ with $thesis.notes }}
             <p class="thesis-entry__notes">{{ . }}</p>
           {{ end }}
           <div class="thesis-entry__actions">
-            {{ if .pdf }}
-              <a class="publication-entry__action" href="{{ (strings.TrimPrefix "/" .pdf) | absURL }}">PDF</a>
+            {{ if $thesis.pdf }}
+              <a class="publication-entry__action" href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">PDF</a>
+            {{ else if $thesis.pdf_url }}
+              <a class="publication-entry__action" href="{{ $thesis.pdf_url }}">PDF</a>
             {{ else }}
-              {{ with .original_url }}
+              {{ with $thesis.original_url }}
                 <a class="publication-entry__action" href="{{ . }}">Original link</a>
               {{ end }}
             {{ end }}

@@ -342,6 +342,26 @@ again (or schedule a daily deploy) after a seminar date passes. Do not run
 `scripts/import_seminars.py`: it was a one-time import and is disabled to
 protect the seminar data.
 
+## Adding a thesis
+
+Add a thesis interactively with:
+
+```bash
+python3 scripts/add_thesis.py
+```
+
+Enter its defense date (`DD.MM.YYYY`), title, author, supervisor(s) separated
+by commas, and choose a local PDF, an external PDF URL, or no PDF. Local PDFs
+are copied into `static/files/theses/`; external URLs are stored directly.
+The entry is added to `data/theses.yaml`. The
+thesis list sorts by the full defense date when available, falling back to
+year for older records, from newest to oldest. Entries are numbered
+automatically in descending order: the newest thesis appears first with the
+highest number, and the oldest appears last with number 1. Use `--dry-run` to
+preview without copying or writing. The `~/MyTools/add_thesis` wrapper runs
+the same script. Supervised theses also appear on matching people profiles,
+using the profile name and its `publication_names` aliases.
+
 ## Typical workflow
 
 1. Add or edit `content/<group>/_index.md` with research lines and/or resources.
