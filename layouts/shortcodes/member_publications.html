@@ -9,7 +9,7 @@
 {{ end }}
 
 {{ if $member.Params.id }}
-  {{ partial "member-publications-block.html" $member }}
+  {{ partial "member-publications-block.html" (dict "member" $member) }}
 {{ else }}
   <p class="member-directory__empty">No publications linked yet.</p>
 {{ end }}

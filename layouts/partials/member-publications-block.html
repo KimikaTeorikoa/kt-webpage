@@ -1,4 +1,14 @@
-{{ $member := . }}
+{{ $member := .member }}
+{{ $sectionID := .section_id | default "" }}
+{{ $sectionTitle := .title | default "Publications" }}
+{{ $minimumYear := .minimum_year | default 0 }}
+{{ $maximumYear := .maximum_year | default 0 }}
+{{ $publicationType := .type | default "" }}
+{{ $limit := .limit | default 0 }}
+{{ $includeSubmitted := true }}
+{{ if isset . "include_submitted" }}
+  {{ $includeSubmitted = .include_submitted }}
+{{ end }}
 {{ $authorNames := slice }}
 {{ with $member.Params.publication_names }}
   {{ $authorNames = . }}
@@ -58,15 +68,38 @@
   {{ end }}
 {{ end }}
 
+{{ if or $minimumYear $maximumYear }}
+  {{ $filteredMatches := slice }}
+  {{ range $matches }}
+    {{ $year := .year | default 0 }}
+    {{ if and (or (not $minimumYear) (ge $year $minimumYear)) (or (not $maximumYear) (le $year $maximumYear)) }}
+      {{ $filteredMatches = $filteredMatches | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $matches = $filteredMatches }}
+{{ end }}
+{{ if $publicationType }}
+  {{ $typedMatches := slice }}
+  {{ range $matches }}
+    {{ if eq (.type | default "misc") $publicationType }}
+      {{ $typedMatches = $typedMatches | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $matches = $typedMatches }}
+{{ end }}
 {{ $sortedSubmissions := sort $submittedMatches "date" "asc" }}
 {{ $sortedMatches := sort (sort (sort $matches "journal" "asc") "title" "asc") "year" "asc" }}
+{{ $displayMatches := collections.Reverse $sortedMatches }}
+{{ if gt $limit 0 }}
+  {{ $displayMatches = first $limit $displayMatches }}
+{{ end }}
 
-<section class="member-publications">
+<section class="member-publications"{{ with $sectionID }} id="{{ . }}"{{ end }}>
   <div class="section-heading">
-    <h2>Publications</h2>
+    <h2>{{ $sectionTitle }}</h2>
   </div>
 
-  {{ if gt (len $sortedSubmissions) 0 }}
+  {{ if and $includeSubmitted (gt (len $sortedSubmissions) 0) }}
     <ol class="publication-list publication-list--submitted">
       {{ range $index, $submission := collections.Reverse $sortedSubmissions }}
         {{ $number := sub (add (len $sortedMatches) (len $sortedSubmissions)) $index }}
@@ -80,10 +113,10 @@
     </ol>
   {{ end }}
 
-  {{ if gt (len $sortedMatches) 0 }}
+  {{ if gt (len $displayMatches) 0 }}
     <ol class="publication-list">
-      {{ range $index, $publication := collections.Reverse $sortedMatches }}
-        {{ $number := sub (len $sortedMatches) $index }}
+      {{ range $index, $publication := $displayMatches }}
+        {{ $number := sub (len $displayMatches) $index }}
         {{ $bibKey := $publication.id | default ((replace $publication.title " " "-") | urlize) }}
         {{ $bibType := $publication.type | default "misc" }}
         {{ $bibtexLines := slice

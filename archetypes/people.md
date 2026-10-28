@@ -31,6 +31,15 @@ weight: 999
 # One of: researcher, postdoc, phd, former_postdoc, former_phd
 member_type: "researcher"
 
+# Profile layout: regular (default) or tx1.
+template: "regular"
+
+# Optional teaching entries displayed by the tx1 profile layout.
+# teaching:
+#   - title: "Course title"
+#     description: "Optional course description"
+#     url: "https://example.edu/course"
+
 # Optional structured contact information.
 # Leave the field empty or remove it if not available.
 office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"

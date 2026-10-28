@@ -5,6 +5,18 @@ url: "/matcat/people/jose-m-mercero/"
 hide_page_hero: true
 weight: 17
 member_type: "researcher"
+template: "tx1"
+teaching: 
+  - title: "Linux"
+    description: "TCCM master lectures"
+  - title: "Function integration and optimizations"
+    description: "TCCM master lectures"
+  - title: "Experiments in Physical Chemistry"
+    description: "Chemistry degree Laboratory"
+  - title: "Quimica General II"
+    description: Grado en quimica
+  - title: "Metodologia esperimentala kimikan"
+    description: Kimika gradua
 email: "jm.mercero [@] ehu.eus"
 office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"
 location: "Euskal Herriko Unibertsitatea, PK 1072, 20080 Donostia, Spain"

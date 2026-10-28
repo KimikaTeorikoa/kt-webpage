@@ -7,7 +7,11 @@
           {{ if .Content }}
             {{ .Content }}
           {{ end }}
-          {{ partial "member-publications-block.html" . }}
+          {{ if eq (.Params.template | default "regular") "tx1" }}
+            {{ partial "member-profile-tx1.html" . }}
+          {{ else }}
+            {{ partial "member-publications-block.html" (dict "member" .) }}
+          {{ end }}
         </article>
       {{ else }}
         <article class="{{ if eq .Params.content_frame false }}prose prose--plain{{ else }}prose{{ end }}">

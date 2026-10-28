@@ -6,8 +6,12 @@
         {{ if .Content }}
           {{ .Content }}
         {{ end }}
-        {{ partial "member-publications-block.html" . }}
-        {{ partial "member-theses-block.html" . }}
+        {{ if eq (.Params.template | default "regular") "tx1" }}
+          {{ partial "member-profile-tx1.html" . }}
+        {{ else }}
+          {{ partial "member-publications-block.html" (dict "member" .) }}
+          {{ partial "member-theses-block.html" . }}
+        {{ end }}
       </article>
     </div>
   </section>

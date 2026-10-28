@@ -1,4 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const profileViews = document.querySelector("[data-profile-views]");
+  if (profileViews) {
+    const panels = Array.from(profileViews.querySelectorAll("[data-profile-view-panel]"));
+    const links = Array.from(document.querySelectorAll("[data-profile-view-link]"));
+    const availableViews = new Set(panels.map((panel) => panel.dataset.profileViewPanel));
+
+    const showProfileView = (view, updateHistory = false) => {
+      const activeView = availableViews.has(view) ? view : "latest-publications";
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.profileViewPanel !== activeView;
+      });
+      links.forEach((link) => {
+        if (link.dataset.profileViewLink === activeView) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+      document.querySelector(".member-profile-nav__dropdown[open]")?.removeAttribute("open");
+
+      if (updateHistory) {
+        window.history.pushState(null, "", `${window.location.pathname}${window.location.search}#${activeView}`);
+      }
+    };
+
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const view = link.dataset.profileViewLink;
+        if (!availableViews.has(view)) return;
+        event.preventDefault();
+        showProfileView(view, true);
+      });
+    });
+
+    const showViewFromLocation = () => {
+      showProfileView(window.location.hash.slice(1));
+    };
+
+    window.addEventListener("hashchange", showViewFromLocation);
+    window.addEventListener("popstate", showViewFromLocation);
+    showViewFromLocation();
+  }
+
   const carousel = document.querySelector(".landing-news");
   if (carousel) {
     const slides = Array.from(carousel.querySelectorAll(".landing-news__slide"));

@@ -1,0 +1,98 @@
+{{ $member := . }}
+{{ $teaching := $member.Params.teaching | default (slice) }}
+
+<div class="member-profile-tx1">
+  <nav class="member-profile-nav" aria-label="Profile sections">
+    <ul class="member-profile-nav__list">
+      <li class="member-profile-nav__item">
+        <details class="member-profile-nav__dropdown">
+          <summary>Publications</summary>
+          <ul>
+            <li><a href="#all-publications" data-profile-view-link="all-publications">All Publications</a></li>
+            <li><a href="#publications-1995-2004" data-profile-view-link="publications-1995-2004">1995–2004</a></li>
+            <li><a href="#publications-2005-2014" data-profile-view-link="publications-2005-2014">2005–2014</a></li>
+            <li><a href="#publications-2015-2026" data-profile-view-link="publications-2015-2026">2015–2026</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#member-theses" data-profile-view-link="member-theses">Supervised theses</a></li>
+      <li><a href="#member-teaching" data-profile-view-link="member-teaching">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <div class="member-profile-tx1__views" data-profile-views>
+    <div data-profile-view-panel="latest-publications">
+      {{ partial "member-publications-block.html" (dict
+        "member" $member
+        "section_id" "latest-publications"
+        "title" "Latest articles"
+        "type" "article"
+        "limit" 5
+      ) }}
+    </div>
+
+    <div data-profile-view-panel="all-publications" hidden>
+      {{ partial "member-publications-block.html" (dict
+        "member" $member
+        "section_id" "all-publications"
+        "title" "All Publications"
+      ) }}
+    </div>
+
+    <div data-profile-view-panel="publications-1995-2004" hidden>
+      {{ partial "member-publications-block.html" (dict
+        "member" $member
+        "section_id" "publications-1995-2004"
+        "title" "Publications, 1995–2004"
+        "minimum_year" 1995
+        "maximum_year" 2004
+        "include_submitted" false
+      ) }}
+    </div>
+
+    <div data-profile-view-panel="publications-2005-2014" hidden>
+      {{ partial "member-publications-block.html" (dict
+        "member" $member
+        "section_id" "publications-2005-2014"
+        "title" "Publications, 2005–2014"
+        "minimum_year" 2005
+        "maximum_year" 2014
+        "include_submitted" false
+      ) }}
+    </div>
+
+    <div data-profile-view-panel="publications-2015-2026" hidden>
+      {{ partial "member-publications-block.html" (dict
+        "member" $member
+        "section_id" "publications-2015-2026"
+        "title" "Publications, 2015–2026"
+        "minimum_year" 2015
+        "maximum_year" 2026
+        "include_submitted" false
+      ) }}
+    </div>
+
+    <div data-profile-view-panel="member-theses" hidden>
+      {{ partial "member-theses-block.html" $member }}
+    </div>
+
+    <section class="member-teaching" id="member-teaching" data-profile-view-panel="member-teaching" hidden>
+      <div class="section-heading">
+        <h2>Teaching</h2>
+      </div>
+      {{ with $teaching }}
+        <ul class="member-teaching__list">
+          {{ range . }}
+            <li id="teaching-{{ .title | urlize }}">
+              <h3>{{ .title }}</h3>
+              {{ with .description }}<p>{{ . }}</p>{{ end }}
+              {{ with .url }}<p><a href="{{ . }}">{{ . }}</a></p>{{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ else }}
+        <p class="member-directory__empty">Teaching information has not been added yet.</p>
+      {{ end }}
+    </section>
+  </div>
+</div>
