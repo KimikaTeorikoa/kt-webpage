@@ -17,9 +17,27 @@ items:
         url: /publications/#articles
       - name: PhD Thesis
         url: /publications/thesis/
-  - name: KT-Seminars
-    url: /kt-seminars/
-  - name: News
-    url: /news/
-  - name: Gallery
-    url: /gallery/
+  - name: Education
+    url: /education/
+    children:
+      - name: Master’s programme
+        url: /education/masters/
+      - name: PhD programme
+        url: /education/phd/
+      - name: Teaching
+        url: /education/teaching/
+  - name: Resources
+    url: /resources/
+    children:
+      - name: Software
+        url: /resources/software/
+      - name: HPC Resources
+        url: /resources/hpc/
+  - name: News and Events
+    children:
+      - name: Seminars
+        url: /kt-seminars/
+      - name: News
+        url: /news/
+      - name: Gallery
+        url: /gallery/
