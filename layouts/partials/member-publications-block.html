@@ -48,6 +48,14 @@
   {{ end }}
 {{ end }}
 
+{{ $allSortedMatches := sort (sort (sort $matches "journal" "asc") "title" "asc") "year" "asc" }}
+{{ $allDisplayMatches := collections.Reverse $allSortedMatches }}
+{{ $publicationNumbers := dict }}
+{{ range $index, $publication := $allDisplayMatches }}
+  {{ $publicationKey := $publication.id | default (printf "%s|%v|%s" $publication.title ($publication.year | default 0) ($publication.journal | default "")) }}
+  {{ $publicationNumbers = merge $publicationNumbers (dict $publicationKey (sub (len $allDisplayMatches) $index)) }}
+{{ end }}
+
 {{ $submittedMatches := slice }}
 {{ $memberID := $member.Params.id | default "" }}
 {{ with hugo.Data.publications.submitted }}
@@ -102,7 +110,7 @@
   {{ if and $includeSubmitted (gt (len $sortedSubmissions) 0) }}
     <ol class="publication-list publication-list--submitted">
       {{ range $index, $submission := collections.Reverse $sortedSubmissions }}
-        {{ $number := sub (add (len $sortedMatches) (len $sortedSubmissions)) $index }}
+        {{ $number := sub (add (len $allSortedMatches) (len $sortedSubmissions)) $index }}
         <li class="publication-entry publication-entry--submitted">
           <span class="publication-entry__number">{{ $number }}.</span>
           <p class="publication-entry__authors">{{ delimit $submission.authors "; " }}</p>
@@ -116,7 +124,8 @@
   {{ if gt (len $displayMatches) 0 }}
     <ol class="publication-list">
       {{ range $index, $publication := $displayMatches }}
-        {{ $number := sub (len $displayMatches) $index }}
+        {{ $publicationKey := $publication.id | default (printf "%s|%v|%s" $publication.title ($publication.year | default 0) ($publication.journal | default "")) }}
+        {{ $number := index $publicationNumbers $publicationKey }}
         {{ $bibKey := $publication.id | default ((replace $publication.title " " "-") | urlize) }}
         {{ $bibType := $publication.type | default "misc" }}
         {{ $bibtexLines := slice

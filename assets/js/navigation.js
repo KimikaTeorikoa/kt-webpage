@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
           link.removeAttribute("aria-current");
         }
       });
-      document.querySelector(".member-profile-nav__dropdown[open]")?.removeAttribute("open");
+      document.querySelectorAll(".member-profile-nav__dropdown[open]").forEach((dropdown) => {
+        dropdown.removeAttribute("open");
+      });
 
       if (updateHistory) {
         window.history.pushState(null, "", `${window.location.pathname}${window.location.search}#${activeView}`);

@@ -1,5 +1,8 @@
 {{ $member := . }}
 {{ $teaching := $member.Params.teaching | default (slice) }}
+{{ $projects := $member.Params.Projects | default (slice) }}
+{{ $activeProjects := where $projects "status" "active" }}
+{{ $completedProjects := where $projects "status" "completed" }}
 
 <div class="member-profile-tx1">
   <nav class="member-profile-nav" aria-label="Profile sections">
@@ -15,7 +18,26 @@
           </ul>
         </details>
       </li>
-      <li><a href="#member-theses" data-profile-view-link="member-theses">Supervised theses</a></li>
+      {{ with $projects }}
+        <li class="member-profile-nav__item">
+          <details class="member-profile-nav__dropdown">
+            <summary>Projects</summary>
+            <ul>
+              <li><a href="#member-projects" data-profile-view-link="member-projects">Active Projects</a></li>
+              <li><a href="#completed-projects" data-profile-view-link="completed-projects">Completed Projects</a></li>
+            </ul>
+          </details>
+        </li>
+      {{ end }}
+      <li class="member-profile-nav__item">
+        <details class="member-profile-nav__dropdown">
+          <summary>Supervised theses</summary>
+          <ul>
+            <li><a href="#member-theses-in-progress" data-profile-view-link="member-theses-in-progress">In Progress</a></li>
+            <li><a href="#member-theses" data-profile-view-link="member-theses">Defended</a></li>
+          </ul>
+        </details>
+      </li>
       <li><a href="#member-teaching" data-profile-view-link="member-teaching">Teaching</a></li>
     </ul>
   </nav>
@@ -72,8 +94,40 @@
       ) }}
     </div>
 
+    {{ with $projects }}
+      <section class="member-projects" id="member-projects" data-profile-view-panel="member-projects" hidden>
+        {{ partial "member-projects-panel.html" (dict
+          "title" "Active Projects"
+          "projects" $activeProjects
+          "empty_message" "No active projects listed."
+        ) }}
+      </section>
+      <section class="member-projects" id="completed-projects" data-profile-view-panel="completed-projects" hidden>
+        {{ partial "member-projects-panel.html" (dict
+          "title" "Completed Projects"
+          "projects" $completedProjects
+          "empty_message" "No completed projects listed."
+        ) }}
+      </section>
+    {{ end }}
+
+    <div data-profile-view-panel="member-theses-in-progress" hidden>
+      {{ partial "member-theses-block.html" (dict
+        "member" $member
+        "status" "in_progress"
+        "title" "Theses in Progress"
+        "id" "member-theses-in-progress"
+        "empty_message" "No theses in progress listed."
+      ) }}
+    </div>
     <div data-profile-view-panel="member-theses" hidden>
-      {{ partial "member-theses-block.html" $member }}
+      {{ partial "member-theses-block.html" (dict
+        "member" $member
+        "status" "defended"
+        "title" "Defended Theses"
+        "id" "member-theses"
+        "empty_message" "No defended theses listed."
+      ) }}
     </div>
 
     <section class="member-teaching" id="member-teaching" data-profile-view-panel="member-teaching" hidden>

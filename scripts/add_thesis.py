@@ -152,6 +152,7 @@ def main(argv: list[str] | None = None) -> int:
 
     entry: dict[str, object] = {
         "number": next_number(items),
+        "status": "defended",
         "author": author,
         "title": title,
         "defense_date": defense_date.isoformat(),

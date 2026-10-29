@@ -40,6 +40,12 @@ template: "regular"
 #     description: "Optional course description"
 #     url: "https://example.edu/course"
 
+# Optional current supervised theses shown in the tx1 profile.
+# theses_in_progress:
+#   - author: "Student name"
+#     title: "Thesis title"
+#     start_year: 2025
+
 # Optional structured contact information.
 # Leave the field empty or remove it if not available.
 office: "Kimika Teorikoa Laboratory; Kimika Fakultatea"

@@ -3,13 +3,14 @@
 {{ if gt (len $items) 0 }}
 <div class="resources-list" aria-label="Software and data repositories">
   {{ range $items }}
+    {{ $resource := . }}
     <article class="resource-card">
-      <h2 class="resource-card__name">{{ .name }}</h2>
-      {{ with .summary }}
+      <h2 class="resource-card__name">{{ $resource.name }}</h2>
+      {{ with $resource.summary }}
         <p class="resource-card__summary">{{ . }}</p>
       {{ end }}
-      {{ with .link }}
-        <a class="resource-card__link" href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>
+      {{ with $resource.link }}
+        <a class="resource-card__link" href="{{ . }}" target="_blank" rel="noopener">{{ $resource.link_text | default . }}</a>
       {{ end }}
     </article>
   {{ end }}

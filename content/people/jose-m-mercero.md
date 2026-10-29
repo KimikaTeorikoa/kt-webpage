@@ -6,6 +6,62 @@ hide_page_hero: true
 weight: 17
 member_type: "researcher"
 template: "tx1"
+Projects:
+  - title: Theoretical design of metallic nanocatalysts for HOR in alkaline media (2023-2026)
+    status: active
+    description: |-
+      **Entity:** Agencia Española de Investigación (AEI) (PID2023-152377OB-I00)
+
+      **Budget:** 71,000 €
+
+      **PI:** Elisa Jimenez-Izal & Jose M. Mercero
+
+  - title:  "Problem-based teaching innovation: programming and adaptive optimization methods—an approach from computational chemistry (2026-2027)"
+    status: active
+    description: |-
+      **Entity:** EHU
+
+      **Budget:** 1,000 €
+
+      **PI:** Jose M. Mercero
+
+  - title:  "Kimika Teorikoa: Development of quantum methods and multiscale simulations for the rational design of materials and biological systems. (2026-2029)"
+    status: active
+    description: |-
+      **Entity:** Grupos Consolidados. GV
+
+      **Budget:** 595,100 €
+
+      **PI:** Jose M. Mercero
+
+  - title: "Scientific specialization in GPU computing and the adaptation of scientific computing codes to new computing environments: GPUs and massively parallel computing. (2012-2014)"
+    status: completed
+    description: |-
+      **Entity:** Saiotek. GV
+
+      **Budget:** 70,000 €
+
+      **PI:** Jose M. Mercero & Eduardo Ogando
+
+  - title: "Scientific specialization in GPU computing and the adaptation of scientific computing codes to new computing environments: GPUs and massively parallel computing. (2009-2011)"
+    status: completed
+    description: |-
+      **Entity:** Saiotek. GV
+
+      **Budget:** 110,000 €
+
+      **PI:** Jose M. Mercero & Eduardo Ogando
+
+  - title: "Kimika Teorikoa: Concepts and Simulations in (Photo)chemistry, (Bio)polymers, and Advanced Materials"
+    status: completed
+    description: |-
+      **Entity:** Grupos Consolidados. GV
+
+      **Budget:** 373,000 €
+
+      **PI:** Jesus M. Ugalde
+
+
 teaching: 
   - title: "Linux"
     description: "TCCM master lectures"
@@ -43,4 +99,11 @@ header:
   brand_name: "MatCat-KT Group"
   brand_note: "Euskal Herriko Unibertsitatea & DIPC"
   brand_url: "/matcat/"
+theses_in_progress:
+  - author: "Ramon Bergua"
+    title: "Theoretical study of electronic, structural, and environmental effects of precious-metal nanocatalysts"
+    start_year: 2022
+  - author: Idoia Camara
+    title: "TBA"
+    start_year: 2026
 ---

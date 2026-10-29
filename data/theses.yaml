@@ -1,6 +1,7 @@
 # Generated from https://www.ehu.eus/chemistry/theory/3_publications/thesis/
 items:
 - number: 34
+  status: defended
   author: Sílvia Escayola Gordils
   title: Exploring the Boundaries of Aromaticity through Computational Analysis of Excited States and Complex Molecular Topologies
   year: 2024
@@ -10,6 +11,7 @@ items:
   - Albert Poater
   pdf: /files/theses/34-SilviaEscayolaGordils.pdf
 - number: 33
+  status: defended
   author: Aaron Rodríguez
   title: Development, Implementation and Applications of Hybrid Quantum Chemistry Models
   year: 2024
@@ -18,6 +20,7 @@ items:
   - Eduard Matito
   pdf: /files/theses/33-AaronRodriguez.pdf
 - number: 32
+  status: defended
   author: Andoni Ugartemendia Biurrun
   title: Theoretical Design of CO Poisoning Resistant Pt Catalysts through Ge Alloying
   year: 2024
@@ -28,6 +31,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/andoni_ugartemendia_tesia_reduced.pdf
   pdf_status: downloaded
 - number: 31
+  status: defended
   author: Xiang Xu
   title: 'Two Aspects of Electron Correlation: Multireference Diagnostics and London Dispersion Interactions'
   year: 2023
@@ -36,6 +40,7 @@ items:
   - Eloy Ramos-Cordoba
   pdf: /files/theses/31-XiangXu.pdf
 - number: 30
+  status: defended
   author: Carmelo Naim
   title: 'Determination of Nonlinear Optical Properties from Quantum Chemistry: From Benchmarks to Experimental Systems'
   year: 2022
@@ -44,6 +49,7 @@ items:
   - Frédéric Castet
   pdf: /files/theses/30-CarmeloNaim.pdf
 - number: 29
+  status: defended
   author: Sebastian Sitkiewicz
   title: Insights into the Efficient Quantum Chemical Simulations of Nonlinear Optical Properties
   year: 2022
@@ -52,6 +58,7 @@ items:
   - Josep M. Luis
   pdf: /files/theses/29-SebastianSitkiewicz.pdf
 - number: 28
+  status: defended
   author: Maria Zubiria Ulacia
   title: Theoretical Study of Excited Triplet States of Aromatic Molecules for Optoelectronic Applications
   year: 2022
@@ -62,6 +69,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maria.pdf
   pdf_status: downloaded
 - number: 27
+  status: defended
   author: Karina G. Madrigal-Carrillo
   title: 'Zirconia supported WO3 catalysts for n-hexane isomerization: theoretical study'
   year: 2022
@@ -69,6 +77,7 @@ items:
   - Elisa Jimenez-Izal
   - Juan I. Rodriguez
 - number: 26
+  status: defended
   author: Mikel Irigoien Urtasun
   title: Theoretical Modeling of Self-Healing Materials
   year: 2021
@@ -79,6 +88,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_IRIGOYEN_URTASUN_MIKEL.pdf
   pdf_status: downloaded
 - number: 25
+  status: defended
   author: Irene Casademont
   title: Estudio Computacional de Moléculas Fotosensibilizadoras a partir de Descriptores del Enlace Químico y la Teoría del Funcional de la Densidad
   year: 2021
@@ -89,6 +99,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_CASADEMONT_REIG_IRENE.pdf
   pdf_status: downloaded
 - number: 24
+  status: defended
   author: María Eugenia Sandoval Salinas
   title: Photophysical processes in complex systems
   year: 2021
@@ -98,6 +109,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-maru.pdf
   pdf_status: downloaded
 - number: 23
+  status: defended
   author: Raul Quintero-Monsebaiz
   title: Natural orbital functional theory for spin-polarized systems
   year: 2021
@@ -108,6 +120,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tesis-raul.pdf
   pdf_status: downloaded
 - number: 22
+  status: defended
   author: Mireia Via Nadal
   title: Electron correlation in density matrices and Coulomb holes
   year: 2020
@@ -117,6 +130,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesis_Mireia_Via.pdf
   pdf_status: downloaded
 - number: 21
+  status: defended
   author: Ion Mitxelena Etxeberria
   title: Development and applications of Natural Orbital Functional Theory
   year: 2020
@@ -126,12 +140,14 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/TESIS_MITXELENA_ECHEVERRIA_ION.pdf
   pdf_status: downloaded
 - number: 20
+  status: defended
   author: Gabriele dala Torre
   title: Computational Studies of New Aluminum Chelating Agents
   year: 2019
   supervisors:
   - Xabier Lopez Pestaña
 - number: 19
+  status: defended
   author: Mauricio Rodriguez-Mayorga
   title: 'Reduced Density Matrices: Development and Chemical Applications'
   year: 2018
@@ -142,6 +158,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/tmrm_20180724.pdf
   pdf_status: downloaded
 - number: 18
+  status: defended
   author: Jon Uranga Barandiaran
   title: Protein Oxidation by the Attack of OH Radicals / OH Erradikalen Erasoen bidezko Proteinen Oxidazioa
   year: 2017
@@ -152,6 +169,7 @@ items:
   original_url: https://www.ehu.eus/chemistry/theory/wordpress/wp-content/uploads/Tesia_Uranga.pdf
   pdf_status: downloaded
 - number: 17
+  status: defended
   author: Elisa Jimenez Izal
   title: Structure and Electronic Properties of Endohedrally Doped II-VI Hollow Nanoclusters
   year: 2014
@@ -162,6 +180,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/Tesia_Jimenez-Izal.pdf
   pdf_status: downloaded
 - number: 16
+  status: defended
   author: Jon Mikel Azpiroz Apezetxea
   title: Computational Modeling of Semiconductor Nanoclusters
   year: 2014
@@ -171,6 +190,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/wordpress/wp-content/uploads/thesisAzpiroz2.pdf
   pdf_status: downloaded
 - number: 15
+  status: defended
   author: Oier Lakuntza Irigoien
   title: Metanoaren aktibazioa hamargarren taldeko hidrido hidroxido/sulfhidrido katioien bitartez katalizatua
   year: 2012
@@ -180,6 +200,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/Tesia_oier.pdf
   pdf_status: downloaded
 - number: 14
+  status: defended
   author: Elena Formoso Estensoro
   title: Theoretical characterization of pentacovalent oxyphosporane intermediate structures of the hydrolysis of RNA catalyzed by RNase A
   year: 2010
@@ -189,6 +210,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/EFormoso_Thesis.old.pdf
   pdf_status: downloaded
 - number: 13
+  status: defended
   author: Julen Larrucea Corchero
   title: Aluminio katioiaren aminoazido aromatikoen gaineko eraginaren azterketa konputazionala / Computational study of the effect of aluminum cation on aromatic aminoacids
   year: 2009
@@ -198,6 +220,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/JulenTes.pdf
   pdf_status: downloaded
 - number: 12
+  status: defended
   author: Elixabete Rezabal Astigarraga
   title: Binding and specificity of aluminum in proteins
   year: 2007
@@ -207,6 +230,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/eli_tesis.pdf
   pdf_status: downloaded
 - number: 11
+  status: defended
   author: Eider San Sebastian
   title: Study of protein-protein interactions involved in cancer metastases and autoimmune diseases. Design of new antimetastatic molecules
   year: 2007
@@ -217,6 +241,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/tesia_eider.pdf
   pdf_status: downloaded
 - number: 10
+  status: defended
   author: Jon I. Mujika Gorostidi
   title: 'Twisted amides: characterization of their electronic structure and analysis of their accelerated hydrolysis'
   year: 2006
@@ -226,6 +251,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/tesis_joni.pdf
   pdf_status: downloaded
 - number: 9
+  status: defended
   author: Iñaki Silanes Cristóbal
   title: Ethylene polymerization by Group IV transition metal metallocenes
   year: 2006
@@ -235,6 +261,7 @@ items:
   original_url: http://www.ehu.es/chemistry/theory/Files/isc-thesis.pdf
   pdf_status: downloaded
 - number: 8
+  status: defended
   author: Jon M. Matxain Beraza
   title: Small clusters of II-VI materials
   year: 2002
@@ -245,6 +272,7 @@ items:
   pdf_status: downloaded
   notes: 'Doctorado Europeo. Premio Extraordinario de Doctorado 2003. ISBN: 84-8373-461-3. Publisher : Editorial Service of the University of the Basque Country'
 - number: 7
+  status: defended
   author: Jose M. Mercero Larraza
   title: Aluminum(III) interactions with aminoacid chains
   year: 2001
@@ -253,6 +281,7 @@ items:
   original_url: http://www.sc.ehu.es/powgep99/dcytp/teoricos/txema/tesia/
   notes: Doctorado Europeo. Premio Extraordinario de Doctorado 2001
 - number: 6
+  status: defended
   author: Arantxa Irigoras Balda
   title: 'Water Dehydrogenation by First-Row Tansition Metals Cations: A Paradigm for Two-State Reactivity'
   year: 1999
@@ -263,6 +292,7 @@ items:
   pdf_status: downloaded
   notes: 'Doctorado Europeo. ISBN: 84-8373-197-5. Publisher : Editorial Service of the University of the Basque Country'
 - number: 5
+  status: defended
   author: Guillermo Roa Zubia
   title: Estudio teorico de la estructura y reactividad de cetenas e isocianatos
   year: 1999
@@ -270,18 +300,21 @@ items:
   - Jesus M. Ugalde Uribe-Etxebarria
   - Fernando P. Cossío
 - number: 4
+  status: defended
   author: América Graciela García
   title: Aplicaciones de la Teoría del Funcional de la Densidad a Enlaces (2e,3c) y Complejos de Transferencia de Carga
   year: 1997
   supervisors:
   - Jesus M. Ugalde Uribe-Etxebarria
 - number: 3
+  status: defended
   author: Elso Manuel Cruz
   title: La Química del Catión P+. Reacciones en Condiciones Interestelares
   year: 1997
   supervisors:
   - Jesus M. Ugalde Uribe-Etxebarria
 - number: 2
+  status: defended
   author: Xabier Lopez Pestaña
   title: 'On The Gas-Phase Chemistry of P+: Ionic Clusters, Dioxides And Interstellar Chemistry'
   year: 1995
@@ -289,11 +322,13 @@ items:
   - J. M. Ugalde Uribe-Etxebarria
   notes: Doctorado Europeo. Premio Extraordinario de Doctorado (1995)
 - number: 1
+  status: defended
   author: Maria Lourdes Domínguez
   title: Densidades y Distribuciones Bielectrónicas Atómicas y Moleculares a partir de Funciones de Onda Construidas con GTO's
   supervisors:
   - Jesus M. Ugalde Uribe-Etxebarria
 - number: 35
+  status: defended
   author: Xabier Telleria Allika
   title: Computational study of statically confined electron systems by means of quantum chemical and machine learning techniques
   defense_date: '2022-10-22'
@@ -303,6 +338,7 @@ items:
   - Jose Maria Mercero
   pdf: /files/theses/2022-10-22-electron-systems-by-means-of-quantum-chemical-computational-study-of-statically-confined.pdf
 - number: 36
+  status: defended
   author: David Silva Brea
   title: Aluminium modulation of the dynamics of short disordered peptides
   defense_date: '2025-07-24'
@@ -312,6 +348,7 @@ items:
   - David de Sancho
   pdf: /files/theses/2025-07-24-david-silva-brea-aluminium-modulation-of-the-dynamics-of-short-disordered-pep.pdf
 - number: 37
+  status: defended
   author: Olatz Uranga Barandiaran
   title: Computational studies on photophysical properties of molecular aggregates
   defense_date: '2022-03-25'
@@ -321,6 +358,7 @@ items:
   - Frédéric Castet
   pdf: /files/theses/2022-03-25-olatz-uranga-barandiaran-computational-studies-on-photophysical-properties-of-molecul.pdf
 - number: 38
+  status: defended
   author: Ewa Natalia Szlapa
   title: Predictive kinetics in homogeneous catalysis
   defense_date: '2018-11-22'
@@ -330,6 +368,7 @@ items:
   - and Jesus M. Ugalde
   pdf: /files/theses/2018-11-22-ewa-natalia-szlapa-predictive-kinetics-in-homogeneous-catalysis.pdf
 - number: 39
+  status: defended
   author: Maialen Galdeano Fraile
   title: Theoretical characterization of new dynamic bonds for responsive materials and their optical properties
   defense_date: '2023-06-16'
@@ -339,6 +378,7 @@ items:
   - Fernando Ruip´erez
   pdf: /files/theses/2023-06-16-maialen-galdeano-fraile-theoretical-characterization-of-new-dynamic-bonds-for-respon.pdf
 - number: 40
+  status: defended
   author: Paula Andrade Sampedro
   title: Merging Metal Catalysis & DFT Studies toward the C-H Functionalization of a-Amino Carbonyl Compounds
   defense_date: '2023-03-27'
@@ -348,6 +388,7 @@ items:
   - Jon M. Matxain
   pdf: /files/theses/2023-03-27-arkaitz-correa-jon-m-matxain-merging-metal-catalysis-dft-studies-toward-the-c-h-functiona.pdf
 - number: 41
+  status: defended
   author: Teotonico Jacopo
   title: Integrating DFT Calculations and Experimental Approaches for the Design of Dynamic Covalent Networks
   defense_date: '2025-02-21'
@@ -357,6 +398,7 @@ items:
   - Fernando Ruipérez
   pdf: /files/theses/2025-02-21-teotonico-jacopo-integrating-dft-calculations-and-experimental-approaches-for.pdf
 - number: 42
+  status: defended
   author: Iker Ortiz de Luzuriaga López
   title: Large-scale and linear-scaling quantum mechanics computational methods to characterize the DNA G-quadruplexes and their interaction with small molecules
   defense_date: '2023-03-03'
@@ -366,6 +408,7 @@ items:
   - Xabier Lopez
   pdf_url: https://addi.ehu.eus/bitstream/handle/10810/61331/TESIS_ORTIZ%20DE%20LUZURIAGA_LOPEZ_IKER.pdf
 - number: 43
+  status: defended
   author: Oxana Azpitarte Aguirre
   title: Computational Multiscale Study of Flavin Redox Chemistry and Mutation Effects in miniSOG-Driven Pt(IV) Prodrug Activation
   defense_date: '2026-04-20'
@@ -375,6 +418,7 @@ items:
   - Xabier Lopez
   pdf_url: https://addi.ehu.eus/bitstream/handle/10810/79529/TESIS_OXANA_AZPITARTE_AGUIRRE.pdf?sequence=1&isAllowed=y
 - number: 44
+  status: defended
   author: Jose Lanuza
   title: How molybdenum species cleave the phosphoester bond
   defense_date: '2023-07-26'
@@ -384,6 +428,7 @@ items:
   - Adrià Gil
   pdf_url: https://addi.ehu.eus/bitstream/handle/10810/62691/TESIS_LANUZA_DELGADO_JOSE%20MANUEL.pdf?sequence=1&isAllowed=y
 - number: 45
+  status: defended
   author: Antonio Cebreiro Gallardo
   title: 'State-interaction approaches to the molecular g-matrix: implementation, analysis, and applications'
   defense_date: '2025-10-03'
@@ -392,6 +437,7 @@ items:
   - David Casanova Casas
   pdf_url: https://addi.ehu.eus/bitstream/handle/10810/77400/TESIS_ANTONIO_CEBREIRO_GALLARDO.pdf?sequence=1&isAllowed=y
 - number: 46
+  status: defended
   author: Aitor Díaz Andrés
   title: 'From Electronic Couplings to Exciton Dynamics: Modeling Photophysical Processes in Rubrene Solids'
   defense_date: '2025-12-19'
@@ -400,6 +446,7 @@ items:
   - David Casanova
   pdf: /files/theses/2025-12-19-aitor-diaz-andres-from-electronic-couplings-to-exciton-dynamics-modeling-photo.pdf
 - number: 47
+  status: defended
   author: Xuban Gastearena Irigoien
   title: 'Theoretical Study of Frustrated Lewis Pairs (FLP) as Catalyst in Chemistry: from Cyclic Polymerizations to N$_2$ Activation'
   defense_date: '2026-10-16'
@@ -408,6 +455,7 @@ items:
   - Fernando Ruipérez
   - Jon Mattin Matxain
 - number: 48
+  status: defended
   author: Julen Aduriz Arrizabalaga
   title: Conformational study and characterization of chemically restrained instrinsically disordered peptides
   defense_date: '2026-06-05'
@@ -416,6 +464,7 @@ items:
   - Xabier Lopez
   - David de Sancho
 - number: 49
+  status: defended
   author: Coralie Jehanno
   title: An innovative organocatalyst for the chemical recycling of commodity polymers
   defense_date: '2019-07-22'
@@ -423,6 +472,7 @@ items:
   supervisors:
   - Fernando Ruiperez
 - number: 50
+  status: defended
   author: Leyre Barandiaran
   title: Design of ancestral enzymes for engineering nanobiomaterials
   defense_date: '2019-12-16'
@@ -430,6 +480,7 @@ items:
   supervisors:
   - David de Sancho
 - number: 51
+  status: defended
   author: Diego López Carballeira
   title: Computational design of organic diradicals for energy applications
   defense_date: '2018-07-16'
@@ -437,6 +488,7 @@ items:
   supervisors:
   - Fernando Ruiperez
 - number: 52
+  status: defended
   author: Rajendra Sharma
   title: Computational approaches to investigate coupled folding and binding and assembly
   defense_date: '2017-09-22'
@@ -445,6 +497,7 @@ items:
   - David De Sancho Sánchez
   - Victor Muñoz
 - number: 53
+  status: defended
   author: Aitor Manteca González
   title: Mechanochemical evolution of the giant muscle protein titin as inferred from resurrected proteins
   defense_date: '2017-07-07'

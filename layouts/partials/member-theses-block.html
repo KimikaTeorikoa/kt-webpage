@@ -1,4 +1,9 @@
-{{ $member := . }}
+{{ $member := .member }}
+{{ $status := .status | default "" }}
+{{ $sectionTitle := .title | default "Supervised theses" }}
+{{ $sectionID := .id | default "member-theses" }}
+{{ $emptyMessage := .empty_message | default "No theses listed." }}
+{{ $memberTheses := $member.Params.theses_in_progress | default (slice) }}
 {{ $profileNames := slice }}
 {{ with $member.Params.publication_names }}
   {{ $profileNames = . }}
@@ -12,77 +17,101 @@
 {{ end }}
 
 {{ $sortableItems := slice }}
-{{ range hugo.Data.theses.items }}
-  {{ $thesis := . }}
-  {{ $sortDate := "0000-00-00" }}
-  {{ with $thesis.year }}{{ $sortDate = printf "%04d-00-00" . }}{{ end }}
-  {{ with $thesis.defense_date }}{{ $sortDate = . }}{{ end }}
-  {{ $sortableItems = $sortableItems | append (merge $thesis (dict "_sort_date" $sortDate)) }}
+{{ if eq $status "in_progress" }}
+  {{ range $memberTheses }}
+    {{ $thesis := . }}
+    {{ $sortDate := "0000-00-00" }}
+    {{ with $thesis.start_year }}{{ $sortDate = printf "%04d-00-00" . }}{{ end }}
+    {{ $sortableItems = $sortableItems | append (merge $thesis (dict "_sort_date" $sortDate "_sort_number" 0)) }}
+  {{ end }}
+{{ else }}
+  {{ range hugo.Data.theses.items }}
+    {{ $thesis := . }}
+    {{ $sortDate := "0000-00-00" }}
+    {{ with $thesis.year }}{{ $sortDate = printf "%04d-00-00" . }}{{ end }}
+    {{ with $thesis.defense_date }}{{ $sortDate = . }}{{ end }}
+    {{ $sortNumber := $thesis.number | default 0 }}
+    {{ $sortableItems = $sortableItems | append (merge $thesis (dict "_sort_date" $sortDate "_sort_number" $sortNumber)) }}
+  {{ end }}
 {{ end }}
-{{ $orderedItems := sort (sort $sortableItems "number" "desc") "_sort_date" "desc" }}
+{{ $orderedItems := sort (sort $sortableItems "_sort_number" "desc") "_sort_date" "desc" }}
 
 {{ $matches := slice }}
-{{ range $orderedItems }}
-  {{ $thesis := . }}
-  {{ $matched := false }}
-  {{ range $thesis.supervisors }}
-    {{ $normalizedSupervisor := . | lower | replaceRE `[áàäâãå]` `a` | replaceRE `[éèëê]` `e` | replaceRE `[íìïî]` `i` | replaceRE `[óòöôõ]` `o` | replaceRE `[úùüû]` `u` | replaceRE `ñ` `n` | replaceRE `ç` `c` | replaceRE `[ýÿ]` `y` }}
-    {{ $supervisorTokens := findRE `[[:alnum:]]+` $normalizedSupervisor }}
-    {{ range $normalizedProfileNames }}
-      {{ $profileTokens := findRE `[[:alnum:]]+` . }}
-      {{ $nameMatches := eq (replaceRE `[^[:alnum:]]` `` .) (replaceRE `[^[:alnum:]]` `` $normalizedSupervisor) }}
-      {{ if and (not $nameMatches) (gt (len $profileTokens) 1) (gt (len $supervisorTokens) 1) }}
-        {{ if eq (substr (index $profileTokens 0) 0 1) (substr (index $supervisorTokens 0) 0 1) }}
-          {{ range after 1 $profileTokens }}
-            {{ if and (ge (len .) 4) (in (after 1 $supervisorTokens) .) }}
-              {{ $nameMatches = true }}
+{{ if eq $status "in_progress" }}
+  {{ $matches = $orderedItems }}
+{{ else }}
+  {{ range $orderedItems }}
+    {{ $thesis := . }}
+    {{ $matched := false }}
+    {{ range $thesis.supervisors }}
+      {{ $normalizedSupervisor := . | lower | replaceRE `[áàäâãå]` `a` | replaceRE `[éèëê]` `e` | replaceRE `[íìïî]` `i` | replaceRE `[óòöôõ]` `o` | replaceRE `[úùüû]` `u` | replaceRE `ñ` `n` | replaceRE `ç` `c` | replaceRE `[ýÿ]` `y` }}
+      {{ $supervisorTokens := findRE `[[:alnum:]]+` $normalizedSupervisor }}
+      {{ range $normalizedProfileNames }}
+        {{ $profileTokens := findRE `[[:alnum:]]+` . }}
+        {{ $nameMatches := eq (replaceRE `[^[:alnum:]]` `` .) (replaceRE `[^[:alnum:]]` `` $normalizedSupervisor) }}
+        {{ if and (not $nameMatches) (gt (len $profileTokens) 1) (gt (len $supervisorTokens) 1) }}
+          {{ if eq (substr (index $profileTokens 0) 0 1) (substr (index $supervisorTokens 0) 0 1) }}
+            {{ range after 1 $profileTokens }}
+              {{ if and (ge (len .) 4) (in (after 1 $supervisorTokens) .) }}
+                {{ $nameMatches = true }}
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
+        {{ if $nameMatches }}{{ $matched = true }}{{ end }}
       {{ end }}
-      {{ if $nameMatches }}{{ $matched = true }}{{ end }}
+    {{ end }}
+    {{ if and $matched (or (eq $status "") (eq $thesis.status $status)) }}
+      {{ $matches = $matches | append $thesis }}
     {{ end }}
   {{ end }}
-  {{ if $matched }}{{ $matches = $matches | append $thesis }}{{ end }}
 {{ end }}
 
-{{ with $matches }}
-  <section class="member-theses" id="member-theses">
+{{ if or $matches $status }}
+  <section class="member-theses" id="{{ $sectionID }}">
     <div class="section-heading">
-      <h2>Supervised theses</h2>
+      <h2>{{ $sectionTitle }}</h2>
     </div>
-    <ol class="publication-list">
-      {{ range $index, $thesis := . }}
-        <li class="publication-entry">
-          <span class="publication-entry__number">{{ sub (len $matches) $index }}.</span>
-          <p class="publication-entry__authors">{{ $thesis.author }}</p>
-          <h3 class="publication-entry__title">
-            {{ if $thesis.pdf }}
-              <a href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">{{ $thesis.title }}</a>
-            {{ else if $thesis.pdf_url }}
-              <a href="{{ $thesis.pdf_url }}">{{ $thesis.title }}</a>
-            {{ else if and $thesis.original_url (not (hasSuffix $thesis.original_url ".pdf")) }}
-              <a href="{{ $thesis.original_url }}">{{ $thesis.title }}</a>
-            {{ else }}
-              {{ $thesis.title }}
-            {{ end }}
-          </h3>
-          <p class="publication-entry__citation">
-            {{ with $thesis.defense_date }}{{ . }}{{ else with $thesis.year }}{{ . }}{{ end }}
-          </p>
-          {{ if or $thesis.pdf $thesis.pdf_url $thesis.original_url }}
-            <div class="publication-entry__actions">
+    {{ with $matches }}
+      <ol class="publication-list">
+        {{ range $index, $thesis := . }}
+          <li class="publication-entry">
+            <span class="publication-entry__number">{{ sub (len $matches) $index }}.</span>
+            <p class="publication-entry__authors">{{ $thesis.author }}</p>
+            <h3 class="publication-entry__title">
               {{ if $thesis.pdf }}
-                <a class="publication-entry__action" href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">PDF</a>
+                <a href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">{{ $thesis.title }}</a>
               {{ else if $thesis.pdf_url }}
-                <a class="publication-entry__action" href="{{ $thesis.pdf_url }}">PDF</a>
+                <a href="{{ $thesis.pdf_url }}">{{ $thesis.title }}</a>
+              {{ else if and $thesis.original_url (not (hasSuffix $thesis.original_url ".pdf")) }}
+                <a href="{{ $thesis.original_url }}">{{ $thesis.title }}</a>
               {{ else }}
-                <a class="publication-entry__action" href="{{ $thesis.original_url }}">Original link</a>
+                {{ $thesis.title }}
               {{ end }}
-            </div>
-          {{ end }}
-        </li>
-      {{ end }}
-    </ol>
+            </h3>
+            <p class="publication-entry__citation">
+              {{ if eq $status "in_progress" }}
+                In progress{{ with $thesis.start_year }} since {{ . }}{{ else with $thesis.year }} since {{ . }}{{ end }}
+              {{ else }}
+                {{ with $thesis.defense_date }}{{ . }}{{ else with $thesis.year }}{{ . }}{{ end }}
+              {{ end }}
+            </p>
+            {{ if or $thesis.pdf $thesis.pdf_url $thesis.original_url }}
+              <div class="publication-entry__actions">
+                {{ if $thesis.pdf }}
+                  <a class="publication-entry__action" href="{{ (strings.TrimPrefix "/" $thesis.pdf) | absURL }}">PDF</a>
+                {{ else if $thesis.pdf_url }}
+                  <a class="publication-entry__action" href="{{ $thesis.pdf_url }}">PDF</a>
+                {{ else }}
+                  <a class="publication-entry__action" href="{{ $thesis.original_url }}">Original link</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    {{ else }}
+      <p class="member-directory__empty">{{ $emptyMessage }}</p>
+    {{ end }}
   </section>
 {{ end }}

@@ -10,7 +10,7 @@
           {{ partial "member-profile-tx1.html" . }}
         {{ else }}
           {{ partial "member-publications-block.html" (dict "member" .) }}
-          {{ partial "member-theses-block.html" . }}
+          {{ partial "member-theses-block.html" (dict "member" .) }}
         {{ end }}
       </article>
     </div>
