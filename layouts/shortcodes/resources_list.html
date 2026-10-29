@@ -6,11 +6,24 @@
     {{ $resource := . }}
     <article class="resource-card">
       <h2 class="resource-card__name">{{ $resource.name }}</h2>
+      {{ with $resource.category }}
+        <p class="resource-card__category">{{ . }}</p>
+      {{ end }}
       {{ with $resource.summary }}
         <p class="resource-card__summary">{{ . }}</p>
       {{ end }}
-      {{ with $resource.link }}
-        <a class="resource-card__link" href="{{ . }}" target="_blank" rel="noopener">{{ $resource.link_text | default . }}</a>
+      {{ with $resource.links }}
+        <div class="resource-card__links">
+          {{ range . }}
+            <a class="resource-card__link" href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>
+          {{ end }}
+        </div>
+      {{ else }}
+        {{ with $resource.link }}
+          <div class="resource-card__links">
+            <a class="resource-card__link" href="{{ . }}" target="_blank" rel="noopener">{{ $resource.link_text | default . }}</a>
+          </div>
+        {{ end }}
       {{ end }}
     </article>
   {{ end }}

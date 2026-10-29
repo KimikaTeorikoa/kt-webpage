@@ -106,10 +106,25 @@
         {{ with $menu }}
           <ul class="nav-list">
             {{ range .items }}
-              {{ $itemURL := cond (or (hasPrefix .url "http://") (hasPrefix .url "https://")) .url ((strings.TrimPrefix "/" .url) | absURL) }}
-              {{ $isActive := or (eq $current $itemURL) (and (ne $itemURL "/") (hasPrefix $current $itemURL)) }}
+              {{ $itemURL := "" }}
+              {{ with .url }}
+                {{ $itemURL = cond (or (hasPrefix . "http://") (hasPrefix . "https://")) . ((strings.TrimPrefix "/" .) | absURL) }}
+              {{ end }}
+              {{ $isActive := false }}
+              {{ if $itemURL }}
+                {{ $isActive = or (eq $current $itemURL) (hasPrefix $current $itemURL) }}
+              {{ else }}
+                {{ range .children }}
+                  {{ $childURL := cond (or (hasPrefix .url "http://") (hasPrefix .url "https://")) .url ((strings.TrimPrefix "/" .url) | absURL) }}
+                  {{ if or (eq $current $childURL) (hasPrefix $current $childURL) }}{{ $isActive = true }}{{ end }}
+                {{ end }}
+              {{ end }}
               <li class="nav-item{{ if or .children .groups }} has-children{{ end }}{{ if $isActive }} is-active{{ end }}">
-                <a href="{{ $itemURL }}">{{ .name }}</a>
+                {{ if $itemURL }}
+                  <a href="{{ $itemURL }}">{{ .name }}</a>
+                {{ else }}
+                  <button class="nav-item__toggle" type="button" aria-expanded="false" aria-haspopup="true">{{ .name }}</button>
+                {{ end }}
                 {{ if .groups }}
                   <ul class="nav-submenu">
                     {{ range $groupPages }}
@@ -121,7 +136,7 @@
                   </ul>
                 {{ else }}
                   {{ with .children }}
-                  <ul class="nav-submenu">
+                  <ul class="nav-submenu{{ if not $itemURL }} nav-submenu--toggle{{ end }}">
                     {{ range . }}
                       {{ $childURL := cond (or (hasPrefix .url "http://") (hasPrefix .url "https://")) .url ((strings.TrimPrefix "/" .url) | absURL) }}
                       <li class="nav-subitem{{ if .children }} has-children{{ end }}">

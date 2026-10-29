@@ -18,7 +18,6 @@ items:
       - name: PhD Thesis
         url: /publications/thesis/
   - name: Education
-    url: /education/
     children:
       - name: Master’s programme
         url: /education/masters/
@@ -27,7 +26,6 @@ items:
       - name: Teaching
         url: /education/teaching/
   - name: Resources
-    url: /resources/
     children:
       - name: Software
         url: /resources/software/

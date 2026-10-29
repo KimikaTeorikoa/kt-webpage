@@ -6,6 +6,7 @@ hide_page_hero: true
 office: "DIPC; Building 4"
 weight: 10
 member_type: "researcher"
+template: "tx1"
 photo: "/images/members/researchers/jesus-m-ugalde.png"
 role: "KT Laboratory Leader"
 position: "Catedratico de Universidad"

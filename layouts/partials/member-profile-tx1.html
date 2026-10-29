@@ -3,6 +3,25 @@
 {{ $projects := $member.Params.Projects | default (slice) }}
 {{ $activeProjects := where $projects "status" "active" }}
 {{ $completedProjects := where $projects "status" "completed" }}
+{{ $publicationData := partial "member-publication-matches.html" $member }}
+{{ $yearSortedArticles := sort (where $publicationData.matches "type" "article") "year" "asc" }}
+{{ $yearSortedPublications := sort $publicationData.matches "year" "asc" }}
+{{ $publicationRanges := slice }}
+{{ if gt (len $yearSortedPublications) 0 }}
+  {{ $rangeStartPublications := $yearSortedArticles }}
+  {{ if eq (len $rangeStartPublications) 0 }}{{ $rangeStartPublications = $yearSortedPublications }}{{ end }}
+  {{ $firstYear := int (index (index $rangeStartPublications 0) "year") }}
+  {{ $lastYear := int (index (index $yearSortedPublications (sub (len $yearSortedPublications) 1)) "year") }}
+  {{ $rangeCount := div (add (sub $lastYear $firstYear) 10) 10 }}
+  {{ range seq 0 (sub $rangeCount 1) }}
+    {{ $rangeStart := add $firstYear (mul . 10) }}
+    {{ $rangeEnd := add $rangeStart 9 }}
+    {{ $rangeID := printf "publications-%d-%d" $rangeStart $rangeEnd }}
+    {{ $rangeLabel := printf "%d–%d" $rangeStart $rangeEnd }}
+    {{ if ge $rangeEnd now.Year }}{{ $rangeLabel = printf "%d–" $rangeStart }}{{ end }}
+    {{ $publicationRanges = $publicationRanges | append (dict "id" $rangeID "start" $rangeStart "end" $rangeEnd "label" $rangeLabel) }}
+  {{ end }}
+{{ end }}
 
 <div class="member-profile-tx1">
   <nav class="member-profile-nav" aria-label="Profile sections">
@@ -12,9 +31,9 @@
           <summary>Publications</summary>
           <ul>
             <li><a href="#all-publications" data-profile-view-link="all-publications">All Publications</a></li>
-            <li><a href="#publications-1995-2004" data-profile-view-link="publications-1995-2004">1995–2004</a></li>
-            <li><a href="#publications-2005-2014" data-profile-view-link="publications-2005-2014">2005–2014</a></li>
-            <li><a href="#publications-2015-2026" data-profile-view-link="publications-2015-2026">2015–2026</a></li>
+            {{ range $publicationRanges }}
+              <li><a href="#{{ .id }}" data-profile-view-link="{{ .id }}">{{ .label }}</a></li>
+            {{ end }}
           </ul>
         </details>
       </li>
@@ -61,38 +80,18 @@
       ) }}
     </div>
 
-    <div data-profile-view-panel="publications-1995-2004" hidden>
-      {{ partial "member-publications-block.html" (dict
-        "member" $member
-        "section_id" "publications-1995-2004"
-        "title" "Publications, 1995–2004"
-        "minimum_year" 1995
-        "maximum_year" 2004
-        "include_submitted" false
-      ) }}
-    </div>
-
-    <div data-profile-view-panel="publications-2005-2014" hidden>
-      {{ partial "member-publications-block.html" (dict
-        "member" $member
-        "section_id" "publications-2005-2014"
-        "title" "Publications, 2005–2014"
-        "minimum_year" 2005
-        "maximum_year" 2014
-        "include_submitted" false
-      ) }}
-    </div>
-
-    <div data-profile-view-panel="publications-2015-2026" hidden>
-      {{ partial "member-publications-block.html" (dict
-        "member" $member
-        "section_id" "publications-2015-2026"
-        "title" "Publications, 2015–2026"
-        "minimum_year" 2015
-        "maximum_year" 2026
-        "include_submitted" false
-      ) }}
-    </div>
+    {{ range $publicationRanges }}
+      <div data-profile-view-panel="{{ .id }}" hidden>
+        {{ partial "member-publications-block.html" (dict
+          "member" $member
+          "section_id" .id
+          "title" (printf "Publications, %s" .label)
+          "minimum_year" .start
+          "maximum_year" .end
+          "include_submitted" false
+        ) }}
+      </div>
+    {{ end }}
 
     {{ with $projects }}
       <section class="member-projects" id="member-projects" data-profile-view-panel="member-projects" hidden>

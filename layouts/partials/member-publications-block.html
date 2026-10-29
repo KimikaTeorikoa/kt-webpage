@@ -9,44 +9,9 @@
 {{ if isset . "include_submitted" }}
   {{ $includeSubmitted = .include_submitted }}
 {{ end }}
-{{ $authorNames := slice }}
-{{ with $member.Params.publication_names }}
-  {{ $authorNames = . }}
-{{ else }}
-  {{ $authorNames = slice (replaceRE `^(Prof\.|Dr\.)\s+` "" ($member.Title | default "")) }}
-{{ end }}
-
-{{ $normalizedAuthorNames := slice }}
-{{ range $authorNames }}
-  {{ $normalized := . | lower | replaceRE `[áàäâãå]` `a` | replaceRE `[éèëê]` `e` | replaceRE `[íìïî]` `i` | replaceRE `[óòöôõ]` `o` | replaceRE `[úùüû]` `u` | replaceRE `ñ` `n` | replaceRE `ç` `c` | replaceRE `[ýÿ]` `y` | replaceRE `\.` `` | replaceRE `\s+` `` | replaceRE `[-‐‑‒–—]` `` | replaceRE `[^[:alnum:]]` `` }}
-  {{ if and $normalized (not (in $normalizedAuthorNames $normalized)) }}
-    {{ $normalizedAuthorNames = $normalizedAuthorNames | append $normalized }}
-  {{ end }}
-{{ end }}
-
-{{ $items := slice }}
-{{ range $year, $bucket := hugo.Data.publications.years }}
-  {{ with $bucket.items }}
-    {{ range . }}
-      {{ $items = $items | append . }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{ $matches := slice }}
-{{ range $items }}
-  {{ $publication := . }}
-  {{ $matched := false }}
-  {{ range $publication.authors }}
-    {{ $normalizedPublicationAuthor := . | lower | replaceRE `[áàäâãå]` `a` | replaceRE `[éèëê]` `e` | replaceRE `[íìïî]` `i` | replaceRE `[óòöôõ]` `o` | replaceRE `[úùüû]` `u` | replaceRE `ñ` `n` | replaceRE `ç` `c` | replaceRE `[ýÿ]` `y` | replaceRE `\.` `` | replaceRE `\s+` `` | replaceRE `[-‐‑‒–—]` `` | replaceRE `[^[:alnum:]]` `` }}
-    {{ if and $normalizedPublicationAuthor (in $normalizedAuthorNames $normalizedPublicationAuthor) }}
-      {{ $matched = true }}
-    {{ end }}
-  {{ end }}
-  {{ if $matched }}
-    {{ $matches = $matches | append $publication }}
-  {{ end }}
-{{ end }}
+{{ $publicationData := partial "member-publication-matches.html" $member }}
+{{ $matches := $publicationData.matches }}
+{{ $normalizedAuthorNames := $publicationData.normalized_author_names }}
 
 {{ $allSortedMatches := sort (sort (sort $matches "journal" "asc") "title" "asc") "year" "asc" }}
 {{ $allDisplayMatches := collections.Reverse $allSortedMatches }}

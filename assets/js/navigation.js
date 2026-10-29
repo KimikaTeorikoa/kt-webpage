@@ -117,6 +117,33 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimer();
   }
 
+  const navDropdownToggles = Array.from(document.querySelectorAll(".nav-item__toggle"));
+  const closeNavDropdowns = () => {
+    navDropdownToggles.forEach((button) => button.setAttribute("aria-expanded", "false"));
+  };
+
+  navDropdownToggles.forEach((button) => {
+    button.addEventListener("click", () => {
+      const shouldExpand = button.getAttribute("aria-expanded") !== "true";
+      closeNavDropdowns();
+      button.setAttribute("aria-expanded", shouldExpand ? "true" : "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Element && !event.target.closest(".nav-item.has-children")) {
+      closeNavDropdowns();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const expandedToggle = navDropdownToggles.find((button) => button.getAttribute("aria-expanded") === "true");
+    if (!expandedToggle) return;
+    expandedToggle.setAttribute("aria-expanded", "false");
+    expandedToggle.focus();
+  });
+
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
 
