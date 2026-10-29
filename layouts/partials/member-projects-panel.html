@@ -1,0 +1,17 @@
+{{ $panel := . }}
+
+<div class="section-heading">
+  <h2>{{ $panel.title }}</h2>
+</div>
+{{ with $panel.projects }}
+  <ul class="member-projects__list">
+    {{ range . }}
+      <li class="member-projects__card">
+        <h3>{{ .title }}</h3>
+        {{ with .description }}{{ . | markdownify }}{{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <p class="member-directory__empty">{{ $panel.empty_message }}</p>
+{{ end }}

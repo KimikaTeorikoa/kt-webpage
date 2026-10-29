@@ -1,4 +1,4 @@
-{{ $items := hugo.Data.theses.items | default slice }}
+{{ $items := where (hugo.Data.theses.items | default slice) "status" "defended" }}
 {{ $sortableItems := slice }}
 {{ range $items }}
   {{ $sortDate := "0000-00-00" }}

@@ -2701,11 +2701,15 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
 /* Resources list (software / data repositories) */
 .resources-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .resource-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 20px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -2735,14 +2739,21 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
 }
 
 .resource-card__link {
-  word-break: break-all;
-  color: var(--accent);
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
 }
 
 .resource-card__link:hover {
-  text-decoration: underline;
+  background: var(--accent);
+  color: #ffffff;
 }
 
 /* Group-specific resource card accent colors */
@@ -4989,11 +5000,13 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
   display: none !important;
 }
 
-.member-teaching {
+.member-teaching,
+.member-projects {
   margin-top: 36px;
 }
 
-.member-teaching__list {
+.member-teaching__list,
+.member-projects__list {
   display: grid;
   gap: 16px;
   margin: 0;
@@ -5001,22 +5014,52 @@ a.matcat-topic-card:hover .matcat-topic-card__cta {
   list-style: none;
 }
 
+.member-projects__list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 18px;
+}
+
+.member-projects__card {
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-strong), var(--surface));
+  box-shadow: 0 10px 28px rgba(15, 35, 70, 0.07);
+}
+
 .member-teaching__list li {
   scroll-margin-top: 24px;
 }
 
-.member-teaching__list h3 {
+.member-teaching__list h3,
+.member-projects__list h3 {
   margin: 0 0 6px;
   color: var(--accent-strong);
 }
 
-.member-teaching__list p {
-  margin: 0 0 8px;
+.member-projects__list h3 {
+  margin-bottom: 14px;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.member-teaching__list p,
+.member-projects__list p {
+  margin: 8px 0 0;
   color: var(--text-soft);
+}
+
+.member-projects__list strong {
+  color: var(--accent-strong);
 }
 
 @media (max-width: 640px) {
   .member-profile-nav__dropdown > ul {
     left: 0;
+  }
+
+  .member-projects__card {
+    padding: 18px 20px;
   }
 }

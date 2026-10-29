@@ -9,7 +9,6 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = "https://www.ehu.eus/chemistry/theory/3_publications/thesis/"
 HTML_PATH = Path("/tmp/kt-thesis.html")
@@ -127,6 +126,7 @@ def parse_theses() -> list[dict[str, object]]:
 
         thesis: dict[str, object] = {
             "number": number,
+            "status": "defended",
             "author": author,
             "title": title,
             "year": year,
@@ -156,11 +156,18 @@ def write_yaml(theses: list[dict[str, object]]) -> None:
         "items:",
     ]
     for thesis in theses:
-        lines.append(f"  - number: {thesis['number']}")
+        if thesis.get("number") is not None:
+            lines.append(f"  - number: {thesis['number']}")
+        else:
+            lines.append("  -")
+        lines.append(f"    status: {yaml_quote(str(thesis.get('status', 'defended')))}")
         lines.append(f"    author: {yaml_quote(str(thesis['author']))}")
         lines.append(f"    title: {yaml_quote(str(thesis['title']))}")
-        if thesis.get("year"):
-            lines.append(f"    year: {thesis['year']}")
+        for key in ("year", "start_year"):
+            if thesis.get(key):
+                lines.append(f"    {key}: {thesis[key]}")
+        if thesis.get("defense_date"):
+            lines.append(f"    defense_date: {yaml_quote(str(thesis['defense_date']))}")
         supervisors = thesis.get("supervisors") or []
         lines.append("    supervisors:")
         if supervisors:
@@ -168,7 +175,7 @@ def write_yaml(theses: list[dict[str, object]]) -> None:
                 lines.append(f"      - {yaml_quote(str(supervisor))}")
         else:
             lines.append("      []")
-        for key in ("pdf", "original_url", "pdf_status", "notes"):
+        for key in ("pdf", "pdf_url", "original_url", "pdf_status", "notes"):
             if thesis.get(key):
                 lines.append(f"    {key}: {yaml_quote(str(thesis[key]))}")
     DATA_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -362,6 +362,19 @@ preview without copying or writing. The `~/MyTools/add_thesis` wrapper runs
 the same script. Supervised theses also appear on matching people profiles,
 using the profile name and its `publication_names` aliases.
 
+Current theses are stored in the relevant member's front matter instead of the
+defended-thesis catalog. Add them under `theses_in_progress` in
+`content/people/<member>.md`:
+
+```yaml
+theses_in_progress:
+  - author: "Student name"
+    title: "Thesis title"
+    start_year: 2025
+```
+
+The tx1 profile displays these under **Supervised theses → In Progress**.
+
 ## Typical workflow
 
 1. Add or edit `content/<group>/_index.md` with research lines and/or resources.
