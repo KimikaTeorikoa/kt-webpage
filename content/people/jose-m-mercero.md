@@ -28,11 +28,11 @@ Projects:
   - title:  "Kimika Teorikoa: Development of quantum methods and multiscale simulations for the rational design of materials and biological systems. (2026-2029)"
     status: active
     description: |-
-      **Entity:** Grupos Consolidados. GV
+      **Entity:** Grupos Consolidados (IT2067-26). GV
 
       **Budget:** 595,100 €
 
-      **PI:** Jose M. Mercero
+      **PI:** Xabier Lopez 
 
   - title: "Scientific specialization in GPU computing and the adaptation of scientific computing codes to new computing environments: GPUs and massively parallel computing. (2012-2014)"
     status: completed
