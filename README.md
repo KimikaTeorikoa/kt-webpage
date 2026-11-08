@@ -308,6 +308,9 @@ path. The script then asks if the article has additional photos (default: no);
 if yes, enter the number of photos and each image path. If any photos were
 provided, choose whether to add them to the photo gallery (default: no).
 Finish by entering the Markdown text, ending with a single `.` on its own line.
+After creating the item, the script can optionally run Git checks and
+`make validate`; if they pass, it offers to commit only the files created by
+that run. The default is not to run the checks or create a commit.
 The script creates a dated post under `content/news/` and copies any media into
 `static/images/news/`. If you opt in, it also copies the provided photos to
 `static/images/gallery/` and creates a gallery event. News posts are shown
@@ -334,6 +337,9 @@ Upcoming seminars accumulate under `next.entries` in `data/seminars.yaml`
 runs it moves the seminars whose date has passed to the past-seminar archive;
 `python3 scripts/add_seminar.py --archive-only` does only that. Use
 `--dry-run` to preview a change.
+After updating the seminar data, the script can optionally run Git checks and
+`make validate`; if they pass, it offers to commit the seminar data file. The
+default is not to run the checks or create a commit.
 
 The site also classifies seminars by date at build time: a seminar is "next"
 until its day is over, then it appears as the latest/past seminar. Because the

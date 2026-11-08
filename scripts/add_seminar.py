@@ -19,6 +19,8 @@ from pathlib import Path
 
 import yaml
 
+from git_review import ensure_generated_paths_clean, review_and_commit
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "seminars.yaml"
@@ -266,6 +268,9 @@ def main(argv: list[str] | None = None) -> int:
     upcoming.sort(key=lambda item: str(item["iso"]))
 
     updated_text = build_updated_text(text, upcoming, past)
+    if updated_text == text:
+        print("No seminar data changes are needed.")
+        return 0
     action = "Would" if args.dry_run else "Did"
     if new_label:
         print(f"{action}: add seminar {new_label}.")
@@ -274,8 +279,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.dry_run:
         print("Dry run: data/seminars.yaml was not changed.")
     else:
+        ensure_generated_paths_clean([DATA_PATH])
         DATA_PATH.write_text(updated_text, encoding="utf-8")
         print(f"Updated {DATA_PATH.relative_to(ROOT)}")
+        commit_message = f"Add seminar: {new_label}" if new_label else "Archive past seminars"
+        if not review_and_commit([DATA_PATH], commit_message):
+            return 1
     return 0
 
 

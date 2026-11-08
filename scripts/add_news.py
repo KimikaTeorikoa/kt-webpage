@@ -15,6 +15,7 @@ import yaml
 from import_gallery import DATA_PATH as GALLERY_DATA_PATH
 from import_gallery import IMAGE_DIR as GALLERY_IMAGE_DIR
 from import_gallery import slugify, sort_events, write_yaml
+from git_review import ensure_generated_paths_clean, review_and_commit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -149,7 +150,7 @@ def create_news_item(
     body: str,
     include_in_gallery: bool = False,
     dry_run: bool = False,
-) -> tuple[Path, str, int]:
+) -> tuple[Path, str, int, list[Path]]:
     date_slug = news_date.isoformat()
     existing_news = {
         path.name for path in NEWS_DIR.iterdir() if path.is_dir()
@@ -214,13 +215,17 @@ def create_news_item(
     event = {"title": event_title, "slug": event_slug, "images": gallery_event_images}
 
     if dry_run:
-        return article_dir / "index.md", event_title, len(gallery_event_images)
+        return article_dir / "index.md", event_title, len(gallery_event_images), []
     if (
         article_dir.exists()
         or (banner_dir.exists() and (banner is not None or photos))
         or (include_in_gallery and (GALLERY_IMAGE_DIR / event_slug).exists())
     ):
         raise FileExistsError(f"Files already exist for news item: {title}")
+
+    protected_paths = [GALLERY_DATA_PATH] if include_in_gallery else []
+    protected_paths.extend([article_dir, banner_dir, GALLERY_IMAGE_DIR / event_slug])
+    ensure_generated_paths_clean(protected_paths)
 
     created_paths: list[Path] = []
     created_directories: list[Path] = []
@@ -263,7 +268,8 @@ def create_news_item(
         if include_in_gallery:
             events.append(event)
             write_yaml(sort_events(events))
-        return article_path, event_title, len(gallery_event_images)
+            created_paths.append(GALLERY_DATA_PATH)
+        return article_path, event_title, len(gallery_event_images), created_paths
     except Exception:
         GALLERY_DATA_PATH.write_text(old_gallery_yaml, encoding="utf-8")
         for path in reversed(created_paths):
@@ -292,7 +298,7 @@ def main() -> int:
     include_in_gallery = prompt_include_in_gallery() if has_photos else False
     body = prompt_body()
 
-    article_path, event_title, photo_count = create_news_item(
+    article_path, event_title, photo_count, created_paths = create_news_item(
         news_date,
         title,
         banner,
@@ -309,6 +315,8 @@ def main() -> int:
         print("Banner and article photos will stay with the news item and won't be added to the photo gallery.")
     if args.dry_run:
         print("Dry run: no files were copied or changed.")
+    elif not review_and_commit(created_paths, f"Add news: {title}"):
+        return 1
     return 0
 
 
