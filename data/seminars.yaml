@@ -8,6 +8,12 @@ next:
       talks:
         - title: "Computational Analysis of the Induced Magnetic Field in Cyclic Molecules"
           speaker: "Fernando Martínez-Villarino"
+    - iso: "2026-11-20"
+      date: "November 20th, 10:00"
+      place: "DIPC (Olarra)"
+      talks:
+        - title: "Occupation Numbers as Reduced Variables for Variational Quantum Computing"
+          speaker: "Edison Salazar"
 
 items:
   - year: 2026
