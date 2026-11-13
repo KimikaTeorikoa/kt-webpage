@@ -107,3 +107,6 @@ theses_in_progress:
     title: "TBA"
     start_year: 2026
 ---
+
+JMM obtained his degree in Chemistry at the University of the Basque Country (EHU) in 1995, including academic stays at Utrecht University and University of North Carolina at Chapel Hill. He earned his PhD in Theoretical Chemistry at UPV/EHU in 2001 under the supervision of Prof. Jesús M. Ugalde, with research stays at UNC Chapel Hill and University of Oxford. Since then, he has developed his academic career at EHU, combining research in theoretical and computational chemistry with activities in high-performance scientific computing and advanced scientific services. His research focuses on electronic structure methods, chemical bonding, heterogeneous catalysis, and computational chemistry methodologies. To date, he has authored around 80 peer-reviewed publications, contributed to several competitive research projects, and actively participated in graduate and postgraduate teaching and supervision in theoretical chemistry and computational modelling.
+
