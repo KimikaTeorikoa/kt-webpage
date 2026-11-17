@@ -589,6 +589,7 @@ items:
   pages: 20533-20540
   groups:
   - moleles
+  - protkt
   tags:
   - MolEles-KT
   - Bio-KT
@@ -827,6 +828,7 @@ items:
   journal: Journal of Chemical Information and Modeling
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:

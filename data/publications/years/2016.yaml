@@ -72,6 +72,8 @@ items:
   doi: 10.1039/c6cp06529e
   year: 2016
   journal: Physical Chemistry Chemical Physics
+  groups:
+  - protkt
   volume: '18'
   issue: '45'
   pages: 30972-30981

@@ -121,6 +121,8 @@ items:
   doi: 10.1021/acs.jpcb.5b09825
   year: 2015
   journal: Journal of Physical Chemistry B
+  groups:
+  - protkt
   volume: '119'
   issue: '50'
   pages: 15430-15442

@@ -1011,6 +1011,7 @@ items:
   journal: Nature
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:
@@ -1039,6 +1040,7 @@ items:
   journal: Journal of Chemical Information and Modeling
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:

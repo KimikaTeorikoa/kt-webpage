@@ -1387,6 +1387,7 @@ items:
   journal: Nature Communications
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:

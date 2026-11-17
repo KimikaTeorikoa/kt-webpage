@@ -33,21 +33,23 @@ def write_file(path: Path, content: str) -> None:
 
 
 def group_index(slug: str, label: str, title: str, logo: str, summary: str) -> str:
+    header = {
+        "variant": "subgroup",
+        "menu": slug,
+        "accent": "primary",
+        "brand_name": title,
+        "brand_note": "EHU & DIPC",
+        "brand_url": f"/{slug}/",
+    }
     metadata = {
         "title": title,
         "layout": "subgroup",
         "hide_hero": True,
         "home_title": f"Welcome to the {title}",
         "weight": 99,
+        "header": header.copy(),
         "cascade": {
-            "header": {
-                "variant": "subgroup",
-                "menu": slug,
-                "accent": "primary",
-                "brand_name": title,
-                "brand_note": "EHU & DIPC",
-                "brand_url": f"/{slug}/",
-            }
+            "header": header,
         },
         "research_group_card": {
             "key": slug,

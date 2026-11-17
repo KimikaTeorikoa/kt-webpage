@@ -98,9 +98,10 @@ python3 scripts/add_group.py --slug new-kt --label New-KT --title "New-KT Group"
 ```
 
 It creates the group landing page, members, publications, research and contact
-pages, plus its local navigation. Add the requested logo beneath `static/` and
-run `make validate`. The global menus and home constellation pick up the new
-group automatically.
+pages, plus its local navigation. The landing page and its subsections are
+configured to use that menu. Add the requested logo beneath `static/` and run
+`make validate`. The global menus and home constellation pick up the new group
+automatically.
 
 ## Generating research pages
 

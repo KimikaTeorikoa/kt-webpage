@@ -1085,6 +1085,7 @@ items:
   journal: Nature Chemical Biology
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:
@@ -1108,6 +1109,7 @@ items:
   journal: Nature Catalysis
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:
@@ -1136,6 +1138,7 @@ items:
   journal: ''
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:

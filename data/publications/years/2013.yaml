@@ -150,6 +150,8 @@ items:
   doi: 10.1002/chem.201203862
   year: 2013
   journal: Chemistry-a European Journal
+  groups:
+  - protkt
   volume: '19'
   issue: '21'
   pages: 6862-6873

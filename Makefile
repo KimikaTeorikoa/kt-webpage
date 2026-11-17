@@ -31,7 +31,7 @@ build:
 	hugo -D --minify --cleanDestinationDir --baseURL "$(PROD_BASEURL)"
 
 validate-data:
-	python3 scripts/validate_site_data.py
+	python scripts/validate_site_data.py
 
 validate: validate-data build check-public-links
 

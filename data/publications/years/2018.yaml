@@ -619,6 +619,8 @@ items:
   doi: 10.1021/acs.jpcb.7b12450
   year: 2018
   journal: Journal of Physical Chemistry B
+  groups:
+  - protkt
   volume: '122'
   issue: '19'
   pages: 4956-4971

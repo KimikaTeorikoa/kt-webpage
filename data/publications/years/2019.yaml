@@ -1187,6 +1187,7 @@ items:
   journal: Nature
   groups:
   - biokt
+  - protkt
   tags:
   - Bio-KT
   authors:
