@@ -4,12 +4,16 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 import tempfile
 import unicodedata
 from datetime import date
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.parse import quote
+from urllib.request import Request, urlopen
 
 import yaml
 
@@ -19,6 +23,9 @@ from group_metadata import group_aliases, load_groups, normalize_group_token
 ROOT = Path(__file__).resolve().parents[1]
 SUBMITTED_FILE = ROOT / "data" / "publications" / "submitted.yaml"
 PEOPLE_DIR = ROOT / "content" / "people"
+CROSSREF_API = "https://api.crossref.org/works/"
+DATACITE_API = "https://api.datacite.org/dois/"
+USER_AGENT = "kt-hugoblox-prototype/1.0 (submitted-publication helper)"
 
 
 def normalize_text(value: str) -> str:
@@ -43,14 +50,138 @@ def parse_date(raw: str) -> date:
         raise argparse.ArgumentTypeError("Date must use YYYY-MM-DD format.") from exc
 
 
+def normalize_doi(raw: str) -> str:
+    value = raw.strip()
+    value = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"^doi:\s*", "", value, flags=re.IGNORECASE)
+    return value.strip()
+
+
+def looks_like_doi(value: str) -> bool:
+    return bool(re.fullmatch(r"10\.\d{4,9}/[^\s<>\"'?#]+", value, flags=re.IGNORECASE))
+
+
+def fetch_json(url: str) -> dict:
+    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    with urlopen(request, timeout=20) as response:
+        payload = json.load(response)
+    if not isinstance(payload, dict):
+        raise ValueError("The metadata service returned an unexpected response.")
+    return payload
+
+
+def first_text(value: object) -> str:
+    if isinstance(value, list):
+        return normalize_text(str(value[0])) if value else ""
+    return normalize_text(str(value)) if value else ""
+
+
+def extract_crossref_metadata(record: dict) -> dict[str, object]:
+    authors = []
+    for author in record.get("author") or []:
+        given = normalize_text(str(author.get("given") or ""))
+        family = normalize_text(str(author.get("family") or ""))
+        name = " ".join(part for part in (given, family) if part)
+        if name:
+            authors.append(name)
+
+    year = None
+    for field in ("published-print", "published-online", "issued", "created"):
+        date_parts = (record.get(field) or {}).get("date-parts") or []
+        if date_parts and date_parts[0]:
+            year = int(date_parts[0][0])
+            break
+    return {
+        "title": first_text(record.get("title")),
+        "authors": authors,
+        "source": first_text(record.get("container-title") or record.get("publisher")),
+        "year": year,
+    }
+
+
+def extract_datacite_metadata(payload: dict) -> dict[str, object]:
+    record = (payload.get("data") or {}).get("attributes") or {}
+    authors = []
+    for creator in record.get("creators") or []:
+        name = normalize_text(str(creator.get("name") or ""))
+        if not name:
+            name = " ".join(
+                part
+                for part in (
+                    normalize_text(str(creator.get("givenName") or "")),
+                    normalize_text(str(creator.get("familyName") or "")),
+                )
+                if part
+            )
+        if name:
+            authors.append(name)
+
+    source = record.get("publisher") or ""
+    containers = record.get("container") or []
+    if containers and isinstance(containers[0], dict):
+        source = containers[0].get("title") or source
+    return {
+        "title": first_text([item.get("title", "") for item in record.get("titles") or []]),
+        "authors": authors,
+        "source": normalize_text(str(source)),
+        "year": record.get("publicationYear"),
+    }
+
+
+def normalize_source(doi: str, source: str) -> str:
+    if doi.lower().startswith("10.26434/"):
+        return "ChemRxiv"
+    if re.match(r"10\.48550/arxiv\.", doi, flags=re.IGNORECASE):
+        return "arXiv"
+    if doi.lower().startswith("10.1101/"):
+        return "bioRxiv / medRxiv"
+    known_sources = {
+        "chemrxiv": "ChemRxiv",
+        "arxiv": "arXiv",
+        "biorxiv": "bioRxiv",
+        "medrxiv": "medRxiv",
+    }
+    return known_sources.get(source.casefold(), source)
+
+
+def fetch_doi_metadata(doi: str) -> tuple[dict[str, object] | None, list[str]]:
+    services = (
+        ("Crossref", CROSSREF_API + quote(doi, safe=""), lambda payload: extract_crossref_metadata(payload.get("message") or {})),
+        ("DataCite", DATACITE_API + quote(doi, safe=""), extract_datacite_metadata),
+    )
+    errors = []
+    for service, url, extract in services:
+        try:
+            metadata = extract(fetch_json(url))
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError, ValueError) as exc:
+            errors.append(f"{service}: {exc}")
+            continue
+        if metadata["title"] or metadata["authors"]:
+            metadata["source"] = normalize_source(doi, str(metadata["source"] or ""))
+            return metadata, errors
+        errors.append(f"{service}: no title or author metadata found")
+    return None, errors
+
+
+def prompt_doi() -> str:
+    while True:
+        doi = normalize_doi(prompt_value("DOI (optional)"))
+        if not doi or looks_like_doi(doi):
+            return doi
+        print("Enter a valid DOI (for example 10.26434/chemrxiv-12345678) or leave it blank.", file=sys.stderr)
+
+
 def prompt_value(label: str, initial: str = "") -> str:
     suffix = f" [{initial}]" if initial else ""
     return input(f"{label}{suffix}: ").strip() or initial
 
 
-def prompt_authors() -> list[str]:
+def prompt_authors(initial: list[str] | None = None) -> list[str]:
+    initial_value = "; ".join(initial or [])
     while True:
-        raw = input("Authors (separate names with semicolons): ").strip()
+        raw = input(f"Authors (separate names with semicolons) [{initial_value}]: ").strip()
+        if not raw and initial:
+            return initial
         authors = [normalize_text(author) for author in raw.split(";")]
         authors = [author for author in authors if author]
         if authors:
@@ -198,6 +329,17 @@ def submission_exists(data: dict, title: str, authors: list[str]) -> bool:
     return False
 
 
+def prompt_year(initial: object = "") -> int | None:
+    default = str(initial or "")
+    while True:
+        raw = prompt_value("Publication year (optional)", default)
+        if not raw:
+            return None
+        if raw.isdigit() and 1000 <= int(raw) <= 9999:
+            return int(raw)
+        print("Enter a four-digit year or leave it blank.", file=sys.stderr)
+
+
 def write_submissions(data: dict) -> None:
     SUBMITTED_FILE.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(
@@ -231,11 +373,29 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     print("Add submitted publication")
-    title = prompt_value("Title")
+    doi = prompt_doi()
+    metadata: dict[str, object] = {}
+    if doi:
+        print(f"Looking up DOI {doi} ...")
+        metadata, errors = fetch_doi_metadata(doi)
+        if metadata:
+            print("Metadata found; review or edit the suggested title and authors below.")
+        else:
+            print("No title/author metadata could be retrieved; enter the details manually.", file=sys.stderr)
+            for error in errors:
+                print(f"  {error}", file=sys.stderr)
+
+    title = prompt_value("Title", str(metadata.get("title") or ""))
     while not title:
         print("Title is required.", file=sys.stderr)
-        title = prompt_value("Title")
-    authors = prompt_authors()
+        title = prompt_value("Title", str(metadata.get("title") or ""))
+    authors = prompt_authors(metadata.get("authors") or None)
+    suggested_source = normalize_source(
+        doi,
+        str(metadata.get("source") or normalize_source(doi, "")),
+    )
+    source = normalize_source(doi, prompt_value("Archive/source (optional)", suggested_source))
+    year = prompt_year(metadata.get("year"))
     members = load_members()
     profile_ids = resolve_profile_ids(authors, members)
     try:
@@ -257,6 +417,9 @@ def main(argv: list[str] | None = None) -> int:
     if submission_exists(data, title, authors):
         print("This submitted publication is already in the data file.", file=sys.stderr)
         return 1
+    if doi and any(str(item.get("doi", "")).casefold() == doi.casefold() for item in data["items"]):
+        print("This DOI is already in the submitted-publications data file.", file=sys.stderr)
+        return 1
 
     base_id = f"submitted-{submitted_date.isoformat()}-{slugify(title)}"
     existing_ids = {str(item.get("id", "")) for item in data["items"]}
@@ -275,10 +438,22 @@ def main(argv: list[str] | None = None) -> int:
         "profile_ids": profile_ids,
         "tags": tags,
     }
+    if doi:
+        entry["doi"] = doi
+    if source:
+        entry["source"] = source
+    if year:
+        entry["year"] = year
 
     print("\n=== Submitted publication ===")
     print(f"Title:   {title}")
+    if doi:
+        print(f"DOI:     {doi}")
     print(f"Authors: {'; '.join(authors)}")
+    if source:
+        print(f"Source:  {source}")
+    if year:
+        print(f"Year:    {year}")
     print(f"Date:    {submitted_date.isoformat()}")
     print(f"Tags:    {', '.join(tags) if tags else 'None'}")
     profile_names = [

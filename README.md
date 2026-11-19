@@ -181,7 +181,9 @@ Use the interactive helper to add a publication that has been submitted but does
 python3 scripts/add_submitted_publication.py
 ```
 
-Enter the title, authors separated by semicolons, submission date (the default is today), and optional research-group tags. The script compares author names with profile `publication_names`, assigns exact matches automatically, and asks whether to associate unmatched authors with a team member. The saved profile IDs determine which profiles display the entry; group tags also make the submission appear on that group's publications page, but not in the site-wide publications directory. Review the preview and confirm before writing.
+Enter an optional DOI first. The helper looks it up through Crossref and DataCite, then offers the retrieved title and author list as editable defaults. It also suggests the archive/source and year when available; review these fields, select research-group tags, and confirm the entry. DOI resolver URLs and `doi:` prefixes are accepted. A supplied DOI links the title and is included with a BibTeX entry; citations show the source and year (for example, `ChemRxiv, 2026`) instead of the submission date when that metadata is available.
+
+The script compares author names with profile `publication_names`, assigns exact matches automatically, and asks whether to associate unmatched authors with a team member. The saved profile IDs determine which profiles display the entry; group tags also make the submission appear on that group's publications page, but not in the site-wide publications directory. Review the preview and confirm before writing.
 
 To provide a non-default date:
 

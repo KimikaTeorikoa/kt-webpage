@@ -79,8 +79,12 @@
         <li class="publication-entry publication-entry--submitted">
           <span class="publication-entry__number">{{ $number }}.</span>
           <p class="publication-entry__authors">{{ delimit $submission.authors "; " }}</p>
-          <h4 class="publication-entry__title">{{ $submission.title }}</h4>
-          <p class="publication-entry__citation"><strong>Submitted</strong> · {{ $submission.date }}</p>
+          <h4 class="publication-entry__title">
+            {{ with $submission.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ end }}
+            {{ $submission.title }}
+            {{ with $submission.doi }}</a>{{ end }}
+          </h4>
+          {{ partial "submitted-publication-citation.html" $submission }}
         </li>
       {{ end }}
     </ol>

@@ -1,0 +1,71 @@
+{{ $publication := . }}
+{{ $source := $publication.source | default "" }}
+{{ $doi := $publication.doi | default "" }}
+{{ if not $source }}
+  {{ if hasPrefix (lower $doi) "10.26434/" }}
+    {{ $source = "ChemRxiv" }}
+  {{ else if hasPrefix (lower $doi) "10.48550/arxiv." }}
+    {{ $source = "arXiv" }}
+  {{ else if hasPrefix (lower $doi) "10.1101/" }}
+    {{ $source = "bioRxiv / medRxiv" }}
+  {{ end }}
+{{ end }}
+{{ $year := $publication.year | default "" }}
+{{ if and (not $year) $publication.date }}
+  {{ $year = (time.AsTime $publication.date).Format "2006" }}
+{{ end }}
+{{ $bibKey := $publication.id | default ((replace $publication.title " " "-") | urlize) }}
+{{ $bibtexLines := slice
+  (printf "@article{%s," $bibKey)
+  (printf "  title = {%s}," $publication.title)
+}}
+{{ with $publication.authors }}
+  {{ $bibtexLines = $bibtexLines | append (printf "  author = {%s}," (delimit . " and ")) }}
+{{ end }}
+{{ with $source }}
+  {{ $bibtexLines = $bibtexLines | append (printf "  journal = {%s}," .) }}
+{{ end }}
+{{ with $year }}
+  {{ $bibtexLines = $bibtexLines | append (printf "  year = {%v}," .) }}
+{{ end }}
+{{ with $doi }}
+  {{ $bibtexLines = $bibtexLines | append (printf "  doi = {%s}," .) }}
+  {{ $bibtexLines = $bibtexLines | append (printf "  url = {%s}," (printf "https://doi.org/%s" .)) }}
+{{ end }}
+{{ $bibtexLines = $bibtexLines | append "}" }}
+{{ $bibtex := delimit $bibtexLines "\n" }}
+
+<div class="publication-entry__citation-row">
+  <p class="publication-entry__citation">
+    {{ if $source }}
+      <em>{{ $source }}</em>
+    {{ else if not $year }}
+      <strong>Submitted</strong> · {{ $publication.date }}
+    {{ end }}
+    {{ with $year }}
+      {{ if $source }}, {{ else }} {{ end }}<strong>{{ . }}</strong>
+    {{ end }}
+  </p>
+  <div class="publication-entry__actions publication-entry__actions--inline">
+    {{ with $publication.doi }}
+      <a class="publication-entry__action publication-entry__action--doi" href="https://doi.org/{{ . }}" target="_blank" rel="noopener" aria-label="Open DOI" title="Open DOI">
+        <span class="publication-entry__action-text">DOI</span>
+      </a>
+    {{ end }}
+    <details class="publication-bibtex-details">
+      <summary class="publication-entry__action publication-entry__action--bib" aria-label="Open BibTeX" title="Open BibTeX">
+        <span class="publication-entry__action-text">BibTeX</span>
+      </summary>
+      <div class="publication-bibtex">
+        <div class="publication-bibtex__header">
+          <span class="publication-bibtex__label">BibTeX</span>
+          <div class="publication-bibtex__controls">
+            <button class="publication-bibtex__copy" type="button" data-bibtex-copy aria-label="Copy BibTeX" title="Copy BibTeX">Copy</button>
+            <button class="publication-bibtex__close" type="button" data-bibtex-close aria-label="Close BibTeX" title="Close BibTeX">Close</button>
+          </div>
+        </div>
+        <pre class="publication-bibtex__code" data-bibtex-code>{{ $bibtex }}</pre>
+      </div>
+    </details>
+  </div>
+</div>

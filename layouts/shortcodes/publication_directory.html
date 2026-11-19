@@ -180,8 +180,12 @@
               {{ with .authors }}
                 <p class="publication-entry__authors">{{ delimit . "; " }}</p>
               {{ end }}
-              <h3 class="publication-entry__title">{{ .title }}</h3>
-              <p class="publication-entry__citation"><strong>Submitted</strong> · {{ .date }}</p>
+              <h3 class="publication-entry__title">
+                {{ with .doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ end }}
+                {{ .title }}
+                {{ with .doi }}</a>{{ end }}
+              </h3>
+              {{ partial "submitted-publication-citation.html" . }}
               <div class="publication-tags">
                 {{ range .tags }}
                   {{ $slug := . | urlize }}

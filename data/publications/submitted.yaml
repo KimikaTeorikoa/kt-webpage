@@ -14,16 +14,49 @@ items:
   - elisa-jimenez-izal
   tags:
   - MatCat-KT
-- id: submitted-2026-09-29-voltage-dependent-hydrogen-evolution-reaction-on-ptge-surfaces
+- id: submitted-2026-11-19-how-multiconfigurational-is-zeaxanthin-a-natural-orbital-functional-study-of-its-ground-and-excited-states
   status: submitted
-  title: Voltage-Dependent Hydrogen Evolution Reaction on PtGe surfaces
+  title: How Multiconfigurational Is Zeaxanthin? A Natural Orbital Functional Study of Its Ground and Excited States
+  authors:
+  - Jon Uranga
+  - Mario Piris
+  date: '2026-11-19'
+  profile_ids:
+  - jon-uranga
+  - mario-piris
+  tags:
+  - Prot-KT
+  - NOFT-KT
+  doi: 10.26434/chemrxiv.15012442/v1
+- id: submitted-2026-11-19-how-composition-and-cluster-structure-influence-co-adsorption-in-pt-and-pt-ge-clusters
+  status: submitted
+  title: How Composition and Cluster Structure Influence CO Adsorption in Pt and Pt–Ge Clusters
+  authors:
+  - Andoni Ugartemendia
+  - Idoia Camara
+  - Ramon M. Bergua
+  - Elisa Jimenez-Izal
+  - Jose M. Mercero
+  date: '2026-11-19'
+  profile_ids:
+  - andoni-ugartemendia
+  - idoia-camara
+  - ramon-bergua
+  - elisa-jimenez-izal
+  - jose-m-mercero
+  tags:
+  - MatCat-KT
+  doi: 10.26434/chemrxiv.15012330/v1
+- id: submitted-2026-11-19-stable-pt-single-atoms-embedded-in-ge-001-enable-efficient-hydrogen-evolution
+  status: submitted
+  title: Stable Pt Single Atoms Embedded in Ge(001) Enable Efficient Hydrogen Evolution
   authors:
   - Idoia Camara
   - Andoni Ugartemendia
   - Ramon M. Bergua
   - Jose M. Mercero
   - Elisa Jimenez-Izal
-  date: '2026-09-29'
+  date: '2026-11-19'
   profile_ids:
   - idoia-camara
   - andoni-ugartemendia
@@ -32,3 +65,4 @@ items:
   - elisa-jimenez-izal
   tags:
   - MatCat-KT
+  doi: 10.26434/chemrxiv.15012327/v1
